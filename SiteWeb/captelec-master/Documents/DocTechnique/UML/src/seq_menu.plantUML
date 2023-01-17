@@ -1,0 +1,44 @@
+@startuml "Diagramme de séquence d'affichage d'un menu"
+
+hide footbox
+autonumber
+
+actor Utilisateur as usr
+
+participant Index.php
+
+participant vSVG.php
+participant vTab.php
+
+participant ctrlMenu.php
+participant ctrlTab.php
+participant ctrlSVG.php
+
+participant model.php
+
+participant SVG
+database BaseInfluxDB
+
+
+
+usr->Index.php : ://*/?route=menu&bat=X&etg=Y
+Index.php->ctrlMenu.php
+ctrlMenu.php->model.php : getData(X,Y)
+model.php->BaseInfluxDB : demande données de getData(X,Y)
+model.php<--BaseInfluxDB : envoie des données
+ctrlMenu.php<--model.php : retourne les données demandées
+
+alt $_COOKIE['menuDisplay'] == $cookieNames['menuDisplay']['tab']
+    ctrlMenu.php->ctrlTab.php : demande le format tableau
+    ctrlTab.php->vTab.php : insertion des données
+    vTab.php-->usr : affichage
+
+else $_COOKIE['menuDisplay'] == $cookieNames['menuDisplay']['svg']
+    ctrlMenu.php->ctrlSVG.php : demande le format SVG
+    ctrlSVG.php->SVG : récupération du SVG correspondant
+    ctrlSVG.php->vSVG.php : insertion des données
+    vSVG.php-->usr : affichage
+    
+end
+
+@enduml

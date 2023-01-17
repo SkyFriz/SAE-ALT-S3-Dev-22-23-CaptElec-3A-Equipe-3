@@ -1,0 +1,5 @@
+=== Maîtrise d'ouvrage
+Ce projet est réalisé pour le secteur recherche de l'IUT de Blagnac, plus exactement le laboratoire IRIT. Notre cliente, Patricia Stolf est donc la maître d'ouvrage et travaille quant à elle au sein de l'équipe SEPIA, qui mène des recherches dans les systèmes sécurisés et l’économie d’énergie. C'est elle qui nous donne ses attentes concernant ce projet ainsi que ses délais. Nous avons déjà eu une réunion dans laquelle elle nous expliquait en détail les besoins du projet et ses attentes.
+
+=== Maîtrise d'œuvre
+Le maître d'œuvre de Capt ELEC est Rémi BOULLE, enseignant en informatique à l'IUT de Blagnac. Il est ici pour aider notre cliente à la bonne réalisation du projet de notre équipe. Notre réunion avec monsieur BOULLE se résume aux explications des détails non compris lors de notre première réunion avec le maître d'ouvrage : il met tout en œuvre pour que les travaux se déroulent conformément aux attentes du maître d’ouvrage.

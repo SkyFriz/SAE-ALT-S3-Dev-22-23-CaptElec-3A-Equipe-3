@@ -1,0 +1,3291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.15">
+<title>Documentation Technique</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment @import statement to use as custom stylesheet */
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;word-wrap:anywhere;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
+ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
+ul.square{list-style-type:square}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
+abbr{text-transform:none}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede;word-wrap:normal}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre).nobreak{word-wrap:normal}
+:not(pre).nowrap{white-space:nowrap}
+:not(pre).pre-wrap{white-space:pre-wrap}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre>code{display:block}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:none;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:rgba(255,255,255,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details>summary:first-of-type{cursor:pointer;display:list-item;outline:none;margin-bottom:.75em}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:inherit}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
+.sidebarblock{border-style:solid;border-width:1px;border-color:#dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;-webkit-border-radius:4px;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class="highlight"],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;padding-right:.5em}
+pre.pygments .lineno{border-right:1px solid currentColor;opacity:.35;display:inline-block;margin-right:.75em}
+pre.pygments .lineno::before{content:"";margin-right:-.125em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;font-size:.85rem;text-align:left;margin-right:0}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>*>tr>*{border-width:1px}
+table.grid-cols>*>tr>*{border-width:0 1px}
+table.grid-rows>*>tr>*{border-width:1px 0}
+table.frame-all{border-width:1px}
+table.frame-ends{border-width:1px 0}
+table.frame-sides{border-width:0 1px}
+table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-child>*{border-top-width:0}
+table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
+table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
+table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
+table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
+ul.inline{display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
+.gist .file-data>table td.line-data{width:99%}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:50%;border-radius:50%;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#header,#content,#footnotes,#footer{max-width:none}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media print,amzn-kf8{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+</head>
+<body class="article">
+<div id="header">
+<h1>Documentation Technique</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<hr>
+<div class="paragraph">
+<p>Par Axel Bacrie 1A <a href="mailto:axel.bacrie@etu.univ-tlse2.fr">axel.bacrie@etu.univ-tlse2.fr</a> et Théo Chaves 1A <a href="mailto:theo.chaves@etu.univ-tlse2.fr">theo.chaves@etu.univ-tlse2.fr</a> (correcteur)<br></p>
+</div>
+<hr>
+<div style="page-break-after: always;"></div>
+<div id="toc" class="toc">
+<div id="toctitle" class="title">Table des matières</div>
+<ul class="sectlevel1">
+<li><a href="#_introduction">1. Introduction</a></li>
+<li><a href="#_structure_et_fonctionnement">2. Structure et fonctionnement</a>
+<ul class="sectlevel2">
+<li><a href="#structureApp">2.1. Structure de l&#8217;application</a>
+<ul class="sectlevel3">
+<li><a href="#_point_sur_les_technologies">2.1.1. Point sur les technologies</a>
+<ul class="sectlevel4">
+<li><a href="#Capteur">2.1.1.1. Capteur Electrique (NKE TRIPHAS&#8217;O 60A)</a></li>
+<li><a href="#_lorawan">2.1.1.2. LoRaWAN</a></li>
+<li><a href="#_mqtt">2.1.1.3. MQTT</a></li>
+<li><a href="#_node_red">2.1.1.4. Node-Red</a></li>
+<li><a href="#_influxdb">2.1.1.5. InfluxDB</a></li>
+<li><a href="#_grafana">2.1.1.6. Grafana</a></li>
+<li><a href="#_php">2.1.1.7. PHP</a></li>
+<li><a href="#_apache">2.1.1.8. Apache</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#structureSite">2.2. Structure du site</a></li>
+<li><a href="#MVC2">2.3. Paradigme MVC2</a></li>
+<li><a href="#_fonctionalités_du_site">2.4. Fonctionalités du site</a>
+<ul class="sectlevel3">
+<li><a href="#auth">2.4.1. L&#8217;authentification</a>
+<ul class="sectlevel4">
+<li><a href="#_lobtention_de_privilèges">2.4.1.1. L&#8217;obtention de privilèges</a></li>
+<li><a href="#verifProvileges">2.4.1.2. La vérivication des privilèges</a></li>
+</ul>
+</li>
+<li><a href="#menus">2.4.2. Les Menus</a></li>
+<li><a href="#param">2.4.3. Les paramètres</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#config">3. Configuration</a>
+<ul class="sectlevel2">
+<li><a href="#configFile">3.1. Le fichier config.php</a>
+<ul class="sectlevel3">
+<li><a href="#infosInflux">3.1.1. Informations sur InfluxDB</a></li>
+<li><a href="#infosDomaine">3.1.2. Stockage des d&#8217;URL</a></li>
+<li><a href="#theme">3.1.3. Mise en place des couleurs de thème</a></li>
+<li><a href="#navig">3.1.4. Informations de navigation/routes</a></li>
+<li><a href="#cookies">3.1.5. Gestion des cookies</a></li>
+<li><a href="#infoMenu">3.1.6. Construction des menus</a></li>
+</ul>
+</li>
+<li><a href="#configAuth">3.2. Configurer l&#8217;authentification</a></li>
+</ul>
+</li>
+<li><a href="#_mise_en_place_du_serveur">4. Mise en place du serveur</a>
+<ul class="sectlevel2">
+<li><a href="#_introduction_2">4.1. Introduction</a></li>
+<li><a href="#_installation_de_nodered">4.2. Installation de NodeRed</a>
+<ul class="sectlevel3">
+<li><a href="#_installation">4.2.1. Installation</a>
+<ul class="sectlevel4">
+<li><a href="#_node">4.2.1.1. Node</a></li>
+<li><a href="#_node_red_2">4.2.1.2. Node-RED</a></li>
+<li><a href="#_node_red_admin_et_configuration_user">4.2.1.3. Node-RED Admin et Configuration user</a></li>
+<li><a href="#_packet_node_red_pour_influxdb">4.2.1.4. Packet Node-RED pour InfluxDB</a></li>
+<li><a href="#_lancer_node_red_au_démarrage">4.2.1.5. Lancer Node-RED au démarrage</a></li>
+</ul>
+</li>
+<li><a href="#_sources">4.2.2. Sources</a></li>
+</ul>
+</li>
+<li><a href="#_installation_de_influxdb">4.3. Installation de InfluxDB</a>
+<ul class="sectlevel3">
+<li><a href="#_installation_2">4.3.1. Installation</a></li>
+<li><a href="#_configuration">4.3.2. Configuration</a>
+<ul class="sectlevel4">
+<li><a href="#_réseau">4.3.2.1. Réseau</a></li>
+<li><a href="#_user_et_base_de_données">4.3.2.2. User et base de données</a></li>
+</ul>
+</li>
+<li><a href="#_sources_2">4.3.3. Sources</a></li>
+</ul>
+</li>
+<li><a href="#_installation_grafana">4.4. Installation Grafana</a>
+<ul class="sectlevel3">
+<li><a href="#_installation_3">4.4.1. Installation</a></li>
+<li><a href="#_configuration_2">4.4.2. Configuration</a>
+<ul class="sectlevel4">
+<li><a href="#_boot">4.4.2.1. Boot</a></li>
+<li><a href="#_réseau_2">4.4.2.2. Réseau</a></li>
+<li><a href="#_première_connexion">4.4.2.3. Première connexion</a></li>
+<li><a href="#_source_de_données">4.4.2.4. Source de données</a></li>
+</ul>
+</li>
+<li><a href="#_sources_3">4.4.3. Sources</a></li>
+</ul>
+</li>
+<li><a href="#_installation_apache_et_php">4.5. Installation Apache et PHP</a>
+<ul class="sectlevel3">
+<li><a href="#_instalation">4.5.1. Instalation</a>
+<ul class="sectlevel4">
+<li><a href="#_apache_2">4.5.1.1. Apache</a></li>
+<li><a href="#_php_2">4.5.1.2. PHP</a></li>
+</ul>
+</li>
+<li><a href="#_configuration_apache">4.5.2. Configuration Apache</a></li>
+<li><a href="#_source">4.5.3. Source</a></li>
+</ul>
+</li>
+<li><a href="#_configuration_réseau">4.6. Configuration réseau</a></li>
+</ul>
+</li>
+<li><a href="#_simulation_de_données_avec_node_red">5. Simulation de données avec Node-Red</a>
+<ul class="sectlevel2">
+<li><a href="#_introduction_3">5.1. Introduction</a></li>
+<li><a href="#_valeurs_de_simulation">5.2. Valeurs de simulation</a></li>
+<li><a href="#_code">5.3. Code</a></li>
+<li><a href="#_fonctionnement_de_la_simulation">5.4. Fonctionnement de la simulation</a></li>
+<li><a href="#_sources_4">5.5. Sources</a></li>
+</ul>
+</li>
+<li><a href="#newSVG">6. Créer de nouveaux SVG</a>
+<ul class="sectlevel2">
+<li><a href="#_étape_1_choisir_un_modèle">6.1. Étape 1 : Choisir un modèle</a></li>
+<li><a href="#_étape_2_décalquer_optionnel">6.2. Étape 2 : Décalquer (optionnel)</a></li>
+<li><a href="#_étape_3_passage_en_svg">6.3. Étape 3 : Passage en SVG</a></li>
+<li><a href="#_étape_4_nettoyage_du_fichier">6.4. Étape 4 : Nettoyage du fichier</a></li>
+<li><a href="#_étape_5_ajouter_le_svg_au_site">6.5. Étape 5 : Ajouter le SVG au site :</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_introduction">1. Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cette documentation a plusieurs objectifs :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Permettre le dépoiement de l&#8217;application</p>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Voir : <a href="#_mise_en_place_du_serveur">Mise en place du serveur</a>, <a href="#structureSite">Structure du site</a></p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Permettre de comprendre la structure de l&#8217;application</p>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Voir : <a href="#structureApp">Structure de l&#8217;application</a>, <a href="#structureSite">Structure du site</a></p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Permettre la modification de l&#8217;existant</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Modifier les processus du site</p>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Voir : <a href="#menus">Les Menus</a>, <a href="#auth">L&#8217;authentification</a>, <a href="#param">Les paramètres</a></p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Étendre les processus existants sans ajout de fonctionnalité</p>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Voir : <a href="#config">Configuration</a>, <a href="#newSVG">Créer de nouveaux SVG</a></p>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Permettre l&#8217;extension future de l&#8217;application et du site (ajout de fonctionalités).</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Ce que nous appellerons <em>"Le Site"</em> est la partie web du projet (plus de détails <a href="#defSite">ici</a>).
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_structure_et_fonctionnement">2. Structure et fonctionnement</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="structureApp">2.1. Structure de l&#8217;application</h3>
+<div class="paragraph">
+<p>Afin de correctement décrire ce projet, nous pouvons le découper en trois grandes parties. Nous retrouvons ces trois parties dans le schéma des technologies ci-dessous (trois lignes). Nous regrouperons donc les technologies et les tâches à réaliser dans ces trois catégories.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Acquisition</strong> : <a href="#Capteur">Capteur Electrique (NKE TRIPHAS&#8217;O 60A)</a>, <a href="#_lorawan">LoRaWAN</a></p>
+</li>
+<li>
+<p><strong>Stockage</strong> : <a href="#_node_red">Node-Red</a>, <a href="#_influxdb">InfluxDB</a></p>
+</li>
+<li>
+<p><strong>Affichage / Interprétation</strong> : <a href="#_php">PHP</a>, <a href="#_apache">Apache</a>, <a href="#_grafana">Grafana</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ici, nous constatons que le <a href="#_mqtt">MQTT</a> n&#8217;est pas vraiment classable entre Acquisition et Stockage puisque par sa nature de protocole de communication, c&#8217;est une technologie de "transition".</p>
+</div>
+<div class="paragraph">
+<p>Nous pouvons apporter un peu plus de détails quant aux rôles de ces différentes parties.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Acquisition</strong> : Récupérer les données (consommation électrique) "sur le terrain" pour les rendre disponibles sur le réseau de l&#8217;IUT.</p>
+</li>
+<li>
+<p><strong>Stockage</strong> : Lire les données envoyées sur le réseau et les insérer dans une base de données.</p>
+</li>
+<li>
+<p><strong>Affichage / Interprétation</strong> : Collecter les données dans la base pour les présenter sous différentes formes et les présenter à l&#8217;utilisateur.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+"Interprétation" fait référence à des traitements faits sur les données et qui déclencheraient des actions en fonction.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/SchemaTechno.png" alt="SchemaTechno">
+</div>
+<div class="title">Figure 1. Schéma de répartition des technologies dans l&#8217;application</div>
+</div>
+<div id="defSite" class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Ce que nous appelerons <em>"Le Site"</em> dans cette documentation fait référence à la partie "Serveur Web" sur l&#8217;image ci-dessus.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_point_sur_les_technologies">2.1.1. Point sur les technologies</h4>
+<div class="sect4">
+<h5 id="Capteur">2.1.1.1. Capteur Electrique (NKE TRIPHAS&#8217;O 60A)</h5>
+<div class="paragraph">
+<p>Le capteur Triphas’O permet la télé relève à distance via le réseau LoRaWAN®, des consommations d’énergies électriques d’une installation. Il est spécialement conçu pour répondre aux besoins de gestion d’énergie des bâtiments industriels, tertiaires, fonctionnant avec des équipements de moyenne et forte puissance et de forte consommation d’énergie.
+C&#8217;est pour ces raisons que ce capteur convient tout à fait à l&#8217;utilisation contrôle à distance d&#8217;une salle informatique.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_lorawan">2.1.1.2. LoRaWAN</h5>
+<div class="paragraph">
+<p>La spécification LoRaWAN est un protocole de télécommunication LPWA (Low Power, Wide Area) conçu pour connecter sans fil des "objets" fonctionnant sur batterie et permettant de se connecter et de se connecter à Internet via des passerelles, participant ainsi à l&#8217;internet des objets.</p>
+</div>
+<div class="paragraph">
+<p>Ce protocole se veut simple, peu coûteux à implémenter et économe en énergie. Le protocole LoRaWAN a pour but les communications longues portées à bas coût et basse consommation plutôt que les communications à débit élevé consommatrices en ressource CPU et en énergie. En effet, les défis concernant l&#8217;interconnexion des objets résident dans leur coût, leur autonomie ainsi que leur nombre d&#8217;un point de vue réseau.</p>
+</div>
+<div class="paragraph">
+<p>En terme d&#8217;architecture, le réseau LoRaWAN est constitué de plusieurs passerelles permettant la communication avec les différents serveurs (par exemple ChirpStack) .</p>
+</div>
+<div class="paragraph">
+<p>En ce qui concerne la portée, une seule passerelle LoRa peut recevoir et transmettre des signaux sur une distance de plus de 15 kilomètres dans les zones rurales. Même dans les environnements urbains denses, les messages peuvent parcourir jusqu&#8217;à cinq kilomètres.</p>
+</div>
+<div class="paragraph">
+<p>En terme de capacité, un réseau LoRaWAN peut prendre en charge des millions de messages. Toutefois, le nombre de messages pris en charge dans un déploiement donné dépend du nombre de passerelles installées.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_mqtt">2.1.1.3. MQTT</h5>
+<div class="paragraph">
+<p>MQTT est un système de messagerie pour objets connectés, leur permettant d&#8217;envoyer des informations sur un sujet donné à un serveur qui fonctionne comme un broker de messages. Le broker publie ces informations sur des "topics" que les utilisateurs peuvent suivre en s&#8217;y abonnant. Ainsi, les utilisateurs abonnés à ces topics recevront les informations qu&#8217;il publie en temps réel.</p>
+</div>
+<div class="literalblock">
+<div class="title">Exemple de trame récupéré sur le bus MQTT de l&#8217;IUT</div>
+<div class="content">
+<pre>application/11/device/8553042fc3905153/rx {
+    "applicationID": "11",
+    "applicationName": "Chaput-Test",
+    "deviceName": "ttgo-1",
+    "devEUI": "8553042fc3905153",
+    "rxInfo": [
+        {
+            "gatewayID": "77aaaa5500000001",
+            "uplinkID": "ed98d035-c452-41ab-a494-6f73fe757767",
+            "name": "",
+            "rssi": -120,
+            "loRaSNR": -4,
+            "location": null
+        }
+    ],
+    "txInfo": {
+        "frequency": 868300000,
+        "dr": 0
+    },
+    "adr": true,
+    "fCnt": 6450,
+    "fPort": 1,
+    "data": "RW5yZWdpc3RyZW1lbnQgZGUgbGEgZMOpbW9uc3RyYXRpb24="
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Les trames qui circulent sur le bus MQTT prennent la forme de chaînes JSON comme l&#8217;exemple ci-dessus. Dans cette trame, la partie utile du dictionnaire JSON est indexée par la clé <em>"data"</em> et la valeur est codée en base 64. Ici, la valeur codée est : "RW5yZWdpc3RyZW1lbnQgZGUgbGEgZMOpbW9uc3RyYXRpb24=" et veut dire "Enregistrement de la démonstration". Nous pouvons également remarquer que la trame contient de nombreuses métadonnées comme la gatewayID : id de la "gateway" qui a réceptionnée le message ou le "deviceName" : nom de l&#8217;émetteur du message.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_node_red">2.1.1.4. Node-Red</h5>
+<div class="paragraph">
+<p>NodeRED est un environnement de programmation low-code pour les applications événementielles. Il utilise une méthode de programmation graphique basée sur les flux. Ainsi, il est possible via des blocs de code prédéfinis appelés "node" de constituer son programme en reliant les différents nodes . Node-RED a été développé en Javascript et est basé sur NodeJS</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_influxdb">2.1.1.5. InfluxDB</h5>
+<div class="paragraph">
+<p>InfluxDB est une time series database (TSDB). Elle est taillée pour stocker un large volume times series venant de différentes sources. Cette base de données vise à collecter le volume croissant de données issues de l&#8217;internet des objets et permet de gérer en temps réel les événements de tous ces systèmes.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_grafana">2.1.1.6. Grafana</h5>
+<div class="paragraph">
+<p>Grafana est un logiciel libre qui permet de générer des graphiques et des tableaux de bord à partir de bases de données de séries temporelles (time series database) tel que Influxdb.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_php">2.1.1.7. PHP</h5>
+<div class="paragraph">
+<p>PHP (Hypertext Preprocessor) est un langage de programmation libre, principalement utilisé pour produire des pages Web dynamiques via un serveur HTTP tel que Apache. Ce langage est principalement conçu pour servir de langage de script côté serveur, il est donc capable de faire tout ce que n&#8217;importe quel script CGI peut faire, comme collecter des données de formulaire, générer du contenu dynamique ou gérer des cookies et des sessions.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_apache">2.1.1.8. Apache</h5>
+<div class="paragraph">
+<p>Le serveur HTTP Apache est un logiciel libre et gratuit qui permet aux utilisateurs de déployer leurs sites web sur Internet. Pour atteindre cet objectif, il agit comme un intermédiaire entre le serveur et les machines clientes. Il extrait le contenu du serveur à chaque demande de l&#8217;utilisateur et le diffuse sur le Web.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="structureSite">2.2. Structure du site</h3>
+<div class="paragraph">
+<p>Avant tout, nous pouvons commencer par voir comment est structuré le site. Vous pouvez voir ci-dessous une représentation de la structure du site.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Ne sont représentés ici que les répertoires ainsi que les fichiers racines.
+</td>
+</tr>
+</table>
+</div>
+<div class="literalblock">
+<div class="title">Représentation de l&#8217;arborescence des fichiers du site</div>
+<div class="content">
+<pre>/
+├── auth.php
+├── composer.json
+├── composer.lock
+├── composer.phar
+├── config.php
+├── index.php
+│  
+├── grafana -&gt; redirect/grafana/
+├── nodered -&gt; redirect/nodered/
+│  
+├── controleurs
+│
+├── model
+│
+├── redirect
+│   ├── grafana
+│   └── nodered
+│
+├── sensible
+│
+├── static
+│   ├── img
+│   ├── include
+│   ├── js
+│   ├── style
+│   └── svg
+│
+├── vendor
+│   ├── composer
+│   ├── guzzlehttp
+│   ├── influxdb
+│   ├── psr
+│   ├── ralouphie
+│   └── symfony
+│
+└── vues</pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Détails de la structure du site</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fichier / Répertoire</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rôle</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>auth.php</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Le contrôleur d&#8217;authentification du site. Il n&#8217;est pas dans le répertoire contrôleur car nous voulons pouvoir directement y accéder avec une URL type "domain.fr/auth.php"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p><code>composer.json</code></p>
+</li>
+<li>
+<p><code>composer.lock</code></p>
+</li>
+<li>
+<p><code>composer.phar</code></p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Des fichiers de configuration de composer installés en local. Composer est un utilitaire de gestion des librirairies de php.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>config.php</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Le fichier de configuration du site : il sera détaillé dans la suite de cette documentation. <a href="#config">Configuration</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>index.php</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Le routeur du site. Page sur laquelle nous tombons par défaut et qui selon la route indiquée en URL choisi le bon contrôleur. <a href="#MVC2">Paradigme MVC2</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p><code>grafana</code></p>
+</li>
+<li>
+<p><code>nodered</code></p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Des liens symboliques vers redirect/&#8230;&#8203; Leur utilité est simplement que nous préférerons des URLs type <code>domaine.fr/grafana</code> plutôt que <code>domaine.fr:3000</code> pour accéder à grafana par exemple.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>controleurs/</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Répertoire regroupant les <em>"contrôleurs"</em> du site (partie du MVC2 qui traite l&#8217;information et met en forme, utilise les modèles pour accéder aux données et les vues pour les afficher). <a href="#MVC2">Paradigme MVC2</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>model/</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Répertoire regroupant les <em>"modèles"</em> du site (partie du MVC2 qui récupère les données, ici requête vers InfluxDB, transmet aux contrôleurs). <a href="#MVC2">Paradigme MVC2</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p><code>redirect/grafana</code></p>
+</li>
+<li>
+<p><code>redirect/nodered</code></p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Des répertoires qui contiennent simplement des fichiers index.php qui redirigent vers grafana et node-red.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>sensible/</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Répertoire contenant tout ce qui est relatif à la sécurité du site (mots de passe). Il est protégé par des règles d&#8217;accès apache (.htpaccess et .htpasswd).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>static</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Contient toutes les ressources du site. Nous y trouvons différents répertoires :</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>img</code> : les images (logo IUT)</p>
+</li>
+<li>
+<p><code>include</code> : les fichiers php inclus dans les autres pages du site (menu, vérification d&#8217;authentification)</p>
+</li>
+<li>
+<p><code>js</code> : les scripts inclus dans les pages du site (actions du menu)</p>
+</li>
+<li>
+<p><code>style</code> : les fichiers CSS</p>
+</li>
+<li>
+<p><code>svg</code> : les fichiers SVG utilisés ans les menus</p>
+</li>
+</ul>
+</div>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>vendor</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Répertoire contenant l&#8217;ensemble des librairies php importées avec Composer.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>vues</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Répertoire regroupant les <em>"vues"</em> du site (partie du MVC2 qui affiche les informations à l&#8217;utilisateur, met en forme les données traitées par le contrôleur) <a href="#MVC2">Paradigme MVC2</a>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="MVC2">2.3. Paradigme MVC2</h3>
+<div class="paragraph">
+<p>Le site est construit avec une structure type MVC2 (Routeur, Contrôleur, Modèle, Vue). Cela permet de correctement séparer les différentes couches de responsablilités entre les fichiers.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Nous n&#8217;avons pas employé de méthode de construction orienté objet. La "communication" entre les strats du modèle se fait donc soit par des <strong>fonctions</strong> soit avec des <strong>include/require</strong>
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="UML/rendu/ParadigmeMVC.png" alt="ParadigmeMVC">
+</div>
+<div class="title">Figure 2. Diagramme de séquence type MVC2</div>
+</div>
+<div class="paragraph">
+<p>Comme présenté dans la partie <a href="#structureSite">Structure du site</a>, nous avons réuni les fichiers <code>.php</code> dans des répertoires selon leurs responsabilités.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fonctionalités_du_site">2.4. Fonctionalités du site</h3>
+<div class="paragraph">
+<p>L&#8217;objectif du site est de visualiser les données. La partie PHP sert à naviguer et visualiser un résumé des données. La partie Grafana sert à consulter les données dans le détail.</p>
+</div>
+<div class="paragraph">
+<p>Le site est plutot petit, il n&#8217;y a pas beaucoup de voies de navigation. Sur le SNI ci-dessous nous pouvons voir se démarquer 3 grandes parties :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>la phase d&#8217;authentification : <a href="#auth">L&#8217;authentification</a></p>
+</li>
+<li>
+<p>la phase de navigation : <a href="#menus">Les Menus</a></p>
+</li>
+<li>
+<p>la phase de paramétrage : <a href="#param">Les paramètres</a></p>
+</li>
+</ul>
+</div>
+<div class="imageblock text-"center 500">
+<div class="content">
+<img src="UML/SNI.png" alt="SNI">
+</div>
+<div class="title">Figure 3. Schéma Navigationnel d&#8217;Interface du site</div>
+</div>
+<div class="sect3">
+<h4 id="auth">2.4.1. L&#8217;authentification</h4>
+<div class="paragraph">
+<p>Ici, le but est de vérifier si un utilisateur peut ou non accéder aux pages du site, dans l&#8217;optique de garder confidentielles les informations affichées.</p>
+</div>
+<div class="paragraph">
+<p>Il y a ici deux processus en jeu :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>l&#8217;obtention de privilèges</p>
+</li>
+<li>
+<p>la vérification des privilèges</p>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="_lobtention_de_privilèges">2.4.1.1. L&#8217;obtention de privilèges</h5>
+<div class="paragraph">
+<p>L&#8217;obtention des privilèges se fait via l&#8217;authentification. Le site compare le login et le hash du mot de passe saisis avec ceux stockés dans le fichier <code>sensible/.mdp.json</code>. Le hash et la vérification sont faits avec les méthodes php <code>crypt()</code> et <code>hash_equals()</code>. Le salt actuel utilise l&#8217;algorithme blowfish.</p>
+</div>
+<div class="paragraph">
+<p>Pour modifier les mots de passe, voir <a href="#configAuth">Configurer l&#8217;authentification</a>.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="UML/rendu/authentification.png" alt="authentification">
+</div>
+<div class="title">Figure 4. Diagramme de séquence du processus d&#8217;authentification</div>
+</div>
+<div class="paragraph">
+<p>Nous vérifions si l&#8217;utilisateur est déja connecté. Si oui, nous le redirigeons directement vers les menus. Si non, nous lui envoyons un formulaire d&#8217;authentification. Il le remplit, nous hashons le mot de passe et vérifions la correspondance avec ceux enregistrés. Tant que l&#8217;authentification échoue, le formulaire est renvoyé avec un message d&#8217;erreur. Quand l&#8217;authentification réussit, le site enregistre le login dans <code>$_SESSION['log']</code> ce qui équivaut à donner le statut "connecté". Enfin nous le redirigeons vers la page des menus. <a href="#menus">Les Menus</a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="verifProvileges">2.4.1.2. La vérivication des privilèges</h5>
+<div class="paragraph">
+<p>Cette opération doit être faite pour chaque page du site (hormis la page d&#8217;identification). Pour cela un petit morceau de code est inclus au début de chaque fichier <code>.php</code>. Ce morceau de code se trouve dans <code>/static/include/authCheck.php</code> et est intégré avec la fonction php <code>requier_once()</code>.</p>
+</div>
+<div class="paragraph">
+<p>Pour savoir si un utilisateur est connecté nous vérifions sa session. Si <code>$_SESSION['log']</code> contient bien un login, alors il est connecté.</p>
+</div>
+<div class="paragraph">
+<p>S&#8217;il n&#8217;est pas connecté, il sera alors redirigé vers la page de connexion.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="menus">2.4.2. Les Menus</h4>
+<div class="paragraph">
+<p>Il s&#8217;agit ici de la partie la plus importante du site. Sa complexité vient du fait que les menus peuvent être affichés sous deux formes différentes : images et tableaux (voir <a href="#param">Les paramètres</a> pour plus de détails). Mais dans le principe, peu importe le mode, nous voulons choisir un bâtiment, puis un étage de ce bâtiment et enfin une salle de cet étage pour finalement être redirigé vers la page grafana de cette salle.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="UML/rendu/menu.png" alt="menu">
+</div>
+<div class="title">Figure 5. Diagramme de séquence d&#8217;affichage d&#8217;un menu</div>
+</div>
+<div class="paragraph">
+<p>Dans le diagramme ci-dessus, l&#8217;utilisateur demande une URL qui passe 3 paramètres <code>route=menu</code>, <code>bat=X</code> et <code>etg=Y</code>. Ils signifient respectivement "nous voulons le menu M", "nous nous plaçons dans le bâtiment X" et "nous voulons l&#8217;étage Y" de ce bâtiment. Si <code>etg</code> n&#8217;est pas précisé alors le bâtiment sera affiché. Et si <code>bat</code> n&#8217;est pas précisé alors tout l&#8217;IUT sera affiché.<br>
+L&#8217;information du mode de menu souhaité est passé via cookie (voir <a href="#cookies">Gestion des cookies</a>).</p>
+</div>
+<div class="paragraph">
+<p>Le routeur redirige vers le <code>controleurMenu</code> qui récupère les données et choisi le bon contrôleur selon le mode : <code>controleurTab</code> ou <code>controleurSVG</code>. Le contrôleur choisi, génère alors le contenu de la page (va chercher les SVG si nécessaire). Le contrôleur va alors insérer les données dans la vue qui lui correspond : <code>VueTab</code> ou <code>VueSVG</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="param">2.4.3. Les paramètres</h4>
+<div class="paragraph">
+<p>Afin de rendre l&#8217;expérience plus agréable à l&#8217;utilisateur, nous lui laissons le choix du "mode de navigation" ainsi que du "thème d&#8217;affichage". Ces choix sont faits dans la page de paramètres via un formulaire.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/formParam.png" alt="formParam" width="500">
+</div>
+<div class="title">Figure 6. Formulaire de paramètres</div>
+</div>
+<div class="paragraph">
+<p>Ici, pas basoin de diagramme de séquence. L&#8217;utilisateur reçoit un formulaire pré-rempli avec ses paramètres actuels, il les modifie et soumet le formulaire. Nous parlons ici de paramètres qui s&#8217;appliquent à tout le site (navigation et style). De plus, nous voulions que ces paramètres soient conservés entre les visites. Les valeurs sont donc stockées sous forme de cookies (voir <a href="#cookies">Gestion des cookies</a>)</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/tousModes.png" alt="tousModes" width="500">
+</div>
+<div class="title">Figure 7. Vue regroupant tous les modes dans tous les thèmes d&#8217;affichage</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="config">3. Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Nous avons essayé de rendre le site facilement configurable et ce, par deux moyens. Un fichier de configuration central <code>config.php</code> qui regroupe la plupart des propriétés du site. Et un dossier <code>/sensible</code> protégé qui contient le nécessaire pour gérer les connexions au site.</p>
+</div>
+<div class="sect2">
+<h3 id="configFile">3.1. Le fichier config.php</h3>
+<div class="paragraph">
+<p>Le fichier de configuration est un fichier php situé à la racine du site. Il est protégé par l&#8217;authentification (voir <a href="#verifProvileges">La vérivication des privilèges</a>). Il contient des déclarations de variables utilisées dans tout le reste du site. Il est requis dans les autres fichiers du site : <code>require_once('config.php')</code>.</p>
+</div>
+<div class="paragraph">
+<p>Nous alons détailler toutes ces variables, à quoi elles servent, et comment les modifier. Pour structurer le propos, nous allons les regrouper selon des groupes d&#8217;usage.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Les informations relatives à la base Influx &#8594; <a href="#infosInflux">Informations sur InfluxDB</a></p>
+</li>
+<li>
+<p>Les informations relatives au domaine URL &#8594; <a href="#infosDomaine">Stockage des d&#8217;URL</a></p>
+</li>
+<li>
+<p>Les informations de couleurs pour les thèmes &#8594; <a href="#theme">Mise en place des couleurs de thème</a></p>
+</li>
+<li>
+<p>Les informations relatives aux routes de navigation sur le site &#8594; <a href="#navig">Informations de navigation/routes</a></p>
+</li>
+<li>
+<p>Les propriétés gestion des cookies &#8594; <a href="#cookies">Gestion des cookies</a></p>
+</li>
+<li>
+<p>La déclaration de la structure des menus &#8594; <a href="#infoMenu">Construction des menus</a></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Les extraits de code donnés ci-après reflètent le fichier de config dans son état au moment de la rédaction de ce document. Si des changements sont appliqués, nous recommandons de modifier une copie de ce document pour y indiquer les modifications apportés.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+Nous recommandons également de faire une copie de sauvegarde de ce fichier avant toute modification.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="infosInflux">3.1.1. Informations sur InfluxDB</h4>
+<div class="paragraph">
+<p>Ici, nous indiquons les informations permettant de nous connecter à InfluxDB :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>l&#8217;adresse hôte : <code>dbHost</code></p>
+</li>
+<li>
+<p>le numéro de port : <code>dbPort</code></p>
+</li>
+<li>
+<p>le nom de la base : <code>dbName</code></p>
+</li>
+<li>
+<p>le nom d&#8217;utilisateur : <code>dbUsername</code></p>
+</li>
+<li>
+<p>le mot de passe : <code>dbPapassword</code></p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Déclarations des variables InfluxDB</div>
+<div class="content">
+<pre class="highlight"><code class="language-PHP" data-lang="PHP">$dbName = 'CaptElec';
+$dbPort = 8086;
+$dbHost = '127.0.0.1';
+$dbUsername = '******';
+$dbPapassword = '******';</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="infosDomaine">3.1.2. Stockage des d&#8217;URL</h4>
+<div class="paragraph">
+<p>Ici, il s&#8217;agit principalement de processus automatiques qui stockent des valeurs permettant de construire les liens de navigation. Nous y trouvons également une variable contenant le lien à remplir pour accéder à la page grafana d&#8217;une salle.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+Nous recommandons de modifier ces variables avec beaucoup de précaution, car elles sont utilisées dans la création de tous les liens de navigation interne.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">Déclaration des variables d&#8217;URL</div>
+<div class="content">
+<pre class="highlight"><code class="language-PHP" data-lang="PHP">$currentURLRoute = (isset($_SERVER['HTTPS']) &amp;&amp; $_SERVER['HTTPS'] === 'on') ? 'https://' : 'http://';
+$currentURLRoute .= $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+$rootURL = str_replace(['index', 'auth', '.php/'], '', explode('?', $currentURLRoute)[0]);
+$rootURL = str_replace(['.php/', '.php'], '', $rootURL);
+$grafanaRoomPage = 'http://captelec.iut-blagnac.fr:3000/d/Z1v-Sk57k/consulter-une-salle?orgId=1&amp;refresh=10s&amp;var-Salle=';</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="theme">3.1.3. Mise en place des couleurs de thème</h4>
+<div class="paragraph">
+<p>Ici, nous déclarons une structure de données qui permet de définir les thèmes disponibles sur le site. Cette structure est un tableau associatif qui prend comme clé le nom du thème et pour valeur un autre tableau qui associe les propriétés graphiques avec la valeur souhaitée.</p>
+</div>
+<div class="listingblock">
+<div class="title">Exemple de déclaration de thème</div>
+<div class="content">
+<pre class="highlight"><code class="language-PHP" data-lang="PHP">$themes = [
+    '&lt;nomTheme1&gt;' =&gt; [
+        '&lt;propriété1&gt;' =&gt; '&lt;val1&gt;',
+        '&lt;propriété2&gt;' =&gt; '&lt;val2&gt;',
+        ...
+    ],
+    '&lt;nomTheme2&gt;' =&gt; [
+        '&lt;propriété1&gt;' =&gt; '&lt;val1&gt;',
+        '&lt;propriété2&gt;' =&gt; '&lt;val2&gt;',
+        ...
+    ],
+    ...
+];</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Cette structure a plusieurs niveaux de profondeur. Dans le listing qui suit, nous donnerons donc les propriétés comme suit <code>['X']['Y']['Z']</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Propriété</th>
+<th class="tableblock halign-left valign-top">Signification</th>
+<th class="tableblock halign-left valign-top">Valeur possible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>['fg']</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Couleur du texte sur la page</p></td>
+<td class="tableblock halign-left valign-top" rowspan="12"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Code couleur hexa (#000 ou #000000)</p>
+</li>
+<li>
+<p>nom de couleur connu par CSS (white, red, gold, teal, &#8230;&#8203;)</p>
+</li>
+<li>
+<p>fonction de couleur css (rgb(x, y, z) ou rgba(x, y, z, a))</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>['bg']</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Couleur de fond par défaut de la page</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>['border']</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Couleur de bordure des éléments de la page (lignes de tableau)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>['headerBg']</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Couleur de fond de l&#8217;en-tête de la page</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>['sideMenuBG']</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Couleur de fond du menu latéral dans le mode "images"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>['fill']</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Couleur de remplissage des zones des SVGs (par défaut)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>['fillclickable']</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Couleur de remplissage des zones "cliquables" sur les SVGs</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>['fillhighlight']</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Couleur de remplissage des zones en surbrillance sur les SVGs</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>['stroke']</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Couleur des traits sur les SVGs (par défaut)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>['strokeclickable']</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Couleur des traits des zones "cliquables" sur les SVGs</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>['strokehighlight']</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Couleur des traits des zones en surbrillance des SVGs</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>['highlightTxtBg']</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Couleur de fond des textes en surbrillance (menu ou tableau)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>['gradient']</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Règles autour des gradients de couleurs pour le mode DATA</p></td>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">Pas de valeur fixée, il s&#8217;agit ici de branches.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>['gradient']['max']</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valeurs des composantes RGB pour la valeur maximale du gradient indiquée pour une salle</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>['gradient']['min']</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valeurs des composantes RGB pour la valeur minimale du gradient indiquée pour une salle</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>['gradient']['default']</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Couleur d&#8217;une salle si elle se trouve en dessous du seuil minimale de consommation</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>code hexa</p>
+</li>
+<li>
+<p>nom couleur</p>
+</li>
+<li>
+<p>fonction couleur</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p><code>['gradient']['max']['R']</code></p>
+</li>
+<li>
+<p><code>['gradient']['max']['V']</code></p>
+</li>
+<li>
+<p><code>['gradient']['max']['B']</code></p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Les composantes "rouge", "vert" et "bleu" pour la valeur maximale du gradient indiquée pour une salle</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">chaine de caractères représentant un entier entre 0 et 255 compris</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p><code>['gradient']['min']['R']</code></p>
+</li>
+<li>
+<p><code>['gradient']['min']['V']</code></p>
+</li>
+<li>
+<p><code>['gradient']['min']['B']</code></p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Les composantes "rouge", "vert" et "bleu" pour la valeur maximale du gradient indiquée pour une salle</p></td>
+</tr>
+</tbody>
+</table>
+<div class="listingblock">
+<div class="title">Code actuel (3 themes)</div>
+<div class="content">
+<pre class="highlight"><code class="language-PHP" data-lang="PHP">$themes = [
+    "Clair-bleu" =&gt; [
+        'bg' =&gt; '#c0d3ff',
+        'fg' =&gt; '#1731e9',
+        'border' =&gt; '#0000f7',
+        'headerBg' =&gt; '#31a2ea',
+        'sideMenuBG' =&gt; '#bec6f7',
+        'fill' =&gt; 'rgb(242, 215, 5)',
+        'stroke' =&gt; 'rgb(180, 82, 0)',
+        'strokehighlight' =&gt; 'rgb(50, 0, 0)',
+        'fillclickable' =&gt; 'rgb(242, 215, 5)',
+        'fillhighlight' =&gt; 'rgb(255, 41, 41)',
+        'strokeclickable' =&gt; 'rgb(180, 82, 0)',
+        'highlightTxtBg' =&gt; 'rgba(0, 33, 255, 0.15)',
+        'gradient' =&gt; [
+            "min" =&gt; [
+                'R' =&gt; "0",
+                'V' =&gt; "255",
+                'B' =&gt; "0",
+            ],
+            "max" =&gt; [
+                'R' =&gt; "255",
+                'V' =&gt; "0",
+                'B' =&gt; "0",
+            ],
+            "default" =&gt; "rgb(50, 50, 50)"
+        ]
+    ],
+    "Sombre" =&gt; [
+        'bg' =&gt; '#111217',
+        'fg' =&gt; '#ccccdc',
+        'headerBg' =&gt; '#0a0b0d',
+        'sideMenuBG' =&gt; 'black',
+        'border' =&gt; 'whitesmoke',
+        'stroke' =&gt; 'rgb(0, 26, 255)',
+        'fill' =&gt; 'rgb(183, 232, 247)',
+        'strokehighlight' =&gt; 'rgb(56, 0, 102)',
+        'strokeclickable' =&gt; 'rgb(0, 26, 255)',
+        'fillclickable' =&gt; 'rgb(183, 232, 247)',
+        'fillhighlight' =&gt; 'rgb(247, 156, 239)',
+        'highlightTxtBg' =&gt; 'rgba(255, 255, 255, 0.12)',
+        'gradient' =&gt; [
+            "min" =&gt; [
+                'R' =&gt; "0",
+                'V' =&gt; "255",
+                'B' =&gt; "0",
+            ],
+            "max" =&gt; [
+                'R' =&gt; "255",
+                'V' =&gt; "0",
+                'B' =&gt; "0",
+            ],
+            "default" =&gt; "rgb(250, 250, 250)"
+        ]
+    ],
+    "Matrix-flat" =&gt; [
+        'fg' =&gt; 'lime',
+        'bg' =&gt; 'black',
+        'stroke' =&gt; 'lime',
+        'border' =&gt; 'lime',
+        'headerBg' =&gt; 'black',
+        'sideMenuBG' =&gt; 'black',
+        'fill' =&gt; 'rgb(0, 0, 0)',
+        'strokeclickable' =&gt; 'lime',
+        'strokehighlight' =&gt; 'lime',
+        'fillhighlight' =&gt; 'darkgreen',
+        'fillclickable' =&gt; 'rgb(0, 0, 0)',
+        'highlightTxtBg' =&gt; 'rgba(0, 255, 0, 0.12)',
+        'gradient' =&gt; [
+            "min" =&gt; [
+                'R' =&gt; "0",
+                'V' =&gt; "255",
+                'B' =&gt; "0",
+            ],
+            "max" =&gt; [
+                'R' =&gt; "255",
+                'V' =&gt; "0",
+                'B' =&gt; "0",
+            ],
+            "default" =&gt; "rgba(0, 0, 0, 0)"
+        ]
+    ]
+];</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="navig">3.1.4. Informations de navigation/routes</h4>
+<div class="paragraph">
+<p>Il est ici question de gérer les routes existantes, les liens de navigation et les noms des champs d&#8217;URL.</p>
+</div>
+<div class="listingblock">
+<div class="title">Déclaration des variables de navigation</div>
+<div class="content">
+<pre class="highlight"><code class="language-PHP" data-lang="PHP">$urlAttr = [];
+$urlAttr['atRoute'] = 'route'; //contient le nom de la page demandée
+$urlAttr['atBatiment'] = 'bat'; //contient le batiment demandé
+$urlAttr['atEtage'] = 'etg'; //contient l'étage demandé
+
+$routes = [];
+$routes['rtSett'] = 'sett'; //contient la chaine identifiant la route vers la page de settings
+$routes['rtMenu'] = 'menu'; //contient la chaine identifiant la route vers la page des menus
+$routes['rtMode'] = 'mode'; //contient la chaine identifiant la route vers les modeles
+$routes['rtDeco'] = 'deco'; //contient la chaine identifiant la route vers la page de déconnexion
+
+$navLinks = '"btNavig" : "'.$rootURL.'index.php/?route='.$routes['rtMenu'].'",';
+$navLinks .= '"btParam" : "'.$rootURL.'index.php/?route='.$routes['rtSett'].'",';
+$navLinks .= '"btDeco" : "'.$rootURL.'index.php/?route='.$routes['rtDeco'].'",';</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Nous avons trois variables :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$urlAttr</code> la liste associative des champs d&#8217;URL que le site peut atteindre. Nous déclarons ainsi :</p>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>exemple : domain.fr/index.php?truc=x &#8594; $urlAttr['champTruc'] = truc</p>
+</div>
+<div class="paragraph">
+<p>Nous donnons en clé le nom que nous utiliserons dans le code, et en valeur la chaîne qui représentera le champs dans les URLs.</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p><code>$routes</code> la liste associative des valeus possibles pour le champs d&#8217;URL <code>$urlAttr['atRoute']</code>. Comme pour <code>$urlAttr</code> nous donnons comme clé le nom de constante utilisé dans le code et comme valeur, la chaine qui sera passé à l&#8217;attribut.</p>
+</li>
+<li>
+<p><code>$navLinks</code> une chaine de caractères format JSON qui donne les liens pour les boutons du menu.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="cookies">3.1.5. Gestion des cookies</h4>
+<div class="paragraph">
+<p>Le site utilise des cookies pour conserver des paramètres au fil des connexions.</p>
+</div>
+<div class="paragraph">
+<p>Nous définissons :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$cookieNames</code> la liste associative qui prend comme clé le nom du cookie et comme valeur un autre tableau associatif qui associe des noms à des valeurs avec <code>default</code> clé ayant pour valeur une autre clé de ce même tableau.</p>
+</li>
+<li>
+<p><code>$cookieLifeTime</code> la durée de vie de nos cookies en seconde.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">définition des variables de gestion des cookies</div>
+<div class="content">
+<pre class="highlight"><code class="language-php" data-lang="php">$cookieNames = [];
+$cookieNames['menuDisplay'] = [
+    'default' =&gt; 'tab',
+    'tab' =&gt; 'displayTab',
+    'svg' =&gt; 'displaySVG'
+];
+$cookieNames['themUsed'] = ['default' =&gt; array_key_first($themes)];
+foreach ($themes as $key =&gt; $value) {
+    $cookieNames['themUsed'][$key] = $key;
+}
+
+$cookieLifeTime = 3600*24*30;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="infoMenu">3.1.6. Construction des menus</h4>
+<div class="paragraph">
+<p>Enfin nous devons indiquer au site comment construire ses menus.</p>
+</div>
+<div class="paragraph">
+<p>D&#8217;abord nous définissons <code>$svgIUT</code> qui contient le nom du svg représentant l&#8217;IUT soit la racine de nos menus.</p>
+</div>
+<div class="paragraph">
+<p>Puis nous définissons <code>$menu</code> dont nous donnons le modèle ci-dessous :</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="title">légende du modèle</div>
+<div class="paragraph">
+<p>Les éléments entre chevrons (&lt;element&gt;) sont des champs auxquels nous donnerons une valeur et les éléments entre crochets ([element]) sont des valeurs constantes.<br>
+Nous pouvons donc traduire une structure php telle <strong><code>$a = [$X&#8658;[$Y&#8658;1, $Z&#8658;2]];</code></strong>
+en une représentation arborecente comme ci-dessous.</p>
+</div>
+<div class="literalblock">
+<div class="title">Exemple de traduction aborecente</div>
+<div class="content">
+<pre>$a
+└── &lt;cleX&gt;
+    ├── &lt;cleY&gt;
+    │   └── [1]
+    └── &lt;cleZ&gt;
+        └── [2]</pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="literalblock">
+<div class="title">Modèle de la variable menu</div>
+<div class="content">
+<pre>$menu
+├── &lt;labelBatiement&gt;
+│   ├── ["id"]
+│   │   └── &lt;idBatSurSVG&gt;
+│   ├── ["image"]
+│   │   └── &lt;nomFichierSVG&gt;
+│   ├── ["requete"]
+│   │   └── &lt;regexQualifiantTouesLesSallesDuBatiment&gt;
+│   └── ["etages"]
+│        ├── &lt;labelEtage&gt;
+│        │   ├── ["id"]
+│        │   │   └── &lt;idEtageSurSVG&gt;
+│        │   ├── ["image"]
+│        │   │   └── &lt;nomFichierSVG&gt;
+│        │   ├── ["requete"]
+│        │   │   └── &lt;regexQualifiantTouesLesSallesDeLetage&gt;
+│        │   └── ["salles"]
+│        │       ├── &lt;idSalleSurSVG&gt;
+│        │       │   ├── ["nom"]
+│        │       │   │   └── &lt;labelSalle&gt;
+│        │       │   └── ["range"]
+│        │       │       ├── ["min"]
+│        │       │       │   └── &lt;valeurMinimaleDeGradient&gt;
+│        │       │       └── ["max"]
+│        │       │           └── &lt;valeurMaximaleDeGradient&gt;
+│        │       └── ...
+│        └── ...
+└── ...</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">code de déclaration de $menu</div>
+<div class="content">
+<pre class="highlight"><code class="language-php" data-lang="php">$menu = [
+    'Batiment_A-admin' =&gt; 'WIP',
+    'Batiment_A-bibli' =&gt; 'WIP',
+    'Batiment_C-locTech' =&gt; 'WIP',
+    'Batiment_E' =&gt; 'WIP',
+    'Maison_Intelligente' =&gt; 'WIP',
+
+    'Batiment_B' =&gt; [
+        'id' =&gt; 'bat_B',
+        'image' =&gt; 'bat_B.svg',
+        'requete' =&gt; '/B_[0-9abc]*/',
+
+        'etages' =&gt; [
+            'Rez de chaussée' =&gt; [
+                'id' =&gt; 'rdc',
+                'image' =&gt; 'rdc_B.svg',
+                'requete' =&gt; '/B_0[0-9abc]*/',
+
+                'salles' =&gt; [
+                    'b001' =&gt; ['nom' =&gt; 'B_001', 'WIP' =&gt; true],
+                    'b002' =&gt; ['nom' =&gt; 'B_002', 'WIP' =&gt; true],
+                    'b003' =&gt; ['nom' =&gt; 'B_003', 'WIP' =&gt; true],
+                    'b004' =&gt; ['nom' =&gt; 'B_004', 'WIP' =&gt; true],
+                    'b005' =&gt; ['nom' =&gt; 'B_005', 'WIP' =&gt; true],
+                    'b006' =&gt; ['nom' =&gt; 'B_006', 'WIP' =&gt; true],
+                    'b007' =&gt; ['nom' =&gt; 'B_007', 'range' =&gt; ['min' =&gt; 20, 'max' =&gt; 4000]],
+                    'b008' =&gt; ['nom' =&gt; 'B_008', 'WIP' =&gt; true],
+                    'b009' =&gt; ['nom' =&gt; 'B_009', 'WIP' =&gt; true],
+                    'b010' =&gt; ['nom' =&gt; 'B_010', 'WIP' =&gt; true],
+                    'magasin' =&gt; ['nom' =&gt; 'Magasin', 'WIP' =&gt; true],
+                    'cafet' =&gt; ['nom' =&gt; 'Caféteria', 'WIP' =&gt; true],
+                    'san' =&gt; ['nom' =&gt; 'Sanitaires', 'WIP' =&gt; true],
+                    'rgt' =&gt; ['nom' =&gt; 'Rangement', 'WIP' =&gt; true]
+                ]
+            ],
+            'Premier Etage' =&gt; [
+                'id' =&gt; 'et1',
+                'image' =&gt; 'et1_B.svg',
+                'requete' =&gt; '/B_1[0-9abc]*/',
+
+                'salles' =&gt; [
+                    'b101' =&gt; ['nom' =&gt; 'B_101', 'range' =&gt; ['min' =&gt; 20, 'max' =&gt; 3000]],
+                    'b102' =&gt; ['nom' =&gt; 'B_102', 'range' =&gt; ['min' =&gt; 20, 'max' =&gt; 3000]],
+                    'b103' =&gt; ['nom' =&gt; 'B_103', 'range' =&gt; ['min' =&gt; 20, 'max' =&gt; 3000]],
+                    'b104' =&gt; ['nom' =&gt; 'B_104', 'range' =&gt; ['min' =&gt; 20, 'max' =&gt; 3000]],
+                    'b105' =&gt; ['nom' =&gt; 'B_105', 'range' =&gt; ['min' =&gt; 20, 'max' =&gt; 3000]],
+                    'b106' =&gt; ['nom' =&gt; 'B_106', 'range' =&gt; ['min' =&gt; 20, 'max' =&gt; 3000]],
+                    'b107' =&gt; ['nom' =&gt; 'B_107', 'WIP' =&gt; true],
+                    'b108' =&gt; ['nom' =&gt; 'B_108', 'WIP' =&gt; true],
+                    'b109' =&gt; ['nom' =&gt; 'B_109', 'WIP' =&gt; true],
+                    'b109b' =&gt; ['nom' =&gt; 'B_109b', 'WIP' =&gt; true],
+                    'b110' =&gt; ['nom' =&gt; 'B_110', 'WIP' =&gt; true],
+                    'b111' =&gt; ['nom' =&gt; 'B_111', 'WIP' =&gt; true],
+                    'b112' =&gt; ['nom' =&gt; 'B_112', 'WIP' =&gt; true],
+                    'b112b' =&gt; ['nom' =&gt; 'B_112b', 'WIP' =&gt; true],
+                    'b113' =&gt; ['nom' =&gt; 'B_113', 'WIP' =&gt; true],
+                    'b115' =&gt; ['nom' =&gt; 'B_115', 'WIP' =&gt; true],
+                    'b116a' =&gt; ['nom' =&gt; 'B_116a', 'WIP' =&gt; true],
+                    'b116b' =&gt; ['nom' =&gt; 'B_116b', 'WIP' =&gt; true],
+                    'sousStation' =&gt; ['nom' =&gt; 'Sous-Station', 'WIP' =&gt; true],
+                    'san' =&gt; ['nom' =&gt; 'Sanitaires', 'WIP' =&gt; true],
+                    'rgt' =&gt; ['nom' =&gt; 'Rangement', 'WIP' =&gt; true]
+                ]
+            ],
+            'Second Etage' =&gt; [
+                'id' =&gt; 'et2',
+                'image' =&gt; 'et2_B.svg',
+                'requete' =&gt; '/B_2[0-9abc]*/',
+
+                'salles' =&gt; [
+                    'b201' =&gt; ['nom' =&gt; 'B_201', 'WIP' =&gt; true],
+                    'b202' =&gt; ['nom' =&gt; 'B_202', 'WIP' =&gt; true],
+                    'b203' =&gt; ['nom' =&gt; 'B_203', 'WIP' =&gt; true],
+                    'b204' =&gt; ['nom' =&gt; 'B_204', 'WIP' =&gt; true],
+                    'b205' =&gt; ['nom' =&gt; 'B_205', 'WIP' =&gt; true],
+                    'b206' =&gt; ['nom' =&gt; 'B_206', 'WIP' =&gt; true],
+                    'b207' =&gt; ['nom' =&gt; 'B_207', 'WIP' =&gt; true],
+                    'b208' =&gt; ['nom' =&gt; 'B_208', 'WIP' =&gt; true],
+                    'b209' =&gt; ['nom' =&gt; 'B_209', 'WIP' =&gt; true],
+                    'b210' =&gt; ['nom' =&gt; 'B_210', 'WIP' =&gt; true],
+                    'b211' =&gt; ['nom' =&gt; 'B_211', 'WIP' =&gt; true],
+                    'b212a' =&gt; ['nom' =&gt; 'B_212a', 'WIP' =&gt; true],
+                    'b212b' =&gt; ['nom' =&gt; 'B_212b', 'WIP' =&gt; true],
+                    'b213' =&gt; ['nom' =&gt; 'B_213', 'WIP' =&gt; true],
+                    'b214' =&gt; ['nom' =&gt; 'B_214', 'WIP' =&gt; true],
+                    'b215' =&gt; ['nom' =&gt; 'B_215', 'WIP' =&gt; true],
+                    'b216' =&gt; ['nom' =&gt; 'B_216', 'WIP' =&gt; true],
+                    'b219' =&gt; ['nom' =&gt; 'B_219', 'range' =&gt; ['min' =&gt; 20, 'max' =&gt; 5000]],
+                    'b220' =&gt; ['nom' =&gt; 'B_220', 'WIP' =&gt; true],
+                    'b221' =&gt; ['nom' =&gt; 'B_221', 'WIP' =&gt; true],
+                    'b222' =&gt; ['nom' =&gt; 'B_222', 'WIP' =&gt; true],
+                    'b223' =&gt; ['nom' =&gt; 'B_223', 'WIP' =&gt; true],
+                    'b224' =&gt; ['nom' =&gt; 'B_224', 'WIP' =&gt; true],
+                    'b225' =&gt; ['nom' =&gt; 'B_225', 'WIP' =&gt; true],
+                    'b226' =&gt; ['nom' =&gt; 'B_226', 'WIP' =&gt; true],
+                    'b227' =&gt; ['nom' =&gt; 'B_227', 'WIP' =&gt; true],
+                    'b228a' =&gt; ['nom' =&gt; 'B_228a', 'WIP' =&gt; true],
+                    'b228b' =&gt; ['nom' =&gt; 'B_228b', 'WIP' =&gt; true],
+                    'b228c' =&gt; ['nom' =&gt; 'B_228c', 'WIP' =&gt; true],
+                    'b229' =&gt; ['nom' =&gt; 'B_229', 'WIP' =&gt; true],
+                    'b230' =&gt; ['nom' =&gt; 'B_230', 'WIP' =&gt; true],
+                    'b231' =&gt; ['nom' =&gt; 'B_231', 'WIP' =&gt; true],
+                    'b232' =&gt; ['nom' =&gt; 'B_232', 'WIP' =&gt; true],
+                    'b233' =&gt; ['nom' =&gt; 'B_233', 'WIP' =&gt; true],
+                    'b234' =&gt; ['nom' =&gt; 'B_234', 'WIP' =&gt; true],
+                    'b235a' =&gt; ['nom' =&gt; 'B_235', 'WIP' =&gt; true],
+                    'b235b' =&gt; ['nom' =&gt; 'B_235', 'WIP' =&gt; true],
+                    'san' =&gt; ['nom' =&gt; 'Sanitaires', 'WIP' =&gt; true],
+                    'rgt' =&gt; ['nom' =&gt; 'Rangement', 'WIP' =&gt; true],
+                    'balcon' =&gt; ['nom' =&gt; 'Balcon', 'WIP' =&gt; true],
+                ]
+            ]
+        ]
+    ],
+];</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Nous pouvons remarquer la mention <code>"WIP" &#8658; true</code> par endroits dans le code ci-dessus. Cette mention sert à indiquer qu&#8217;une entrée est toujours "en construction". L&#8217;objectif est de pouvoir créer toutes les entrées possibles pour un niveau mais sans nécessairement que celles-ci soient prises en compte.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="configAuth">3.2. Configurer l&#8217;authentification</h3>
+<div class="paragraph">
+<p>Le dossier <code>/sensible</code> contient plusieurs fichiers :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>.htaccess</code> &#8594; un fichier contenant les règles d&#8217;accès au répertoire <code>/sensible`</code></p>
+</li>
+<li>
+<p><code>.htpasswd</code>&#8594; un fichier contenant les login/hash d&#8217;accès au répertoire <code>/sensible`</code></p>
+</li>
+<li>
+<p><code>.salt</code> &#8594; un fichier contenant le "grain de sel" du site qui permet de rendre les hash vraiment spécifiques au site</p>
+</li>
+<li>
+<p><code>.mdp.json</code> &#8594; un fichier json contenant un dictionaire tel :</p>
+<div class="literalblock">
+<div class="content">
+<pre>{
+    "login1" : "hash1",
+    "login2" : "hash2",
+    ...
+}</pre>
+</div>
+</div>
+</li>
+<li>
+<p><code>genHash.php</code> &#8594; une petite page qui contient un formulaire permettant de générer une nouvelle ligne pour <code>.mdp.json</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Nou pouvons ajouter de nouveaux utilisateurs au site en ajoutant une ligne à .mdp.json. Si nous changeons le salt alors tous les hash devrons êtres regénérés.<br>
+Pour salt et hash voir <a href="https://www.php.net/manual/fr/function.crypt.php" class="bare">https://www.php.net/manual/fr/function.crypt.php</a></p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/genHash.png" alt="genHash" width="500">
+</div>
+<div class="title">Figure 8. Page de génération de hash pour nouveau login (genHash.php)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mise_en_place_du_serveur">4. Mise en place du serveur</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_introduction_2">4.1. Introduction</h3>
+<div class="paragraph">
+<p>Nous travaillons sur une machine <code>Ubuntu Server LTS 20.04</code> dont nous ne détaillerons pas l&#8217;installation ici. Vous pouvez vous reporter au lien suivant : <a href="https://www.linuxtechi.com/ubuntu-20-04-lts-server-installation-guide/" class="bare">https://www.linuxtechi.com/ubuntu-20-04-lts-server-installation-guide/</a>.</p>
+</div>
+<div class="paragraph">
+<p>Pour les tests, toutes les URLs sont données comme locales (127.0.0.1). Bien évidemment, il faut remplacer cela par l&#8217;adresse de votre site (serveur).</p>
+</div>
+<div class="paragraph">
+<p>Nous allons effectuer beaucoup d&#8217;installations donc nous commençons par mettre à jour les dépots et applications déjà présentes.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo apt update
+sudo apt upgrade</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installation_de_nodered">4.2. Installation de NodeRed</h3>
+<div class="sect3">
+<h4 id="_installation">4.2.1. Installation</h4>
+<div class="sect4">
+<h5 id="_node">4.2.1.1. Node</h5>
+<div class="paragraph">
+<p>Nous commençons par installer Node.js dans sa version 14.x comme recommandé ici <em><a href="https://nodered.org/docs/faq/node-versions" class="bare">https://nodered.org/docs/faq/node-versions</a></em></p>
+</div>
+<div class="literalblock">
+<div class="title">Installation de Node.js 14.x</div>
+<div class="content">
+<pre>curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_node_red_2">4.2.1.2. Node-RED</h5>
+<div class="literalblock">
+<div class="title">Installation de Node-RED via npm (gestionnaire de packages de Node)</div>
+<div class="content">
+<pre>sudo npm install -g --unsafe-perm node-red</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Nous pouvons vérifier que tout soit bien installé en :</p>
+</div>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p>&#10003; regardant la version de Node.js</p>
+</li>
+<li>
+<p>&#10003; regardant la version de npm</p>
+</li>
+<li>
+<p>&#10003; démarrant le service Node-RED</p>
+</li>
+</ul>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/verifInstallNode.png" alt="verifInstallNode">
+</div>
+<div class="title">Figure 9. Vérifications de la bonne installation de Node</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Avec le service démarré nous pouvons dès à présent ouvrir Node-RED dans le navigateur à l&#8217;url <em><a href="http://127.0.0.1:1880/" class="bare">http://127.0.0.1:1880/</a></em>.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+CTRL+C pour arrêter le service.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_node_red_admin_et_configuration_user">4.2.1.3. Node-RED Admin et Configuration user</h5>
+<div class="paragraph">
+<p>À des fins de sécurité, nous allons maintenant installer l&#8217;outil Node-RED Admin.
+Nous allons également générer le hash de mot de passe pour le compte admin</p>
+</div>
+<div class="literalblock">
+<div class="title">Installation Node-RED Admin</div>
+<div class="content">
+<pre>sudo npm install -g --unsafe-perm node-red-admin
+node-red admin hash-pw</pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+Le login/mdp admin actuel pour NodeRed est admin/admin. Il devra donc être changé lors de la mise en production.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Le hash : <em>$2b$08$VG0y4gKFB50Quai75WOfzOs7fjVVRCO5d3W1sYDWsdvalbU41ZqoK</em>
+</td>
+</tr>
+</table>
+</div>
+<div id="trouverFichierSettings" class="paragraph">
+<p>Nous plaçons ce hash dans le fichier de configuration de NodeRed (settings file dans la capture précédente) <em>/home/user/.node-red/settings.js</em> . Nous décommentons la section suivante, et nous la modifions avec les données qui nous intéressent :</p>
+</div>
+<div class="listingblock">
+<div class="title">Fichier settings.js</div>
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">/*******************************************************************************
+ * Security
+ *  - adminAuth
+ *  - https
+ *  - httpsRefreshInterval
+ *  - requireHttps
+ *  - httpNodeAuth
+ *  - httpStaticAuth
+ ******************************************************************************/
+
+    /** To password protect the Node-RED editor and admin API, the following
+     * property can be used. See http://nodered.org/docs/security.html for details.
+     */
+    adminAuth: {
+        type: "credentials",
+        users: [
+        {
+                username: "admin",
+                password: "$2b$08$VG0y4gKFB50Quai75WOfzOs7fjVVRCO5d3W1sYDWsdvalbU41ZqoK",
+                permissions: "*"
+        },
+        {
+                username: "guest",
+                password: "$2b$08$1z5p7eB9qn037dN4r0QrouPhwpV0juvcYBMZo26KzHxKklRcinnou",
+                permissions: "read"
+        }]
+    },</code></pre>
+</div>
+</div>
+<div class="ulist NOTE">
+<ul class="NOTE">
+<li>
+<p>Nous avons bien notre utilisateur admin.</p>
+</li>
+<li>
+<p>Nous avons également ajouter un utilisateur guest (mdp: hello) avec les droits de lecture uniquement</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Maintenant, si nous redémarrons le service nodeRED et que nous l&#8217;ouvrons dans un navigateur (<em><a href="http://127.0.0.1:1880/" class="bare">http://127.0.0.1:1880/</a></em>), nous sommes maintenant accueilis par une page de connexion.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_packet_node_red_pour_influxdb">4.2.1.4. Packet Node-RED pour InfluxDB</h5>
+<div class="paragraph">
+<p>Nous avons node-RED, il est correctement installé et sécurisé avec des users. Toutefois nos chartFlows ne peuvent toujours pas communiquer avec une base influxDB car nous n&#8217;avons pas installé le packet nécessaire.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+Pour réaliser cette commande, il faut se placer à la racine de notre installation Node-RED.<br>
+Ici <em>/home/user/.node-red</em>. Pour trouver le chemin nous pouvons nous servir de settings.js qui se trouve à la racine souhaitée (cf <a href="#trouverFichierSettings">[trouverFichierSettings]</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="literalblock">
+<div class="title">Installation du packet pour la communication influxDB &lt;&#8594; Node-RED</div>
+<div class="content">
+<pre>cd /path/.node-red
+npm install node-red-contrib-influxdb</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_lancer_node_red_au_démarrage">4.2.1.5. Lancer Node-RED au démarrage</h5>
+<div class="paragraph">
+<p>Il faut créer un nouveau fichier systemd nodered.service</p>
+</div>
+<div class="literalblock">
+<div class="title">Création du fichier</div>
+<div class="content">
+<pre>sudo nano /etc/systemd/system/nodered.service</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ensuite nous copions le contenu suivant dans le fichier :</p>
+</div>
+<div class="literalblock">
+<div class="title">Contenu du fichier nodeRed.service</div>
+<div class="content">
+<pre>[Unit]
+Description=Node-RED
+After=syslog.target network.target
+
+[Service]
+ExecStart=/usr/local/bin/node-red --max-old-space-size=128 -v
+Restart=on-failure
+KillSignal=SIGINT
+
+# log output to syslog as 'node-red'
+SyslogIdentifier=node-red
+StandardOutput=syslog
+
+# non-root user to run as
+WorkingDirectory=/home/user/
+User=user
+Group=user
+
+# if using a root user
+#WorkingDirectory=/root/
+#User=root
+#Group=root
+
+[Install]
+WantedBy=multi-user.target</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Il faut penser à remplacer user par le nom d&#8217;utilisateur qui exécute nodeRED ou décommenter la partie root si c&#8217;est root qui l&#8217;exécute.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Il faut maintenant activer le lancement automatique</p>
+</div>
+<div class="literalblock">
+<div class="title">Activation du lancement automatique de NodeRED</div>
+<div class="content">
+<pre>sudo systemctl enable nodered.service</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_sources">4.2.2. Sources</h4>
+<div class="paragraph">
+<p><a href="https://www.arubacloud.com/tutorial/how-to-install-node-red-on-ubuntu-20-04.aspx" class="bare">https://www.arubacloud.com/tutorial/how-to-install-node-red-on-ubuntu-20-04.aspx</a><br>
+<a href="https://nodered.org/docs/getting-started/local" class="bare">https://nodered.org/docs/getting-started/local</a><br>
+<a href="https://github.com/nodesource/distributions/blob/master/README.md#debinstall" class="bare">https://github.com/nodesource/distributions/blob/master/README.md#debinstall</a>
+<a href="https://flows.nodered.org/node/node-red-contrib-influxdb" class="bare">https://flows.nodered.org/node/node-red-contrib-influxdb</a>
+<a href="https://randomnerdtutorials.com/access-node-red-dashboard-anywhere-digital-ocean/" class="bare">https://randomnerdtutorials.com/access-node-red-dashboard-anywhere-digital-ocean/</a></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installation_de_influxdb">4.3. Installation de InfluxDB</h3>
+<div class="paragraph">
+<p>Maintenant que NodeRED est installé nous devons pouvoir stocker les données qu&#8217;il génère, pour cela nous devons installer une base InflucDB.</p>
+</div>
+<div class="sect3">
+<h4 id="_installation_2">4.3.1. Installation</h4>
+<div class="paragraph">
+<p>Avant de procéder à l&#8217;installation, il nous faut ajouter le package InfluxDB</p>
+</div>
+<div class="literalblock">
+<div class="title">Ajout du package influxDB</div>
+<div class="content">
+<pre>wget -qO- https://repos.influxdata.com/influxdb.key | sudo apt-key add -
+source /etc/lsb-release
+echo "deb https://repos.influxdata.com/${DISTRIB_ID,,} ${DISTRIB_CODENAME} stable" | sudo tee /etc/apt/sources.list.d/influxdb.list</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Nous pouvons maintenant procéder à l&#8217;installation. Ici, nous mettons à nouveau à jour les packets apt puisque ils viennent d&#8217;en ajouter.</p>
+</div>
+<div class="literalblock">
+<div class="title">Installation d&#8217;influxDB</div>
+<div class="content">
+<pre>sudo apt-get update
+sudo apt-get install influxdb
+sudo service influxdb start</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Nous finissons par démarrer influxDB pour vérifier sa bonne installation.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configuration">4.3.2. Configuration</h4>
+<div class="paragraph">
+<p>Nous pouvons afficher la configuration d&#8217;influx</p>
+</div>
+<div class="literalblock">
+<div class="title">Configuration influxDB</div>
+<div class="content">
+<pre>influxd -config /etc/influxdb/influxdb.conf</pre>
+</div>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/configInflux.png" alt="configInflux">
+</div>
+<div class="title">Figure 10. Résultats de configuration influxDB</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+Nous pouvons remarquer que le fichier de configuration que nous pourrons modifier se trouve à <em>/etc/influxdb/influxdb.conf</em>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_réseau">4.3.2.1. Réseau</h5>
+<div class="paragraph">
+<p>Par défaut InfluxDB utilise les ports :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TCP 8086 pour la communication client-serveur par l&#8217;API HTTP d&#8217;influxDB</p>
+</li>
+<li>
+<p>TCP 8088 pour les sercvices de backup/restoration RPC</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Nous allons ouvrir ces ports aux connexions extérieures vers InfluxDB.</p>
+</div>
+<div class="literalblock">
+<div class="title">Ouverture du port 8086</div>
+<div class="content">
+<pre>sudo ufw enable
+sudo ufw allow 8086/tcp</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_user_et_base_de_données">4.3.2.2. User et base de données</h5>
+<div class="paragraph">
+<p>Nous allons maintenant nous connecter, créer un nouvel utilisateur et une nouvelle base de données.</p>
+</div>
+<div class="literalblock">
+<div class="title">Création d&#8217;un nouvel utilisateur influxDB</div>
+<div class="content">
+<pre>curl -XPOST "http://localhost:8086/query" \
+
+--data-urlencode "q=CREATE USER admin WITH PASSWORD 'admin' WITH ALL PRIVILEGES"</pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+Ici, nous créons par requête http un nouvel utilisateur admin/admin qui devra être modifié lors de la mise en production.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Nous pouvons maintenant nous connecter avec notre utilisateur fraîchement créé.</p>
+</div>
+<div class="literalblock">
+<div class="title">Connexion à un user InfluxDB</div>
+<div class="content">
+<pre>influx -username 'admin' -password 'admin'</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Nous avons maintenant accès au shell d&#8217;influxDB</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/influxShell.png" alt="influxShell">
+</div>
+<div class="title">Figure 11. Capture shell influxDB</div>
+</div>
+<div class="paragraph">
+<p>Enfin nous pouvons créer une nouvelle base</p>
+</div>
+<div class="literalblock">
+<div class="title">Création d&#8217;une base dans InfluxDB</div>
+<div class="content">
+<pre>CREATE DATABASE CaptElec_sim
+SHOW DATABASES</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_sources_2">4.3.3. Sources</h4>
+<div class="paragraph">
+<p><a href="https://otodiginet.com/database/how-to-install-influxdb-on-ubuntu-20-04-lts/" class="bare">https://otodiginet.com/database/how-to-install-influxdb-on-ubuntu-20-04-lts/</a></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installation_grafana">4.4. Installation Grafana</h3>
+<div class="sect3">
+<h4 id="_installation_3">4.4.1. Installation</h4>
+<div class="paragraph">
+<p>Pour installer Grafana nous allons d&#8217;abord devoir ajouter le package software-properties-common, mais également ajouter la clé GPG de Grafana à apt (sinon nous n&#8217;aurons pas les dernières mises à jour.</p>
+</div>
+<div class="literalblock">
+<div class="title">Ajout de software-properties-common et de la clé GPG grafana</div>
+<div class="content">
+<pre>sudo apt-get install -y gnupg2 curl software-properties-common
+curl https://packages.grafana.com/gpg.key | sudo apt-key add -
+sudo add-apt-repository "deb https://packages.grafana.com/oss/deb stable main"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Nous pouvons maintenant procéder à l&#8217;installation (nous mettons à jour apt puisque nous venons d&#8217;ajouter la clé GPG de grafana).</p>
+</div>
+<div class="literalblock">
+<div class="title">Installation de Grafana</div>
+<div class="content">
+<pre>sudo apt-get update
+sudo apt-get install grafana</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Afin de vérifier que l&#8217;installation est bonne, nous pouvons maintenant lancer le service grafana</p>
+</div>
+<div class="literalblock">
+<div class="title">Démarrage du service Grafana</div>
+<div class="content">
+<pre>sudo systemctl start grafana-server</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="title">Supervision du service grafana</div>
+<div class="content">
+<pre>systemctl status grafana-server.service</pre>
+</div>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/runGrafana.png" alt="runGrafana">
+</div>
+<div class="title">Figure 12. Visualisation du service grafana</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configuration_2">4.4.2. Configuration</h4>
+<div class="sect4">
+<h5 id="_boot">4.4.2.1. Boot</h5>
+<div class="paragraph">
+<p>Pour que grafana se lance au démarage, nous utiliserons la commande suivante</p>
+</div>
+<div class="literalblock">
+<div class="title">Lancement automatique de grafana au boot</div>
+<div class="content">
+<pre>sudo systemctl enable grafana-server</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_réseau_2">4.4.2.2. Réseau</h5>
+<div class="paragraph">
+<p>Par défaut grafana utilise le port 3000. Nous allons l&#8217;ouvrir aux connexions extérieures.</p>
+</div>
+<div class="literalblock">
+<div class="title">Ouverture du port 3000 pour grafana</div>
+<div class="content">
+<pre>sudo ufw enable
+sudo ufw allow 3000/tcp</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_première_connexion">4.4.2.3. Première connexion</h5>
+<div class="paragraph">
+<p>Nous pouvons maintenant ouvrir grafana dans notre navigateur à l&#8217;url suivante <em><a href="http://127.0.0.1:3000/" class="bare">http://127.0.0.1:3000/</a></em>. Nous sommes accuellis par une page de connexion.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/1coGraf.png" alt="1coGraf">
+</div>
+<div class="title">Figure 13. Connexion grafana</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Par défaut grafana crée un compte admin/admin.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Puisqu&#8217;il s&#8217;agit de notre première connexion, il nous est proposé de changer le mot de passe.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/changementmdpgrafana.png" alt="changementmdpgrafana">
+</div>
+<div class="title">Figure 14. Changement mot de passe première connexion Grafana</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Le compte est maintenant admin/motdepasseadmin.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_source_de_données">4.4.2.4. Source de données</h5>
+<div class="paragraph">
+<p>Maintenant, il faut ajouter notre base influxDB comme source de données dans grafana.<br>
+Pour cela il faut aller dans Configuration(engrenage) &gt; Data Sources</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/grafanaDatasource.png" alt="grafanaDatasource" width="500">
+</div>
+<div class="title">Figure 15. Accès aux sources de données</div>
+</div>
+<div class="paragraph">
+<p>Nous choisissons une nouvelle source de données type influxDB</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/choixGrafana.png" alt="choixGrafana" width="500">
+</div>
+<div class="title">Figure 16. Choix nouvelle source de données</div>
+</div>
+<div class="paragraph">
+<p>Maintenant nous pouvons paramétrer cette nouvelle source de données.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/paramDatasource.png" alt="paramDatasource" width="500">
+</div>
+<div class="title">Figure 17. Paramétrage de la source de données</div>
+</div>
+<div class="paragraph">
+<p>Les paramètres sont :</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nom de la source de données dans Grafana. Cela a peu d&#8217;importance, nous laisserons le nom par défaut.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Query Language</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Méthode de requête avec la base (Langage de requete/flux) Nous choisirons InfluxQL qui est le langage de requête d&#8217;influxDB.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP &gt; URL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adresse pour accéder à la base : <em><a href="http://127.0.0.1:8086" class="bare">http://127.0.0.1:8086</a></em>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP &gt; Access</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Point depuis lequel sont faites les requêtes (navigateur/serveur grafana). Dans ce choix, nous retrouvons des enjeux de sécurité et de traitement de multiples sources de données. Nous choisirons le Serveur puisque cela permet de garder la base inaccessible depuis l&#8217;extérieur.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">InfluxDB Details &gt; Access</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Base à laquelle nous accédons lors des requêtes. Le langage de requête permet toutefois de facilement changer de base si nécessaire</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">InfluxDB Details &gt; User</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User utilisé pour faire les requêtes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">InfluxDB Details &gt; Password</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mot de passe du "User" précédent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">InfluxDB Details &gt; HTTP Method</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Méthode de requêtes (POST/GET) GET est limité en nombre de caractères nous préfèrons donc utiliser POST</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Enfin nous pouvons cliquer sur <em>Sava &amp; test</em> si tout est vert nous avons fini.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_sources_3">4.4.3. Sources</h4>
+<div class="paragraph">
+<p><a href="https://linuxways.net/ubuntu/how-to-install-grafana-on-ubuntu-20-04/" class="bare">https://linuxways.net/ubuntu/how-to-install-grafana-on-ubuntu-20-04/</a>
+<a href="https://computingforgeeks.com/how-to-install-grafana-on-ubuntu-debian/" class="bare">https://computingforgeeks.com/how-to-install-grafana-on-ubuntu-debian/</a>
+<a href="https://grafana.com/docs/grafana/v7.5/datasources/influxdb/" class="bare">https://grafana.com/docs/grafana/v7.5/datasources/influxdb/</a></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installation_apache_et_php">4.5. Installation Apache et PHP</h3>
+<div class="paragraph">
+<p>Maintenant que nous avons InfluxDB, Grafana, Node-RED il nous reste à installer apache et php pour réaliser certaines parties de notre tableau de bord.</p>
+</div>
+<div class="sect3">
+<h4 id="_instalation">4.5.1. Instalation</h4>
+<div class="sect4">
+<h5 id="_apache_2">4.5.1.1. Apache</h5>
+<div class="paragraph">
+<p>Nous allons commencer par installer apache2</p>
+</div>
+<div class="literalblock">
+<div class="title">Installation de apache2</div>
+<div class="content">
+<pre>sudo apt install apache2</pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+Ici, aucune configuration de pare-feu/port (ufw) n&#8217;a été effectuée cela sera nécessaire lors de la mise en production. Aucun hôte virtuel n&#8217;a également été mis en place.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_php_2">4.5.1.2. PHP</h5>
+<div class="paragraph">
+<p>Ici, nous installons php et le package apache2 pour gérer php. Nous vérifions la version pour voir si php a bien été installé.</p>
+</div>
+<div class="literalblock">
+<div class="title">Installation PHP</div>
+<div class="content">
+<pre>sudo apt install php libapache2-mod-php
+php -v</pre>
+</div>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/verifphp.png" alt="verifphp" width="500">
+</div>
+<div class="title">Figure 18. Vérification d&#8217;installation de php</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configuration_apache">4.5.2. Configuration Apache</h4>
+<div class="paragraph">
+<p>Nous allons également configurer apache pour qu&#8217;il serve en priorité les pages index.php plutôt que les pages index.html.</p>
+</div>
+<div class="literalblock">
+<div class="title">Accéder à la configuration des priorités</div>
+<div class="content">
+<pre>sudo nano /etc/apache2/mods-enabled/dir.conf</pre>
+</div>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/apachdirconf.png" alt="apachdirconf">
+</div>
+<div class="title">Figure 19. Contenu de dir.conf</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_source">4.5.3. Source</h4>
+<div class="paragraph">
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04-fr" class="bare">https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04-fr</a></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuration_réseau">4.6. Configuration réseau</h3>
+<div class="paragraph">
+<p>Nous avons installé de nombreux services dans le but de mettre en place une application Web. Il est maintenant nécessaire de faire en sorte que ces services soient disponibles.</p>
+</div>
+<div class="paragraph">
+<p>Outre l&#8217;attribution d&#8217;un domaine de nom et d&#8217;une adresse routable sur internet. Nous allons devoir rediriger les ports utilisés par nos différents services.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Liste des ports à rediriger (NAT/PAT)</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Numéro de Port</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Service correspondant</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ssh</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">80</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Web&#8201;&#8212;&#8201;Apache</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1880</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Node-Red</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Grafana</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8086</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">InfluxDB</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_simulation_de_données_avec_node_red">5. Simulation de données avec Node-Red</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_introduction_3">5.1. Introduction</h3>
+<div class="paragraph">
+<p>Le projet n&#8217;étant qu&#8217;une preuve de concept, nous n&#8217;allons connecter qu&#8217;un seul capteur au bus MQTT de l&#8217;IUT. De ce fait, la quantité de données affichées par le tableau de bord sera très limitée. À des fins de démonstrations, nous allons donc simuler des données qui pourraient êtres envoyées par un capteur connecté.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_valeurs_de_simulation">5.2. Valeurs de simulation</h3>
+<div class="paragraph">
+<p>Les valeurs que nous allons simuler n&#8217;ont qu&#8217;un objectif démonstratif : leur précision ou leur cohérence ne sont donc pas des facteurs très importants.<br>
+Toutefois, nous allons tenter de nous approcher de quelque chose de réel, tant en terme de valeurs, qu&#8217;en fluctuation de celles-ci pour que les données affichées aient l&#8217;air crédibles.</p>
+</div>
+<div class="paragraph">
+<p>Nous parlerons en poste de travail (Ecran + Machine). Nous considérons que ces postes sont utilisés pour faire de la bureautique.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>La consommation d&#8217;un poste de travail est fixée à 200 watts +- 15 (pour apporter un peu de fluctuation).</p>
+</li>
+<li>
+<p>Un poste de travail est considéré comme actif ou éteint (nous ignorons le mode veille).</p>
+</li>
+<li>
+<p>Une session de travail sur un poste dure entre 10 et 90 minutes.</p>
+</li>
+<li>
+<p>Des données seront simulées en permanance (sans prendre en compte les heures de fermeture/ouverture de l&#8217;IUT).</p>
+</li>
+<li>
+<p>Ces données seront ajoutées toutes les 30 secondes.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Pour l&#8217;instant nous simulerons 9 salles</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nom de Salle</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nombre de Poste (vérifié)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B_007</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B_101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B_102</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B_103</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B_104</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B_105</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B_106</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B_117</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B_219</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">34</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_code">5.3. Code</h3>
+<div class="imageblock">
+<div class="content">
+<img src="img/nodeRED_simul.png" alt="nodeRED simul">
+</div>
+<div class="title">Figure 20. Capture du Flow de simulation de des données dans Node-Red</div>
+</div>
+<div class="paragraph">
+<p>Pour la simulation des données vers grafana, nous avons utilisé NodeRED. C&#8217;est un outil low-code constitué de blocs. Il repose sur NodeJS et permettant de traiter des flux de données d&#8217;une base InfluxDB.<br>
+Chaque bloc de couleur possède une spécialité :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Le bloc bleu (New Data) est un point d&#8217;activation à partir du lancement de NodeRED qui créé un message toutes les x secondes (paramétrable : ici 30) contenant des données.</p>
+</li>
+<li>
+<p>Les blocs jaunes (Définition des constantes, etc.) permettent la manipulation des variables crées par des blocs bleus, variable globales ou variables de message.</p>
+</li>
+<li>
+<p>Les blocs saumons/corail permettent de manipuler du code JavaScript personnalisé.</p>
+</li>
+<li>
+<p>Les blocs verts (Voir input, etc.) effectue des affichages dans la console debug pour s&#8217;assurer du bon fonctionnement du flow.</p>
+</li>
+<li>
+<p>Les blocs oranges (json) sont des parsers : ils permettent de récupérer une chaine de charactère json afin de créer un objet en JavaScript, ou bien récupérer les données d&#8217;un objet JavaScript afin d&#8217;écrire dans le fichier json.</p>
+</li>
+<li>
+<p>Les blocs gris numérotés sont des passerelles afin de rendre le flow plus lisible et esthétique.</p>
+</li>
+<li>
+<p>Les blocs marrons permettent de travailler sur un fichier en faisant des opérations de lecture ou d&#8217;écriture.</p>
+</li>
+<li>
+<p>Le bloc rouge fait office de "try/catch" : si le fichier demandé n&#8217;existe pas, le bloc de lecture de fichier lève une erreur, le flow passera par cette branche afin de réparer le problème.</p>
+</li>
+<li>
+<p>Le bloc violet ([v1.x]127.0.0.1.8086/CaptElec) insère les données reçues dans la base influxDB.</p>
+</li>
+<li>
+<p>Les chemins gris reliant chaque bloc font transiter un objet JavaScript (identique ou non à celui du bloc précédent) afin de réaliser les exécutions du flux voulues. Chaque objet possède un attribut obligatoire : le payload, il contient le contenu principale du message, nous pouvons lui ajouter d&#8217;autre champs (comme "filename", etc).</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fonctionnement_de_la_simulation">5.4. Fonctionnement de la simulation</h3>
+<div class="paragraph">
+<p>Lorsque NodeRED se lance, le bloc NewData envoie un message de déclenchement (renouvelé toutes les 30 secondes). Ce message arrive ensuite dans le bloc "Définition des constantes" mettant à jour les constantes de simulation en écrasant les constantes précédentes. Le message arrive ensuite dans le bloc "Récupération salles" il y sera modifié : nous y mettons la liste des chemins de stockage des fichiers de simulation (un par salle). Le message arrive ensuite dans le bloc "Split" qui va séparer la liste pour envoyer x messages : un message par salle. Ces x messages seront alors transmis dans le bloc gris numéro 1 pour rejoindre le bloc "Lecture du fichier de la salle actuelle".</p>
+</div>
+<div class="paragraph">
+<p>Ce bloc va lire le fichier grâce au chemin que le message contient : si le fichier n&#8217;existe pas, un fichier vide sera créé avec le chemin d&#8217;accès dicté précédemment, puis le message reviendra à notre bloc "Lecture du fichier de la salle actuelle".</p>
+</div>
+<div class="paragraph">
+<p>Le contenu du fichier json est donc transformé afin de créer un objet JavaScript pour travailler sur ses données. Le message est ensuite transmis vers le bloc "Génération de données". Ce bloc va créer les nouvelles données :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Il va éteindre les pcs qui doivent être éteint (car l&#8217;utilisateur a fini de travailler dessus).</p>
+</li>
+<li>
+<p>Il va allumer aléatoirement les pcs éteints avec une probabilité de 0,3.</p>
+</li>
+<li>
+<p>Pour tous les PCs allumés, il va tirer aléatoirement une valeur correspondant en Watt à la consommation de chaque ordinateur pour additionner le tout et obtenir la consommation totale de la salle.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Le message passe ensuite dans le deuxième bloc gris (le numéro 2) pour rejoindre le bloc "Conditionnement des données". Celui-ci va conditionner les données pour obtenir deux messages corrects pour l&#8217;enregistrement de celles-ci. Ce bloc va renvoyer deux messages :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>L&#8217;un pour insérer dans la base InfluxDB (consommation électrique totale de la salle)</p>
+</li>
+<li>
+<p>L&#8217;autre pour mettre à jour les fichiers json de simulation (le nombre de PCs allumés)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ces données simulées sont ensuite illustrées grâce à l&#8217;outil Grafana, qui montrera des  graphiques / données en temps réel (consommation maximale, moyenne de consommation, salle illustrée etc.).</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/grafana_simul.png" alt="grafana simul">
+</div>
+<div class="title">Figure 21. Capture d&#8217;un panel Grafana</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Les valeurs simulées sont basées sur des moyennes réelles, cependant leur évolution ne sont pas représentatives de la réalité : des variations aussi grandes et aussi fréquentes de la  consommation seront très probablement pas observés lors de la réalisation du projet avec le capteur, ce ne sont que des données simulées. Nous nous laissons nonobstant la possibilité d&#8217;améliorer le graphique de simulation.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sources_4">5.5. Sources</h3>
+<div class="paragraph">
+<p><a href="https://www.fournisseurs-electricite.com/guides/consommation/ordinateur" class="bare">https://www.fournisseurs-electricite.com/guides/consommation/ordinateur</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="newSVG">6. Créer de nouveaux SVG</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Afin de réaliser des menus en <code>mode images</code>, il nous faut des images dans un format particulier. Nous utilisons des <code>SVG</code>, car la manière de définir les zones de l&#8217;image avec des balises nous permet ensuite d&#8217;appliquer des classes et des IDs comme pour des éléments HTML. Cela nous donne la possibilité de changer le style grâce à des fichiers CSS, mais également de programmer des évènements JavaScript.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+Nous recommandons très vivement l&#8217;utilisation d&#8217;une tablette graphique pour réaliser ces tâches.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<strong>La question maintenant est : comment créer de nouveaux SVG pour étendre le site ?</strong>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Pour répondre à cette question nous allons simplement détailler les étapes de création. Bien évidement il ne sagit ici que de notre méthode.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/svgDansMenu.png" alt="svgDansMenu" width="500">
+</div>
+<div class="title">Figure 22. Exemple de menu avec image (ici le Bâtiment B de l&#8217;IUT&#8201;&#8212;&#8201;le second étage est selectionné)</div>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/menuSVGetage.png" alt="menuSVGetage" width="500">
+</div>
+<div class="title">Figure 23. Exemple de menu avec image (ici le premier étage du Bâtiment B de l&#8217;IUT&#8201;&#8212;&#8201;la salle 106 est selectionnée)</div>
+</div>
+<div class="sect2">
+<h3 id="_étape_1_choisir_un_modèle">6.1. Étape 1 : Choisir un modèle</h3>
+<div class="paragraph">
+<p>Nous ne partons pas de zéro. Il nous faut donc un modèle. Pour notre part, nous utilisons les extrapolations 3D de <code><a href="https://www.google.fr/intl/fr/earth/" class="bare">https://www.google.fr/intl/fr/earth/</a></code> pour faire les bâtiments, et les plans d&#8217;évacuation pour les plans des étages.</p>
+</div>
+<div class="paragraph">
+<p>Pour les plans, il suffit d&#8217;une photo ou d&#8217;un scan. Mais pour les vues 3D de l&#8217;IUT, il est important de bien cadrer ce que vous voulez représenter, et de choisir la bonne inclinaison de caméra car sinon, la perspective risque d&#8217;être compliqué à transcrire en dessin par la suite.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/batBggearth.png" alt="batBggearth" width="500">
+</div>
+<div class="title">Figure 24. Capture d&#8217;écran de l&#8217;extrapolation 3D google earth du BÂtiment B</div>
+</div>
+<div class="imageblock text-"center 500">
+<div class="content">
+<img src="img/planEtageBatB.jpg" alt="planEtageBatB">
+</div>
+<div class="title">Figure 25. Photo du plan d&#8217;évacuation du premier étage du Bâtiment B de l&#8217;IUT</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_étape_2_décalquer_optionnel">6.2. Étape 2 : Décalquer (optionnel)</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Cette étape n&#8217;est pas obligatoire, il est possible de créer les SVG directement sur les modèles. Cependant, nous recommandons vivement d&#8217;en passer par là car elle permet de poser un premier filtre sur ce que nous souhaitons représenter ou non. De plus, elle met en évidence les courbes qui sont les éléments les plus complèxes à tracer pour les SVG.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Maintenant que nous avons nos modèles, nous allons passer par un logiciel de dessin tiers pour créer une image intermédiaire en "fil de fer" de nos sujets, c&#8217;est à dire créer une image "plate" (pas de distinction de zone <code><strong>.png</strong></code>, <code><strong>.jpg</strong></code> par exemple) qui trace en noir sur fond blanc les arètes.</p>
+</div>
+<div class="paragraph">
+<p>Nous avons utilisé <code>Krita</code> qui est parfait pour ce genre de tâche mais <code>GIMP</code> ou encore un produit de la suite Adobe fera aussi bien le travail.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/krita.jpeg" alt="krita" width="250">
+</div>
+<div class="title">Figure 26. Logo du logiciel krita</div>
+</div>
+<div class="paragraph">
+<p>Vous devriez obtenir des images dans ce genre :</p>
+</div>
+<div id="imgBatB" class="imageblock text-center">
+<div class="content">
+<img src="img/batimentB.png" alt="batimentB" width="500">
+</div>
+<div class="title">Figure 27. Fil le fer du bâtiment B.</div>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/et1_wireFrame.png" alt="et1 wireFrame" width="500">
+</div>
+<div class="title">Figure 28. Fil le fer du premier étage du bâtiment B.</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_étape_3_passage_en_svg">6.3. Étape 3 : Passage en SVG</h3>
+<div class="paragraph">
+<p>Maintenant, nous allons produire nos SVG. Pour cela, il faut avant tout se munir d&#8217;un outil de dessin Vectoriel. Nous avons utilisé <code>Ink Scape</code> car c&#8217;est un outil spécifique au dessin vectoriel. Mais encore une fois Krita, GIMP, ou la suite Adobe sont des alternatives envisageables.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/inkskape.jpeg" alt="inkskape" width="250">
+</div>
+<div class="title">Figure 29. logo du logiciel Ink Skape</div>
+</div>
+<div class="paragraph">
+<p>Dans ink skape :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Créer un nouveau document (il doit faire au moins la taille de votre modèle pour éviter de perdre de l&#8217;information).</p>
+</li>
+<li>
+<p>Importer votre modèle.</p>
+</li>
+<li>
+<p>Baisser l&#8217;opacité du modèle pour pouvoir dessiner dessus plus aisément.</p>
+</li>
+<li>
+<p><strong>Utiliser un nouveau calque pour chaque partie du dessin</strong></p>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Par exemple :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Pour le bâtiment B nous avons : Toit, 2<sup>eme</sup> étage, 1<sup>er</sup>, RDC, cylindre, piliers (cf. <a href="#imgBatB">image du batiment B</a>).</p>
+</li>
+<li>
+<p>Pour le premier étage du bâtiment B : Un calque par salle.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Avec l&#8217;outil chemin de dessin vectoriel, tracez les zones de votre image (une zone est simplement une forme fermée : une salle, un pan de mure).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Une fois terminé, enregistrez au format SVG.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Quand vous tracez vos chemins il est important de garder en tête l&#8217;objectif : Nous voulons pouvoir isoler les zones pour pouvoir les sélectionner plus tard dans le site.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Nous recommandons de mettre le moins de style passible lors de l&#8217;édition des SVGs car cela pourrait plus tard interférer avec l&#8217;application des styles du site.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/batimentB.svg" alt="batimentB" width="500">
+</div>
+<div class="title">Figure 30. SVG du bâtiment B (avec style &#8594; remplissage)</div>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/1et.svg" alt="1et" width="500">
+</div>
+<div class="title">Figure 31. SVG du permier étage du bâtiment B (sans aucun style &#8594; transparent)</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_étape_4_nettoyage_du_fichier">6.4. Étape 4 : Nettoyage du fichier</h3>
+<div class="paragraph">
+<p>Le logiciel d&#8217;édition vectoriel a généré automatiquement un fichier SVG. Toutefois, afin qu&#8217;il corresponde totalement à ce que le site attend, il est nécessaire de le "nettoyer" et d&#8217;y ajouter certains éléments.</p>
+</div>
+<div class="paragraph">
+<p>Ouvrez votre fichier SVG dans votre éditeur de Code favori. Le début du fichier devrait se présenter comme ci-dessous :</p>
+</div>
+<div class="listingblock">
+<div class="title">Début du fichier SVG avant nettoyage</div>
+<div class="content">
+<pre class="highlight"><code class="language-SVG" data-lang="SVG">&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;
+&lt;!-- Created with Inkscape (http://www.inkscape.org/) --&gt;
+
+&lt;svg
+   version="1.1"
+   id="svg9"
+   width="2141.3333"
+   height="1064"
+   viewBox="0 0 2141.3333 1064"
+   sodipodi:docname="batimentB_ink.svg"
+   inkscape:version="1.1.1 (eb90963e84, 2021-10-02)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"&gt;
+  &lt;defs
+     id="defs13" /&gt;
+  &lt;sodipodi:namedview
+     id="namedview11"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     showgrid="false"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:object-paths="true"
+     inkscape:snap-midpoints="true"
+     inkscape:zoom="0.56551269"
+     inkscape:cx="1083.1916"
+     inkscape:cy="561.45676"
+     inkscape:window-width="1848"
+     inkscape:window-height="1016"
+     inkscape:window-x="72"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="poto_l" /&gt;
+
+ ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Nous ne voulons conserver que l&#8217;ouverture de la balise <code>&lt;svg&gt;</code> avec seulement l&#8217;attribut <code><strong>viewBox</strong></code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Début du fichier SVG après nettoyage</div>
+<div class="content">
+<pre class="highlight"><code class="language-SVG" data-lang="SVG">&lt;svg viewBox="0 0 2141.3333 1064"&gt;
+
+ ...</code></pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Selon les versions et les éditeurs, il est possible que l&#8217;attribut viewBox soit absent. Dans ce cas il faut le créer.</p>
+</div>
+<div class="paragraph">
+<p>Pour cela vous pouvez rouvrir votre SVG dans un éditeur d&#8217;image. l&#8217;objectif est de déterminer 4 entiers :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>X<sub>origine</sub></p>
+</li>
+<li>
+<p>Y<sub>origine</sub></p>
+</li>
+<li>
+<p>La largeur</p>
+</li>
+<li>
+<p>La hauteur</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Pour X et Y vous pouvez mettre 0. Pour la hauteur et la largeur, dans votre éditeur, tracez un rectangle qui contient tout votre dessin en étant aussi petit que possible. Prenez alors la hauteur et la largeur en pixel de ce rectangle. Nous pouvons maintenant écrire la balise SVG tel que :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;svg viewBox="X Y largeur hauteur"&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Pour en savoir plus sur <code>viewBox</code> : <a href="https://wattenberger.com/guide/scaling-svg" class="bare">https://wattenberger.com/guide/scaling-svg</a></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>La suite de votre SVG est constitué de blocks <code>&lt;g&gt;</code> qui représentent vos calques. Nous allons également nettoyer leurs attributs.</p>
+</div>
+<div class="listingblock">
+<div class="title">Balise g avant nettoyage</div>
+<div class="content">
+<pre class="highlight"><code class="language-SVG" data-lang="SVG"> ...
+
+  &lt;g
+     inkscape:groupmode="layer"
+     id="layer-05-cyl"
+     style="display:inline"&gt;
+    &lt;path
+       style="fill:#d5d5d5;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       d="m 1462.8373,235.72736 c 9.2665,-16.9624 48.9807,-27.60629 127.2774,-28.79453 102.0212,1.85489 129.922,16.26802 132.4884,30.34378 -20.1337,24.60438 -83.0376,24.0544 -133.9794,25.62044 -51.1156,-1.56985 -105.6764,-2.09544 -125.7864,-27.16969 z"
+       id="path5191"
+       sodipodi:nodetypes="ccccc" /&gt;
+    &lt;path
+       style="fill:#d5d5d5;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       d="m 1722.6031,237.27661 -0.3909,410.25704 c -14.1432,21.49393 -86.2232,24.81863 -130.1379,25.68983 -46.1326,-0.45692 -123.5105,-5.24244 -127.2467,-32.37033 l -1.9903,-405.12579 c 27.5006,28.16085 79.191,24.29218 125.7864,27.16969 58.5079,-1.0565 115.7858,-2.77769 133.9794,-25.62044"
+       id="path6309"
+       sodipodi:nodetypes="ccccccc" /&gt;
+  &lt;/g&gt;
+
+ ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Dans les attributs de la balise g, nous ne souhaitons conserver que id. Nous allons changer la valeur de l&#8217;id pour y mettre quelque chose de plus parlant.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+Vous ne pouvez pas choisir n&#8217;importe quoi car ces id sont utilisés dans le fichier de configuration. (cf. <a href="#fichierConfigIdSVGRules">Règles sur les Id des SVG</a>)
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Nous pouvons voir que les blocks <code>&lt;g&gt;</code> contiennent des chemins <code>&lt;path&gt;</code>. Pour ces éléments "chemin", nous n&#8217;allons conserver que les attributs <code>id</code> et <code>d</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Balise g après nettoyage</div>
+<div class="content">
+<pre class="highlight"><code class="language-SVG" data-lang="SVG"> ...
+
+    &lt;g id="cylindre"&gt;
+        &lt;path
+            id="path5191"
+            d="m 1462.8373,235.72736 c 9.2665,-16.9624 48.9807,-27.60629 127.2774,-28.79453 102.0212,1.85489 129.922,16.26802 132.4884,30.34378 -20.1337,24.60438 -83.0376,24.0544 -133.9794,25.62044 -51.1156,-1.56985 -105.6764,-2.09544 -125.7864,-27.16969 z"/&gt;
+        &lt;path
+            id="path6309"
+            d="m 1722.6031,237.27661 -0.3909,410.25704 c -14.1432,21.49393 -86.2232,24.81863 -130.1379,25.68983 -46.1326,-0.45692 -123.5105,-5.24244 -127.2467,-32.37033 l -1.9903,-405.12579 c 27.5006,28.16085 79.191,24.29218 125.7864,27.16969 58.5079,-1.0565 115.7858,-2.77769 133.9794,-25.62044"/&gt;
+    &lt;/g&gt;
+
+ ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Après ce nettoyage, les SVGs ressemblent à des "ombres". Nous leurs avons retiré tous les styles graphiques (remplissage, couleur, épaisseur de trais, &#8230;&#8203;). C&#8217;est normal, le site ajoutera automatiquement ses styles à l&#8217;utilisation.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/batBsansStyle.png" alt="batBsansStyle" width="500">
+</div>
+<div class="title">Figure 32. Bâtiment B svg sans style</div>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/et1sansStyle.png" alt="et1sansStyle" width="500">
+</div>
+<div class="title">Figure 33. Premier étage du bâtiment B svg sans style</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_étape_5_ajouter_le_svg_au_site">6.5. Étape 5 : Ajouter le SVG au site :</h3>
+<div class="paragraph">
+<p>Vous devez maintenant rendre votre nouveau SVG disponible sur le site. Pour cela il vous suffit de le placer dans l&#8217;arborescence dans : <code><em>racineDuSite</em>/static/svg/&lt;nouveauSVG.svg&gt;</code>.</p>
+</div>
+<div class="paragraph">
+<p>Pour que le site utilise vos nouveaux SVG dans ses menus il faudra bien entendu modifier le fichier de configuration en conséquence (cf. <a href="#fichierConfigNouveauxMenus">Nouveax menus</a>).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2022-01-21 23:26:01 +0100
+</div>
+</div>
+</body>
+</html>

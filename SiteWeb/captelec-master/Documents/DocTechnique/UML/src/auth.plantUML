@@ -1,0 +1,33 @@
+@startuml "authentification"
+
+hide footbox
+autonumber
+
+actor utilisateur as usr
+participant auth.php
+database ".mdp.json" as mdp
+
+usr->auth.php : http://domaine.fr/auth.php
+
+alt Si on est déja connecté
+    auth.php-->usr : redirection vers menu
+else SINON : on est pas connecté
+    auth.php->usr : envoie formulaire de connexion
+    loop Tant que non connecté
+    usr->auth.php : saisie login/mdp
+    auth.php->auth.php : hachage mdp
+    auth.php->mdp : lecture des données
+    alt Si login et hash mdp ok
+        auth.php->auth.php : mise à jour de la session : status connecté
+    else SINON : login ou mdp faux
+        auth.php->usr : envoie formulaire de connexion avec erreur
+    
+    end
+    end
+
+end
+
+auth.php-->usr : redirection vers menu
+
+
+@enduml

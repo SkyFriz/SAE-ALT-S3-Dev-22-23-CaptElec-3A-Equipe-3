@@ -1,0 +1,23 @@
+@startuml
+skinparam actorStyle awesome
+actor PersonelIUT
+actor Technicien
+
+(Visualiser la consommation éléctrique au temps T) as Vce
+(Visualiser un étage particulier) as Vep
+(Visualiser l'hitorique de la consommation éléctrique) as Hist
+(Choisir un encadrement de date) as Fourch
+(Obtenir plus de données sur une salle) as Choose
+(Choisir un type de diagramme) as ChooseD
+(Ajouter des salles) as AddS
+(Ajouter de nouveaux capteur) as AddC
+
+PersonelIUT --> Vce
+Vce .. Vep
+PersonelIUT --> Hist
+Hist .. Fourch
+PersonelIUT --> Choose
+Choose .. ChooseD
+Technicien --> AddS
+Technicien --> AddC
+@enduml

@@ -1,0 +1,79 @@
+=== Planification
+Dans les contraintes de délais, nous avons défini plusieurs échéances intermédiaires. Il faut maintenant déterminer ce que contiendront les dépôts de ces étapes.
+
+==== Premier Prototype
+Pour cette version très simpliste du projet, nous nous concentrerons sur les deux premières parties : Collecte et Stockage des données. Ici, il y a de nombreuses technologies qui interviennent et qui doivent être paramétrées/programmées correctement.
+
+[NOTE]
+Les parties sont décrites dans <<Description>>
+
+.Contenu de la livraison du premier prototype
+[cols="~,~"]
+|====
+^|Nom ^|Objet
+
+^.^|Capteur simulé
+|À cause de la date de livraison incertaine du capteur, il est primordial pour la suite du projet de pouvoir le remplacer. Il faudra donc trouver un moyen de simuler un ou plusieurs capteurs qui émettraient des données.
+
+^.^|Documentation paramétrage (partie de doc technique)
+|Une documentation qui retrace toutes les manipulations de paramétrage et de programmation des différentes technologies des parties Collecte et Stockage.
+
+^.^|Fichiers paramétrages
+|L’ensemble des fichiers qui ont un lien avec les manipulations de paramétrage et de programmation des différentes technologies des parties Collecte et Stockage.
+
+^.^|Début de documentation utilisateur
+|Une documentation destinée à l'utilisateur, détaillant les quelques fonctionnalités de cette version.
+
+^.^|Ébauche de tableau de bord (sources et site opérationnel)
+|Une version *minimale* du site avec quelques pages grafana et un menu, sans porter attention au style.
+
+^.^|Conception tableau de bord pour second prototype
+|Les documents de conception du tableau de bord de la prochaine version (SNI, maquette).
+|====
+
+==== Second Prototype
+Pour cette seconde version, nous nous concentrerons sur le développement du tableau de bord, il s'agit ici de le rendre plus complet en terme de fonctionnalités. Nous travaillerons également la présentation graphique et l'ergonomie.
+
+.Contenu de la livraison du second prototype
+[cols="~,~"]
+|====
+^|Nom ^|Objet
+
+^.^|Tableau de bord final
+|Un tableau de bord complet présentant à l’utilisateur toutes les données que l’utilisateur peut souhaiter sous différentes formes de graphiques, ainsi que des menus ergonomiques pour faciliter la navigation.
+
+^.^|Documentation technique
+|Une documentation permettant d'améliorer le tableau de bord.
+
+^.^|Documentation utilisateur
+|Une documentation complète de la navigation dans le tableau de bord ainsi que des possibilités qu’il offre.
+
+^.^|Cahier de recettes
+|Écriture d’un cahier de recette contenant les généralités, les détails des tests et le plan de test. Il sera ensuite complété ave les résultats des tests effectués avec le client.
+|====
+
+==== Livraison et Recette client
+Pour cette étape finale, l'objectif et de rendre tout ce que nous avons livré précédemment mis au propre et corrigé selon les remarques du client.
+
+.Contenu de la livraison finale
+[cols="~,~"]
+|====
+
+^.^|Vidéo de démonstration
+|Une vidéo qui présente le dispositif, du capteur au tableau de bord.
+
+^.^|Sources
+|L'ensemble des fichiers sources qui constituent le projet.
+
+^.^|Documentations
+|Toutes les documentations écrites jusque-là.
+
+^.^|Cahier de recette rempli
+|Résultat complet des tests effectués avec le client.
+
+|====
+
+=== Documentation
+La documentation livrée sera composée de 2 documents : la documentation technique et la documentation utilisateur. Toutes les documentations seront écrites en Asciidoc et donc seront livrées en PDF et en HTML. +
+La documentation technique est importante pour que le projet soit maintenable et améliorable facilement par n'importe quel développeur. Elle comportera pour le coté web l'arborescence du site web, et le fonctionnement des request/reponse HTTP. Du coté back-end la documentation doit décrire les protocoles utilisés et les différentes étapes pour qu'une trame de données parte du capteur et rentre dans la base de données du projet. Pour finir, pour que le code source soit lisible, il sera évidemment commenté. +
+Quant à elle la documentation utilisateur, elle doit décrire toutes les fonctionnalités implémentées au site et comment l'utilisateur peut interagir avec ce dernier.

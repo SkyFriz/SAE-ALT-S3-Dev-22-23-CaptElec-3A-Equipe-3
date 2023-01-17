@@ -1,0 +1,126 @@
+= CaptElec : Rapport d'étape n°1
+:date: 09/11/2021
+:autor1: Axel Bacrie
+:autor2: Théo Chaves
+:autor3: Nathan Chaugier
+:autor4: William Touzani
+:email1: axel.bacrie@etu.univ-tlse2.fr
+:email2: theo.ch.47@hotmail.fr
+:email3: nathan.chaugier@gmail.com
+:email4: william.touzani@live.fr
+:dest1: Patricia Stolf (client)
+:dest2: Rémi Boulle (superviseur)
+:dest3: Fabrice Pelleau (chef du module PTUT)
+:email5: patricia.stolf@univ-tlse2.fr
+:email6: remi.boulle@univ-tlse2.fr
+:email7: fabrice.pelleau@univ-tlse2.fr
+:toc: macro
+:toc-title: Table des matières
+:toclevels: 4
+:sectnums:
+
+image::CDCU/src/Logo_IUT_Blagnac.png[align="center", 300]
+
+'''
+Fait le {date}
+
+Par :
+
+* {autor1} {email1}
+* {autor2} {email2}
+* {autor3} {email3}
+* {autor4} {email4}
+
+Pour :
+
+* {dest1} {email5}
+* {dest2} {email6}
+* {dest3} {email7}
+
+'''
+<<<
+
+toc::[Title="Table des matières"]
+
+<<<
+
+== État d'avancement du projet 
+
+Le projet se présente actuellement sous la forme d'une machine virtuelle permettant de visualiser des données grâce à une interface très simpliste. Ces données sont simulées en local  grâce à nodered, influxDB et Grafana en attendant la livraison définitive du capteur. Toutes les documentations concernant ces technologies peuvent être retrouvées grâce aux liens ci-dessous.
+
+Documentation concernant la mise en place de la VM et technologies :
+
+https://gitlab.iut-blagnac.fr/ptut2021-b-captelec/ptut/captelec/-/blob/master/Documents/creationVM/install.adoc
+
+Documentation concernant la simulation de données via nordeRed :
+
+https://gitlab.iut-blagnac.fr/ptut2021-b-captelec/ptut/captelec/-/blob/master/Documents/simulationData/simulationData.adoc
+
+Documentation utilisateur : 
+
+https://gitlab.iut-blagnac.fr/ptut2021-b-captelec/ptut/captelec/-/blob/master/Documents/DocUtilisateur/DocUtilisateur.adoc
+
+Nous avons désormais pour objectif de réaliser un tableau de bord plus complet graphiquement et permettant d'avoir toutes les données souhaitées par l'utilisateur. Dans le cadre d'une livraison du capteur, nous allons le relier au réseau LoraWan et à notre tableau de bord afin de ne plus avoir seulement des données simulées. Toutefois, puisqu'il s'agit d'une preuve de concepte, nous n'allons déployer qu'un seul capteur donc afin d'éviter d'avoir pleins de tableaux de bords vide, nous allons concerver la simulation de donnée pour ces tableaux à des fins de démonstration.
+
+== Le déroulement de l'étape 
+
+En premier lieu, il a fallu du temps à notre équipe afin de se mettre en place, car nous pensions qu'il était nécessaire pour nous d'avoir tous les identifiants afin permettant l'accès aux technologies nous permettant de créer de nouvelles données et de lier un capteur au serveur. Une fois, un capteur de substitution fournit, nous avons rencontré des difficultés en essayant de le paramétrer (de le lier au réseau loraWan de l'IUT). Au final nous n'y sommes pas arrivé. Nous avons donc prit la décision de créer une machine virtuelle nous permettant d'avoir toutes ces technologies en local et nous permettant d'avoir des données fictives affichables sur un site web local ayant une interface simple.
+
+== Planification 
+
+=== Attendus 
+
+Pour ce premier prototype, il est prévu d'avoir une première ébauche du tableau de bord avec un menu graphiquement simple permettant l'accès à des pages grafana. De plus, les documentations de paramétrages, fichier de paramétrages et début de documentation utilisateur sont à fournir ainsi qu'une alternative à l'absence éventuelle de capteur.
+
+.Contenu de la livraison du premier prototype (extrait du cahier des charges)
+[cols="~,~"]
+|====
+^|Nom ^|Objet
+
+^.^|Capteur simulé
+|À cause de la date de livraison incertaine du capteur, il est primordial pour la suite du projet de pouvoir le remplacer. Il faudra donc trouver un moyen de simuler un ou plusieurs capteurs qui émettraient des données.
+
+^.^|Documentation paramétrage (partie de doc technique)
+|Une documentation qui retrace toutes les manipulations de paramétrage et de programmation des différentes technologies des parties Collecte et Stockage.
+
+^.^|Fichiers paramétrages
+|L’ensemble des fichiers qui ont un lien avec les manipulations de paramétrage et de programmation des différentes technologies des parties Collecte et Stockage.
+
+^.^|Début de documentation utilisateur
+|Une documentation destinée à l'utilisateur, détaillant les quelques fonctionnalités de cette version.
+
+^.^|Ébauche de tableau de bord (sources et site opérationnel)
+|Une version *minimale* du site avec quelques pages grafana et un menu, sans porter attention au style.
+
+^.^|Conception tableau de bord pour second prototype
+|Les documents de conception du tableau de bord de la prochaine version (SNI, maquette).
+|====
+
+=== Réalisation 
+
+Le premier prototype de ce projet est un succès sur l'aspect technique. Nous avons bien respecté les attentes concernant les livrables et la première version du tableau de bord permettant de visualiser les données simulées. Le tout est présent sur une machine virtuelle permettant d'avoir toutes les données et le site web en local. La plus part des livrables sont présents sut le gitlab mis en place, toutefois, la machine virtuelle ne s'y trouve pas puisqu'elle est trop lourde.
+
+* [x] Capteur simulé
+* [x] Documentation paramétrage
+* [x] Fichiers paramétrages
+* [x] Début de documentation utilisateur
+* [x] Ébauche de tableau de bord
+* [ ] Conception tableau de bord pour second prototype (SNI, maquettes)
+
+Nous n'avons pas pu livrer de SNI comme prévu toutefois le prototype en lui-même donne déjà une bonne idée de ce que sera la structure finale. Nous ratraperons cela lors de la prochaine étape.
+
+=== Prévisions
+
+Nos objectifs se tournent maintenant sur le deuxième prototype qui est un tableau de bord complet et ergonomique permettant à l'utilisateur de voir toutes les informations sous différentes formes de graphique. Une documentation technique facilitant la maintenance du site et de la mise en place de nouveaux capteurs. Une documentation utilisateur rendant compte de toutes les fonctionnalités possible de faire avec le tableau de bord ainsi qu'un cahier de recette concernant les tests.
+
+== Résumé de la communication 
+
+La communication est le point d'ombre de cette période, en effet, la communication avec la cliente n'était pas au rendez-vous. Il était bien convenu de ne pas avoir de réunion concernant cette phase de mise en place concernant essentiellement la découverte des nouvelles technologies. Cependant les rapports hebdomadaires concernant notre avancement comme cela était convenu n'ont pas été réalisés, car finalement faire état de notre avancement dans la compréension des différentes technologies et la reception des mots de passe ne nous semblais pas pertinents. Nous aurions tout de même du garder le contacte.
+ 
+La communication avec notre surperviseur s'est faite à l'aide de discord et lorsque nous allions le voir à son bureau. Nous avons eu de nomreux échanges portant notement sur des questions techniques (identifiants, capteur, réseau LoraWan).
+
+== Conclusion 
+
+Notre première étape n'était clairement pas parfaite et nous avons encore certains point à revoir et à améliorer. Nous avons pour prévision d'avoir un meilleur environnement gitlab et surtout, une meilleure communication cliente qui nous permettra dès lors de réelement travailler en agile.
+
+Du point de vue des livrables, tout ce qui était prévu n’a pas pu être fait, toutefois, ce que nous avons déjà accompli trace plutôt bien les contours de notre projet et pose de bonnes bases pour avoir une version finale propre et répondant un maximum aux attentes du client.

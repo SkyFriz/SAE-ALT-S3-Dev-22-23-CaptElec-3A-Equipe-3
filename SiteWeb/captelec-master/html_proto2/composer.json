@@ -1,0 +1,6 @@
+{
+    "require": {
+        "guzzlehttp/guzzle": "^7.4",
+        "influxdb/influxdb-php": "^1.15"
+    }
+}

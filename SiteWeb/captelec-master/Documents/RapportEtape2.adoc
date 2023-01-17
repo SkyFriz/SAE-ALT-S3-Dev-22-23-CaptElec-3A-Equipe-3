@@ -1,0 +1,116 @@
+= CaptElec : Rapport d'étape n°2
+:date: 08/12/2021
+:autor1: Axel Bacrie
+:autor2: Théo Chaves
+:autor3: Nathan Chaugier
+:autor4: William Touzani
+:email1: axel.bacrie@etu.univ-tlse2.fr
+:email2: theo.ch.47@hotmail.fr
+:email3: nathan.chaugier@gmail.com
+:email4: william.touzani@live.fr
+:dest1: Patricia Stolf (client)
+:dest2: Rémi Boulle (superviseur)
+:dest3: Fabrice Pelleau (chef du module PTUT)
+:email5: patricia.stolf@univ-tlse2.fr
+:email6: remi.boulle@univ-tlse2.fr
+:email7: fabrice.pelleau@univ-tlse2.fr
+:toc: macro
+:toc-title: Table des matières
+:toclevels: 4
+:sectnums:
+
+image::CDCU/src/Logo_IUT_Blagnac.png[align="center", 300]
+
+'''
+Fait le {date}
+
+Par :
+
+* {autor1} {email1}
+* {autor2} {email2}
+* {autor3} {email3}
+* {autor4} {email4}
+
+Pour :
+
+* {dest1} {email5}
+* {dest2} {email6}
+* {dest3} {email7}
+
+'''
+<<<
+
+toc::[Title="Table des matières"]
+
+<<<
+
+== État d'avancement du projet 
+
+Le projet se présente à nouveau sous la forme d’une machine virtuelle permettant de visualiser les données toujours simulées grâce à une interface sophistiquée. Le capteur relevant des données devrait nous être transmis prochainement nous permettant de faire le lien entre le site web et la consommation électrique d’un appareil (lampe, pc etc.). 
+
+Nous avons désormais pour objectif d’héberger la VM sur un serveur de l’iut afin de se connecter au site web à partir de l’extérieur. 
+Le capteur sera déjà relié au réseau LoraWan lorsqu’il nous sera transmis. Nous allons donc pouvoir récupérer les publications du BUS MQTT et envoyer ainsi à la fois des données simulées et des données réelles au tableau de bord.
+Il sera alors possible d'avoir un aperçu des possibilités qu'offrira le tableau de bord une fois que plusieurs capteurs y seront reliés. 
+
+== Le déroulement de l'étape 
+
+La machine virtuelle étant en place, nous avons pu nous focaliser sur la mise en forme des données simulées par node-red. 
+
+Suite à une période de réflexion sur la forme que devrait prendre le site afin d’avoir l’interface la plus claire et complète possible. Nous avons opté pour une vue en perspective de l’IUT qui réagit au survol du curseur pour sélectionner un bâtiment, un étage ou bien une salle.
+
+Pour avoir un tel rendu, nous avons dessiné les différents plans de l'IUT afin de produire des SVG* et les intégrer au site en liant les images aux différents liens possibles (bâtiments, étages, salles).
+
+[NOTE]
+SVG : Scalable Vector Graphics est un format de données ASCII conçu pour décrire des ensembles de graphiques vectoriels.
+
+== Planification 
+
+=== Attendus 
+
+Pour ce deuxième prototype, il est prévu d'avoir un tableau de bord avec plusieurs menus ergonomiques et simples d'utilisation permettant l'accès à des pages grafana. De plus, les documentations techniques et utilisateurs ainsi qu'un cahier de recettes sont à fournir.
+
+
+.Contenu de la livraison du second prototype
+[cols="~,~"]
+|====
+^|Nom ^|Objet
+
+^.^|Tableau de bord final
+|Un tableau de bord complet présentant à l’utilisateur toutes les données qu'il peut souhaiter sous différentes formes de graphiques, ainsi que des menus ergonomiques pour faciliter la navigation.
+
+^.^|Documentation technique
+|Une documentation permettant d'améliorer le tableau de bord.
+
+^.^|Documentation utilisateur
+|Une documentation complète de la navigation dans le tableau de bord ainsi que des possibilités qu’il offre.
+
+^.^|Cahier de recettes
+|Écriture d’un cahier de recette contenant les généralités, les détails des tests et le plan de tests. Il sera ensuite complété avec les résultats des tests effectués avec la cliente au cours de la prochaine période de projet.
+|====
+
+=== Réalisation 
+
+Le second prototype de ce projet est un succès, bien que les documentations technique et utilisateur soient toujours en cours de rédaction. 
+Il est possible de choisir plusieurs modes d’affichage. Le mode tableau permet d'avoir une vue textuelle de l'IUT. 
+Le mode image permet à l’utilisateur d’avoir les schémas intéractifs de l’IUT. Cela propose une vue pseudo-3D de l’IUT et de l’endroit précis voulant être examiné. Les différentes salles sont reliées aux tableaux de bords grafana permettant d’avoir toutes les données en détails.
+
+* [x] Tableau de bord (nécessite des ajustements mineurs)
+* [x] Documentation technique (toujours en cours)
+* [x] Documentation utilisateur (toujours en cours)
+* [x] Cahier de recettes
+
+
+Nous avons pu rattraper notre retard et produire le SNI comme il était convenu lors de la première étape du projet.
+
+=== Prévisions
+
+Nos objectifs se tournent maintenant sur la complétion des différentes documentations, l'hébergement de notre service, le traitement des données récupérées par le capteur ainsi que le remplissage du cahier de recettes avec la cliente. Une fois cela produit, il nous sera possible de se concentrer sur la réalisation de la vidéo commerciale.
+
+== Résumé de la communication 
+
+Durant cette période, la communication s'est améliorée et le contact avec notre cliente et notre superviseur a été continu afin de rendre compte du travail effectué. Nous avons pu les contacter par mail, par discord et via des rencontres réelles.  
+
+== Conclusion 
+
+Comparé à notre première étape du projet, notre équipe s'est améliorée tant bien en organisation qu'en communication. Cela nous a permis de travailler efficacement tout en ayant des retours de notre superviseur et de mettre au courant notre cliente des avancées du projet. Nous avons pour objectif de terminer la production des documentations et de passer à la prochaine étape du projet. 
+
