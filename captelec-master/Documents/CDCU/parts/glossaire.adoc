@@ -1,0 +1,86 @@
+==== Capteur Electrique (NKE TRIPHAS'O 60A)
+
+Le capteur Triphas’O permet la télé relève à distance via le réseau LoRaWAN®, des consommations d’énergies électriques d’une installation. Il est spécialement conçu pour répondre aux besoins de gestion d’énergie des bâtiments industriels, tertiaires, fonctionnant avec des équipements de moyenne et forte puissance et de forte consommation d’énergie.
+C'est pour ces raisons que ce capteur convient tout à fait à l'utilisation contrôle à distance d'une salle informatique.
+
+==== LoRaWAN
+
+La spécification LoRaWAN est un protocole de télécommunication LPWA (Low Power, Wide Area) conçu pour connecter sans fil des "objets" fonctionnant sur batterie et permettant de se connecter et de se connecter à Internet via des passerelles, participant ainsi à l'internet des objets.
+
+Ce protocole se veut simple, peu coûteux à implémenter et économe en énergie. Le protocole LoRaWAN a pour but les communications longues portées à bas coût et basse consommation plutôt que les communications à débit élevé consommatrices en ressource CPU et en énergie. En effet, les défis concernant l'interconnexion des objets résident dans leur coût, leur autonomie ainsi que leur nombre d'un point de vue réseau.
+
+En terme d'architecture, le réseau LoRaWAN est constitué de plusieurs passerelles permettant la communication avec les différents serveurs (par exemple ChirpStack) .
+
+En ce qui concerne la portée, une seule passerelle LoRa peut recevoir et transmettre des signaux sur une distance de plus de 15 kilomètres dans les zones rurales. Même dans les environnements urbains denses, les messages peuvent parcourir jusqu'à cinq kilomètres.
+
+En terme de capacité, un réseau LoRaWAN peut prendre en charge des millions de messages. Toutefois, le nombre de messages pris en charge dans un déploiement donné dépend du nombre de passerelles installées.
+
+==== ChirpStack
+
+Le serveur de réseau ChirpStack est un serveur de réseau LoRaWAN, responsable de la gestion de l'état du réseau. Il a connaissance des activations de dispositifs sur le réseau et est capable de traiter les demandes d'adhésion lorsque des dispositifs veulent rejoindre le réseau.
+
+Lorsque des données sont reçues par plusieurs passerelles, le serveur LoRa recevra la même trame une ou plusieurs fois, d'une ou plusieurs passerelles.
+Lorsque le serveur LoRa reçoit la première trame, il attend, par exemple pendant 200 ms (configurable), que d'autres passerelles reçoivent les mêmes données et les transmettent au serveur. Ainsi, le serveur est alors capable de dédupliquer les données afin de ne pas transmettre le même message plusieurs fois.
+Lorsqu'un serveur d'application doit renvoyer des données à un appareil, le serveur de réseau ChirpStack garde ces éléments en file d'attente jusqu'à ce qu'il puisse les envoyer à l'une des passerelles.
+
+[NOTE]
+Serveur de réseau :  
+Il implémente le protocole LoRaWan afin de gérer la couche réseau. Il valide l'authenticité et l'intégrité des appareils communiquant avec le serveur. 
+[NOTE]
+Serveur d'application : 
+Le serveur d'application est responsable de l'envoi des données récupérées par le serveur de réseau. Dans notre cas, il communique avec MQTT.
+
+
+==== MQTT
+
+MQTT est un système de messagerie pour objets connectés, leur permettant d'envoyer des informations sur un sujet donné à un serveur qui fonctionne comme un broker de messages. Le broker publie ces informations sur des "topics" que les utilisateurs peuvent suivre en s'y abonnant. Ainsi, les utilisateurs abonnés à ces topics recevront les informations qu'il publie en temps réel.
+
+.Exemple de trame récupéré sur le bus MQTT de l'IUT
+[src, Donnees.json]
+....
+application/11/device/8553042fc3905153/rx {
+    "applicationID": "11",
+    "applicationName": "Chaput-Test",
+    "deviceName": "ttgo-1",
+    "devEUI": "8553042fc3905153",
+    "rxInfo": [
+        {
+            "gatewayID": "77aaaa5500000001",
+            "uplinkID": "ed98d035-c452-41ab-a494-6f73fe757767",
+            "name": "",
+            "rssi": -120,
+            "loRaSNR": -4,
+            "location": null
+        }
+    ],
+    "txInfo": {
+        "frequency": 868300000,
+        "dr": 0
+    },
+    "adr": true,
+    "fCnt": 6450,
+    "fPort": 1,
+    "data": "RW5yZWdpc3RyZW1lbnQgZGUgbGEgZMOpbW9uc3RyYXRpb24="
+}
+....
+Les trames qui circulent sur le bus MQTT prennent la forme de chaînes JSON comme l'exemple ci-dessus. Dans cette trame, la partie utile du dictionnaire JSON est indexée par la clé __"data"__ et la valeur est codée en base 64. Ici, la valeur codée est : "RW5yZWdpc3RyZW1lbnQgZGUgbGEgZMOpbW9uc3RyYXRpb24=" et veut dire "Enregistrement de la démonstration". On peut également remarquer que la trame contient de nombreuses métadonnées comme la gatewayID : id de la "gateway" qui a réceptionnée le message ou le "deviceName" : nom de l'émetteur du message.
+
+==== Node-RED
+
+NodeRED est un environnement de programmation low-code pour les applications événementielles. Il utilise une méthode de programmation graphique basée sur les flux. Ainsi, il est possible via des blocs de code prédéfinis appelés "node" de constituer son programme en reliant les différents nodes . Node-RED a été développé en Javascript et est basé sur NodeJS
+
+==== Influxdb
+
+InfluxDB est une time series database (TSDB). Elle est taillée pour stocker un large volume times series venant de différentes sources. Cette base de données vise à collecter le volume croissant de données issues de l'internet des objets et permet de gérer en temps réel les événements de tous ces systèmes.
+
+==== Grafana
+
+Grafana est un logiciel libre qui permet de générer des graphiques et des tableaux de bord à partir de bases de données de séries temporelles (time series database) tel que Influxdb.
+
+==== PHP
+
+PHP (Hypertext Preprocessor) est un langage de programmation libre, principalement utilisé pour produire des pages Web dynamiques via un serveur HTTP tel que Apache. Ce langage est principalement conçu pour servir de langage de script côté serveur, il est donc capable de faire tout ce que n'importe quel script CGI peut faire, comme collecter des données de formulaire, générer du contenu dynamique ou gérer des cookies et des sessions.
+
+==== Apache
+
+Le serveur HTTP Apache est un logiciel libre et gratuit qui permet aux utilisateurs de déployer leurs sites web sur Internet. Pour atteindre cet objectif, il agit comme un intermédiaire entre le serveur et les machines clientes. Il extrait le contenu du serveur à chaque demande de l'utilisateur et le diffuse sur le Web.

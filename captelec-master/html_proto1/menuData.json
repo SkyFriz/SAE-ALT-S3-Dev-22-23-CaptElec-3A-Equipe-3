@@ -1,0 +1,31 @@
+{
+    "Batiment_B" : {
+        "requete" : "/B_[0-9]*/",
+        "etages" : {
+            "Rez de chaussée" : {
+                "requete" : "/B_0[0-9]*/",
+                "salles" : [
+                    "B_007"
+                ]
+            },
+            "Premier Etage" : {
+                "requete" : "/B_1[0-9]*/",
+                "salles" : [
+                    "B_101",
+                    "B_102",
+                    "B_103",
+                    "B_104",
+                    "B_105",
+                    "B_106"
+                ]
+            },
+            "Second Etage" : {
+                "requete" : "/B_2[0-9]*/",
+                "salles" : [
+                    "B_217",
+                    "B_219"
+                ]
+            }
+        }
+    }
+}

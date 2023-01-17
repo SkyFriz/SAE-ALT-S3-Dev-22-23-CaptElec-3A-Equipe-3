@@ -1,0 +1,28 @@
+=planification 1 rdv
+
+* Clarification du sujet de PTUT : Capt ELEC
+** Contexte 
+** Objet du projet
+** Périmètre du projet
+* Élaboration du cahier des charges :
+** Objectifs et besoins du projet
+** Contraintes et risques par rapport aux besoins
+** Critères de réussite et gains
+* Déroulement du projet :
+** Dates importantes
+** Notation
+** Méthodes de production
+* Planification prochain rendez-vous
+
+questions : 
+où sont stockées les données ? Capteurs ? Serveurs ? Données collectées (importances) ?
+Informations sur les technologies ?
+- PoD-IoT
+- Seveur IoT
+- rôle Locura4IoT
+
+demander la doc des serveurs ?
+
+demander les docs semaine prochaine
+
+

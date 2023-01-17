@@ -1,0 +1,13 @@
+=== Besoins fonctionnels
+Nous allons définir les besoins fonctionnels grâce à des Users Stories qui sont toutes associées à des niveaux de priorité. Il y a donc quatre niveaux de priorité : **M**ust, **S**hould, **C**ould, **W**ill allant du niveau de priorité le plus élevé au moins élevé. +
+
+[NOTE]
+Vous pouvez trouver le schéma des use case en annexe dans la section <<Schema use cases>>
+
+include::descriptionDesBesoins_tab.adoc[]
+
+=== Besoins non-fonctionnels
+Le projet étant une preuve de concept, une vidéo de présentation du projet fini est nécessaire pour pouvoir financer plus facilement un projet plus ambitieux. La vidéo doit montrer toutes les fonctionnalités du site et comment elles ont été réalisées et ce de manière vulgarisée. De plus, nous devons convaincre sur le potentiel de ce projet en montrant des évolutions possibles et intéressantes. Enfin pour permettre une reprise du projet captElec dans le but d'ajouter de nouvelles fonctionnalités, nous devons rendre une documentation développeur complète et facile à comprendre. Le tableau de bord s'accompagne également d'une documentation utilisateur.
+
+[NOTE]
+Description des documentations dans <<Documentation>>

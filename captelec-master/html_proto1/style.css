@@ -1,0 +1,48 @@
+header {
+    background-color: #0a0b0d;
+    margin: 0;
+    padding: 25px;
+}
+h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    padding: 0;
+}
+table {
+    border-collapse: collapse;
+}
+html {
+    padding: 0;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #111217;
+    color: #ccccdc;
+}
+th {
+    border-bottom: solid #ccccdc 4px;
+    padding-left: 50px;
+}
+td {
+    border-bottom: solid #ccccdc 1px;
+    padding-top: 10px;
+}
+.changeHoverd:hover{
+    background-color: rgba(255, 255, 255, 0.12);
+}
+.start {
+    padding-left: 0;
+    text-align: left;
+}
+.numberCell {
+    text-align: right;
+}
+#conteneur {
+    display: flex;
+    justify-content: center;
+}
+#pathDisplay {
+    margin: 0 0 25px 0;
+    padding: 25px 25px 0 25px;
+}

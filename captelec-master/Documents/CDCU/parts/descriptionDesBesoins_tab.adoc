@@ -1,0 +1,31 @@
+.Expression des besoins fonctionnels
+[cols="~h,~"]
+|====
+^|Priorité ^|User Stories
+^.^|M
+|En tant que personnel de l'IUT, je veux pouvoir visualiser la consommation électrique salle par salle.
+^.^|M
+|En tant que personnel de l'IUT, je veux pouvoir accéder aux données par le biais des principaux navigateurs (Firefox, google chrome, edge).
+^.^|M
+|En tant que personnel de l'IUT, je veux pouvoir accéder à un historique de la consommation électrique jour par jour et par salle.
+^.^|M
+|En tant que personnel de l’IUT, je veux pouvoir visualiser les salles de l’IUT comme sur un plan 2D et interagir avec elles.
+^.^|M
+|En tant que personnel de l'IUT, je veux pouvoir accéder aux données de la consommation électrique aux salles de l'étage du bâtiment B.
+^.^|S
+|En tant que personnel de l'IUT, je veux pouvoir accéder aux données de la consommation électrique sous forme de graphe.
+^.^|S
+|En tant que personnel de l'IUT, je veux avoir une interface graphique facile à prendre en main et complète.
+^.^|S
+|En tant que personnel de l'IUT, je veux pouvoir visualiser facilement quelles salles consomment en temps réel par un code couleur.
+^.^|C
+|En tant que personnel de l'IUT, je veux pouvoir choisir le style de graphe utilisé pour visualiser les données.
+^.^|C
+|En tant que personnel de l'IUT, je veux pouvoir intégrer des nouveaux capteurs (température, présence) facilement au projet.
+^.^|C
+|En tant que personnel de l'IUT, je veux pouvoir choisir l'encadrement par date pour visualiser les données de consommation électrique.
+^.^|W
+|En tant que personnel de l'IUT, je veux pouvoir accéder aux données de la consommation électrique de toutes les salles de l'enceinte de l'IUT.
+^.^|W
+|En tant que personnel de l'IUT, je veux pouvoir être averti avec une notification automatique (bot telegram) lors d'une consommation inhabituelle.
+|====

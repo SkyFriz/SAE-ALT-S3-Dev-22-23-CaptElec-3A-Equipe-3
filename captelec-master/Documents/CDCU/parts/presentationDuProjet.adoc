@@ -1,0 +1,21 @@
+=== Contexte
+
+Lors du troisième semestre du DUT informatique, un projet tutoré est proposé dans le programme des élèves, projet visant à améliorer leur professionnalisme en travaillant avec des clients en entreprise.
+
+Différentes plateformes comme Locura4IoT (projet concernant l’internet des objets) ou alors POD-IoT, nous ont proposé le projet Capt ELEC, projet ayant pour objectif de distribution et manipulation de capteurs pour monitorer l’IUT. Notre groupe a donc fait le choix de CaptElec.
+Notre projet s’inscrit dans le cadre d’un plus grand projet de recherche (réponse d'un appel d'offre) qui vise à équiper l'IUT d'IoT supervisé par l’équipe de recherche RMESS de l’IRIT (laboratoire informatique) et financé par le projet région SRESRI (en cours de soumission).
+Notre cliente quant à elle, travaille dans l'équipe SEPIA de l'IRIT, qui mène des recherches dans les systèmes sécurisés et l’économie d’énergie.
+
+=== Enjeu du projet
+
+Notre projet est une preuve de concept, c'est-à-dire qu'il s'agit de la partie initiale d'un projet possédant potentiellement une grande envergure.
+
+L'objectif du projet est de paramétrer des capteurs électriques afin de récupérer les données qu'ils émettent. Ces données seront transmises vers un tableau de bord en ligne que nous aurons programmé.
+
+Ce tableau sera illustré par un plan de l'IUT, plan pouvant être zoomé ou dézoomé, permettant l'accès aux données des différents bâtiments, étages et salles. Les données des salles seront quant à elles clarifiées par des graphiques générés par Grafana, qui permettront de visualiser la consommation électrique des salles et de détecter des incohérences.
+La consommation électrique figurera en premier plan par des codes couleur en fonction du degré de consommation.
+
+=== Description de l'existant
+
+Ce projet ne possède pas "d'existant" informatique, c'est-à-dire que notre cliente nous demande d'élaborer le projet Capt ELEC sans interface ou code initial.
+Actuellement à l'IUT de Blagnac il n'existe aucun système permettant de visualiser la consommation d'une salle précise, on peut seulement connaître la consommation générale avec le compteur général du site. Il existe tout de même une mise hors tension automatique des ordinateurs de toutes les salles à l'IUT la nuit pour limiter la surconsommation énergétique.

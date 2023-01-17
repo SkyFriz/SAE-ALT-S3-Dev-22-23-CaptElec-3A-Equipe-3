@@ -1,0 +1,73 @@
+=== Documentation du NKE TRIPHAS’O 60A
+Ci-dessous des liens vers les deux supports de documentation du capteur disponible sur Internet.
+
+* link:https://www.nke-watteco.fr/download/fiche-technique-triphaso/?wpdmdl=3334&refresh=61586a9445b6f1633184404[Fiche Technique]
+* link:https://www.nke-watteco.fr/download/notice-dinstallation-capteur-triphaso/?wpdmdl=8368&refresh=61586a9446c861633184404[Notice d'installation]
+
+=== Maquette
+Afin de matérialiser ce que nous imaginons pour ce projet, nous avons réalisé deux maquettes.
+
+==== Carte topologique
+
+[WARNING]
+Il est important de noter pour les parties qui suivent qu'il ne s'agit que de maquettes réalisées à la main dans un souci de structure et de visualisation du projet. Aucune attention particulière n'a été portée au côté esthétique, cela ne sera évidemment pas le cas lors de la réalisation finale du projet.
+
+===== Description
+
+.Carte topologique des consommations d'un étage
+image::src/maquette_carte.png[]
+
+Sur l'image ci-dessus on peut voir à quoi ressemblerait un écran qui donnerait les valeurs de consommation des salles d'un étage. Ici, on reconnaît la forme du bâtiment B de l'IUT de Blagnac. Les différentes salles sont remplies avec les couleurs représentant leur consommation respective.
+
+On peut voir que la salle __B_1yy__ a été sélectionnée, un onglé est donc apparu pour fournir plus d'informations sur cette salle.
+
+L'objectif de ce genre d'écran est de prendre rapidement des informations sur : l'ensemble de l'IUT, un bâtiment ou un étage à l'instant T.
+
+En bas on peut voir le chemin qui mène à cet écran; en cliquant sur __Batiment B__ ou __IUT__ on revient aux écrans précédents. Cela permet donc de naviguer entre les différents écrans de visualisation.
+
+===== Évolutions et interrogations
+Ce genre d'écran est intéressant pour voir les données "temps réel", il permet une meilleure représentation qu'un simple tableau. Toutefois, il reste encore quelques questions en suspens.
+
+Sur quel maximum devons-nous générer __l'Echelle des puissances__ ? Les options envisageables seraient :
+
+* La consommation totale de l'IUT
+* La moyenne généralement observé plus une constante
+* Le maximum de l'écran
+* Laisser le choix entre les trois propositions précédentes
+
+Quelles informations sont pertinentes à faire apparaître dans l'onglet de sélection d'une salle ? Ici, nous avons mis :
+
+* La consommation actuelle (en gros de la couleur de la salle)
+* Des moyennes
+** Journalière serait la moyenne de la journée en cours
+** Absolue serait la moyenne de l'ensemble des relevés faits sur la salle.
+
+On pourrait ajouter d'autres agrégations mathématiques, un lien flop vers l'emploi du temps de la salle, ou plus tard les informations d'autres types de capteurs (présence, température, CO2, ...).
+
+==== Visualisation des données
+
+===== Description
+
+.Graph de visualisation de la consommation d'une salle
+image::src/maquette_graph.png[]
+
+Comme on peut le voir, la maquette ci-dessus comprend peu d'éléments, cela est dû à notre connaissance encore faible de l'outil <<Grafana>> nous ne connaissons pas encore tous les types de présentation de données disponibles.
+
+L'écran se compose en trois parties :
+
+* La zone centrale : contient le graphe ainsi que son titre, mais également des boutons permettant de changer de mode de visualisation ou de télécharger les données par exemple.
+* Le menu latéral : permet de naviguer entre les éléments du niveau actuel. Il évite d'avoir à repasser par la carte vue précédemment.
+** Si on visualise une salle du premier étage du bâtiment B on pourra naviguer entre toutes les salles de cet étage.
+** Si on visualise l'ensemble du premier étage du bâtiment B on pourra naviguer entre les étages de ce bâtiment.
+* Le menu supérieur : permet de revenir aux cartes, de changer de niveau (IUT, Bâtiment, Étage) ou encore d'accéder aux paramètres du tableau de bord.
+
+===== Évolutions et interrogations
+
+Nous ne savons pas encore s'il sera possible d'intégrer des menus tels que ceux décrits plus haut avec l'outil Grafana; et dans l'hypothèse où ce serait possible la forme de ces menus pourrait être amené à changer.
+
+Les écrans de ce type ont pour objectif de mettre en évidence des modèles ou des comportements dans les données collectées par les capteurs. Il est donc primordial de pouvoir simplement ajouter de nouvelles visualisations et de pouvoir naviguer entre elles. L'évolution de tels écrans fait donc partie intégrante de leur utilisation, les manipulations devront donc être simples et accessibles à l'utilisateur.
+
+=== Schema use cases
+
+.Schema des use cases du projet
+image::src/usercase.png[]

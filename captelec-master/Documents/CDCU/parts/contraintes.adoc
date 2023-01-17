@@ -1,0 +1,31 @@
+=== Matériel
+Le capteur de consommation électrique constitue le point zéro de la chaîne d'information de ce projet, il est chargé de recueillir les données qui seront présentées par notre tableau de bord.
+Un lot de capteur a déjà été commandé par l'IUT en août 2021, mais en raison de la conjoncture sanitaire la date de livraison reste incertaine. Toutefois, nous serons en mesure de palier ce problème en simulant le capteur. De cette manière, même dans l'hypothèse où l'on ne recevrait jamais les capteurs, le reste du projet se déroulerait normalement.
+
+En plus du capteur, nous avons aussi des contraintes sur les technologies à utiliser. Ces technologies sont déjà déployées sur le réseau de l'IUT. Nous devons donc les étudier afin de les utiliser correctement. Ces technologies sont :
+
+* LoRaWAN
+* ChirpStack
+* MQTT
+* Node-Red
+* Influxdb
+
+[NOTE]
+Pour plus de détail sur le capteur et les différentes technologies, vous pouvez vous référer au __<<Glossaire>>__.
+
+=== Délais
+Puisque ce projet s'inscrit dans le cadre d'un projet tutoré de l'IUT de Blagnac, il comprend plusieurs échéances intermédiaires.
+
+.Échéances intermédiaires
+[cols="~h,~"]
+|====
+^|Date ^|Étape
+^.^|06/10/2021
+|CDC - Cahier Des Charges
+^.^|10/11/2021
+|Premier Prototype
+^.^|09/12/2021
+|Deuxième Prototype
+^.^|21/01/2022
+|Livraison et Recette client
+|====

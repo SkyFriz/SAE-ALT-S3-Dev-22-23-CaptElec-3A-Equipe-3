@@ -1,0 +1,45 @@
+= CaptElec
+:toc: macro
+:toc-title: Table des matières
+:sectnums:
+
+<<<
+
+toc::[Title="Table des matières"]
+
+<<<
+
+== Contact
+
+* Bacrie Axel : axel.bacrie@etu.univ-tlse2.fr
+* Chaves Théo : theo.ch.47@hotmail.fr
+* Chaugier Nathan : nathan.chaugier@gmail.com
+* Touzani William : william.touzani@live.fr
+
+== Le site en production
+
+http://captelec.iut-blagnac.fr/auth.php
+
+== Liens vers Livraison
+
+* https://youtu.be/O8YL7YfD6b8[Vidéo de présentation du projet].
+
+=== Documents en html et PDF 
+
+* link:Livrables/DocumentationTechnique.pdf[Documentation technique (pdf)]
+* link:Livrables/DocUtilisateur.pdf[Documentation utilisateur (pdf)]
+
+* link:Livrables/DocumentationTechnique.pdf[Documentation technique (html)]
+* link:Livrables/DocUtilisateur.pdf[Documentation utilisateur (html)]
+
+=== Sources en asciidoc
+
+* link:Documents/CaptElec_CDCU.adoc[Cahier des charges utilisateur]
+* link:Documents/DocTechnique/DocumentationTechnique.adoc[Documentation technique]
+* link:Documents/DocUtilisateur/DocUtilisateur.adoc[Documentation utilisateur]
+
+=== Code source PHP
+
+Vous trouverez le code source PHP actuellement en production dans le répertoire `html_proto2` de ce dépôt.
+
+//asciidoctor-pdf -a pdf-themesdir=src -a pdf-theme=pdf-theme.yml CaptElec_CDCU.adoc

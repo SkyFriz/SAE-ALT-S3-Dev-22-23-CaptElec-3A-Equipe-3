@@ -1,0 +1,23 @@
+@startuml "ParadigmeMVC"
+
+hide footbox
+autonumber
+
+actor utilisateur as usr
+participant ":Routeur" as R
+participant ":Vue" as V
+participant ":Controleur" as C
+participant ":Modele" as M
+database "Données" as D
+
+usr->R : requete utilisateur 
+R->C : routage
+C->M : demande de données
+M->D : collecte des données
+M-->C : retour des données
+C->C : Traitement des données
+C->V : Insertion/mise en forme
+V-->usr : Affichage
+
+
+@enduml

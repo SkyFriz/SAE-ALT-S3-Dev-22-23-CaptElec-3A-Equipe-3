@@ -1,0 +1,25 @@
+=== Description
+
+Afin de correctement décrire ce projet, nous pouvons le découper en trois grandes parties. On retrouve ces trois parties dans le schéma des technologies ci-dessous (trois lignes). Nous regrouperons donc les technologies et les tâches à réaliser dans ces trois catégories.
+
+* *Acquisition* : Capteur, LoRaWan, ChirpStack
+* *Stockage* : Node-Red, InfluxDB
+* *Affichage / Interprétation* : PHP, Apache, Grafana
+
+Ici on constate que le MQTT n'est pas vraiment classable entre Acquisition et Stockage puisque par sa nature de protocole de communication, c'est une technologie de "transition".
+
+On peut apporter un peu plus de détails quant aux rôles de ces différentes parties.
+
+* *Acquisition* : Récupérer les données (consommation électrique) "sur le terrain" pour les rendre disponibles sur le réseau de l'IUT.
+* *Stockage* : Lire les données envoyées sur le réseau et les insérer dans une base de données.
+* *Affichage / Interprétation* : Collecter les données dans la base pour les présenter sous différentes formes et les présenter à l'utilisateur.
+
+[NOTE]
+"Interprétation" fait référence à des traitements faits sur les données et qui déclencheraient des actions en fonction.
+
+.Schéma d'interactions des technologies dans le projet
+image::src/schemaTechno.png[]
+
+=== Glossaire
+
+include::glossaire.adoc[]

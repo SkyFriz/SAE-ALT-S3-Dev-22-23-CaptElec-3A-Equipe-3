@@ -1,0 +1,53 @@
+= Cahier des charges utilisateur, projet tutoré 3eme semestre : CaptElec
+:version: 1
+:autor1: Axel Bacrie
+:autor2: Théo Chaves
+:autor3: Nathan Chaugier
+:autor4: William Touzani
+:email1: axel.bacrie@etu.univ-tlse2.fr
+:email2: theo.ch.47@hotmail.fr
+:email3: nathan.chaugier@gmail.com
+:email4: william.touzani@live.fr
+:toc: macro
+:toc-title: Table des matières
+:toclevels: 4
+:sectnums:
+
+image::src/Logo_IUT_Blagnac.png[align="center", 300]
+
+'''
+Version : {version} +
+Par :
+
+* {autor1} {email1}
+* {autor2} {email2}
+* {autor3} {email3}
+* {autor4} {email4}
+
+'''
+<<<
+
+toc::[Title="Table des matières"]
+
+<<<
+
+== Présentation du projet
+include::parts/presentationDuProjet.adoc[]
+
+== Expression des besoins
+include::parts/expressionDesBesoins.adoc[]
+
+== Structure du projet
+include::parts/structureDuProjet.adoc[]
+
+== Contraintes
+include::parts/contraintes.adoc[]
+
+== Déroulement du projet
+include::parts/deroulementDuProjet.adoc[]
+
+== Responsabilités
+include::parts/responsabilitees.adoc[]
+
+== Annexe
+include::parts/annexe.adoc[]

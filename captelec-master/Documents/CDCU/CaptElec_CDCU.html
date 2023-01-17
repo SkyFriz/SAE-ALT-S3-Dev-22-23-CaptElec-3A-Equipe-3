@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.15">
+<title>Cahier des charges utilisateur, projet tutoré 3eme semestre : CaptElec</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment @import statement to use as custom stylesheet */
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;word-wrap:anywhere;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
+ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
+ul.square{list-style-type:square}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
+abbr{text-transform:none}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede;word-wrap:normal}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre).nobreak{word-wrap:normal}
+:not(pre).nowrap{white-space:nowrap}
+:not(pre).pre-wrap{white-space:pre-wrap}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre>code{display:block}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:none;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:rgba(255,255,255,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details>summary:first-of-type{cursor:pointer;display:list-item;outline:none;margin-bottom:.75em}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:inherit}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
+.sidebarblock{border-style:solid;border-width:1px;border-color:#dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;-webkit-border-radius:4px;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class="highlight"],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;padding-right:.5em}
+pre.pygments .lineno{border-right:1px solid currentColor;opacity:.35;display:inline-block;margin-right:.75em}
+pre.pygments .lineno::before{content:"";margin-right:-.125em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;font-size:.85rem;text-align:left;margin-right:0}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>*>tr>*{border-width:1px}
+table.grid-cols>*>tr>*{border-width:0 1px}
+table.grid-rows>*>tr>*{border-width:1px 0}
+table.frame-all{border-width:1px}
+table.frame-ends{border-width:1px 0}
+table.frame-sides{border-width:0 1px}
+table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-child>*{border-top-width:0}
+table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
+table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
+table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
+table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
+ul.inline{display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
+.gist .file-data>table td.line-data{width:99%}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:50%;border-radius:50%;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#header,#content,#footnotes,#footer{max-width:none}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media print,amzn-kf8{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+</head>
+<body class="article">
+<div id="header">
+<h1>Cahier des charges utilisateur, projet tutoré 3eme semestre : CaptElec</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="imageblock text-center">
+<div class="content">
+<img src="src/Logo_IUT_Blagnac.png" alt="Logo IUT Blagnac" width="300">
+</div>
+</div>
+<hr>
+<div class="paragraph">
+<p>Version : 1<br>
+Par :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Axel Bacrie <a href="mailto:axel.bacrie@etu.univ-tlse2.fr">axel.bacrie@etu.univ-tlse2.fr</a></p>
+</li>
+<li>
+<p>Théo Chaves <a href="mailto:theo.ch.47@hotmail.fr">theo.ch.47@hotmail.fr</a></p>
+</li>
+<li>
+<p>Nathan Chaugier <a href="mailto:nathan.chaugier@gmail.com">nathan.chaugier@gmail.com</a></p>
+</li>
+<li>
+<p>William Touzani <a href="mailto:william.touzani@live.fr">william.touzani@live.fr</a></p>
+</li>
+</ul>
+</div>
+<hr>
+<div style="page-break-after: always;"></div>
+<div id="toc" class="toc">
+<div id="toctitle" class="title">Table des matières</div>
+<ul class="sectlevel1">
+<li><a href="#_présentation_du_projet">1. Présentation du projet</a>
+<ul class="sectlevel2">
+<li><a href="#_contexte">1.1. Contexte</a></li>
+<li><a href="#_enjeu_du_projet">1.2. Enjeu du projet</a></li>
+<li><a href="#_description_de_lexistant">1.3. Description de l&#8217;existant</a></li>
+</ul>
+</li>
+<li><a href="#_expression_des_besoins">2. Expression des besoins</a>
+<ul class="sectlevel2">
+<li><a href="#_besoins_fonctionnels">2.1. Besoins fonctionnels</a></li>
+<li><a href="#_besoins_non_fonctionnels">2.2. Besoins non-fonctionnels</a></li>
+</ul>
+</li>
+<li><a href="#_structure_du_projet">3. Structure du projet</a>
+<ul class="sectlevel2">
+<li><a href="#_description">3.1. Description</a></li>
+<li><a href="#_glossaire">3.2. Glossaire</a>
+<ul class="sectlevel3">
+<li><a href="#_capteur_electrique_nke_triphaso_60a">3.2.1. Capteur Electrique (NKE TRIPHAS&#8217;O 60A)</a></li>
+<li><a href="#_lorawan">3.2.2. LoRaWAN</a></li>
+<li><a href="#_chirpstack">3.2.3. ChirpStack</a></li>
+<li><a href="#_mqtt">3.2.4. MQTT</a></li>
+<li><a href="#_node_red">3.2.5. Node-RED</a></li>
+<li><a href="#_influxdb">3.2.6. Influxdb</a></li>
+<li><a href="#_grafana">3.2.7. Grafana</a></li>
+<li><a href="#_php">3.2.8. PHP</a></li>
+<li><a href="#_apache">3.2.9. Apache</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_contraintes">4. Contraintes</a>
+<ul class="sectlevel2">
+<li><a href="#_matériel">4.1. Matériel</a></li>
+<li><a href="#_délais">4.2. Délais</a></li>
+</ul>
+</li>
+<li><a href="#_déroulement_du_projet">5. Déroulement du projet</a>
+<ul class="sectlevel2">
+<li><a href="#_planification">5.1. Planification</a>
+<ul class="sectlevel3">
+<li><a href="#_premier_prototype">5.1.1. Premier Prototype</a></li>
+<li><a href="#_second_prototype">5.1.2. Second Prototype</a></li>
+<li><a href="#_livraison_et_recette_client">5.1.3. Livraison et Recette client</a></li>
+</ul>
+</li>
+<li><a href="#_documentation">5.2. Documentation</a></li>
+</ul>
+</li>
+<li><a href="#_responsabilités">6. Responsabilités</a>
+<ul class="sectlevel2">
+<li><a href="#_maîtrise_douvrage">6.1. Maîtrise d&#8217;ouvrage</a></li>
+<li><a href="#_maîtrise_dœuvre">6.2. Maîtrise d&#8217;œuvre</a></li>
+</ul>
+</li>
+<li><a href="#_annexe">7. Annexe</a>
+<ul class="sectlevel2">
+<li><a href="#_documentation_du_nke_triphaso_60a">7.1. Documentation du NKE TRIPHAS’O 60A</a></li>
+<li><a href="#_maquette">7.2. Maquette</a>
+<ul class="sectlevel3">
+<li><a href="#_carte_topologique">7.2.1. Carte topologique</a>
+<ul class="sectlevel4">
+<li><a href="#_description_2">Description</a></li>
+<li><a href="#_évolutions_et_interrogations">Évolutions et interrogations</a></li>
+</ul>
+</li>
+<li><a href="#_visualisation_des_données">7.2.2. Visualisation des données</a>
+<ul class="sectlevel4">
+<li><a href="#_description_3">Description</a></li>
+<li><a href="#_évolutions_et_interrogations_2">Évolutions et interrogations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_schema_use_cases">7.3. Schema use cases</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_présentation_du_projet">1. Présentation du projet</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_contexte">1.1. Contexte</h3>
+<div class="paragraph">
+<p>Lors du troisième semestre du DUT informatique, un projet tutoré est proposé dans le programme des élèves, projet visant à améliorer leur professionnalisme en travaillant avec des clients en entreprise.</p>
+</div>
+<div class="paragraph">
+<p>Différentes plateformes comme Locura4IoT (projet concernant l’internet des objets) ou alors POD-IoT, nous ont proposé le projet Capt ELEC, projet ayant pour objectif de distribution et manipulation de capteurs pour monitorer l’IUT. Notre groupe a donc fait le choix de CaptElec.
+Notre projet s’inscrit dans le cadre d’un plus grand projet de recherche (réponse d&#8217;un appel d&#8217;offre) qui vise à équiper l&#8217;IUT d&#8217;IoT supervisé par l’équipe de recherche RMESS de l’IRIT (laboratoire informatique) et financé par le projet région SRESRI (en cours de soumission).
+Notre cliente quant à elle, travaille dans l&#8217;équipe SEPIA de l&#8217;IRIT, qui mène des recherches dans les systèmes sécurisés et l’économie d’énergie.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_enjeu_du_projet">1.2. Enjeu du projet</h3>
+<div class="paragraph">
+<p>Notre projet est une preuve de concept, c&#8217;est-à-dire qu&#8217;il s&#8217;agit de la partie initiale d&#8217;un projet possédant potentiellement une grande envergure.</p>
+</div>
+<div class="paragraph">
+<p>L&#8217;objectif du projet est de paramétrer des capteurs électriques afin de récupérer les données qu&#8217;ils émettent. Ces données seront transmises vers un tableau de bord en ligne que nous aurons programmé.</p>
+</div>
+<div class="paragraph">
+<p>Ce tableau sera illustré par un plan de l&#8217;IUT, plan pouvant être zoomé ou dézoomé, permettant l&#8217;accès aux données des différents bâtiments, étages et salles. Les données des salles seront quant à elles clarifiées par des graphiques générés par Grafana, qui permettront de visualiser la consommation électrique des salles et de détecter des incohérences.
+La consommation électrique figurera en premier plan par des codes couleur en fonction du degré de consommation.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_description_de_lexistant">1.3. Description de l&#8217;existant</h3>
+<div class="paragraph">
+<p>Ce projet ne possède pas "d&#8217;existant" informatique, c&#8217;est-à-dire que notre cliente nous demande d&#8217;élaborer le projet Capt ELEC sans interface ou code initial.
+Actuellement à l&#8217;IUT de Blagnac il n&#8217;existe aucun système permettant de visualiser la consommation d&#8217;une salle précise, on peut seulement connaître la consommation générale avec le compteur général du site. Il existe tout de même une mise hors tension automatique des ordinateurs de toutes les salles à l&#8217;IUT la nuit pour limiter la surconsommation énergétique.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_expression_des_besoins">2. Expression des besoins</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_besoins_fonctionnels">2.1. Besoins fonctionnels</h3>
+<div class="paragraph">
+<p>Nous allons définir les besoins fonctionnels grâce à des Users Stories qui sont toutes associées à des niveaux de priorité. Il y a donc quatre niveaux de priorité : <strong>M</strong>ust, <strong>S</strong>hould, <strong>C</strong>ould, <strong>W</strong>ill allant du niveau de priorité le plus élevé au moins élevé.<br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Vous pouvez trouver le schéma des use case en annexe dans la section <a href="#_schema_use_cases">Schema use cases</a>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Expression des besoins fonctionnels</caption>
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Priorité</p></th>
+<td class="tableblock halign-center valign-top"><p class="tableblock">User Stories</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">M</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En tant que personnel de l&#8217;IUT, je veux pouvoir visualiser la consommation électrique salle par salle.</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">M</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En tant que personnel de l&#8217;IUT, je veux pouvoir accéder aux données par le biais des principaux navigateurs (Firefox, google chrome, edge).</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">M</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En tant que personnel de l&#8217;IUT, je veux pouvoir accéder à un historique de la consommation électrique jour par jour et par salle.</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">M</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En tant que personnel de l’IUT, je veux pouvoir visualiser les salles de l’IUT comme sur un plan 2D et interagir avec elles.</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">M</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En tant que personnel de l&#8217;IUT, je veux pouvoir accéder aux données de la consommation électrique aux salles de l&#8217;étage du bâtiment B.</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">S</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En tant que personnel de l&#8217;IUT, je veux pouvoir accéder aux données de la consommation électrique sous forme de graphe.</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">S</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En tant que personnel de l&#8217;IUT, je veux avoir une interface graphique facile à prendre en main et complète.</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">S</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En tant que personnel de l&#8217;IUT, je veux pouvoir visualiser facilement quelles salles consomment en temps réel par un code couleur.</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">C</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En tant que personnel de l&#8217;IUT, je veux pouvoir choisir le style de graphe utilisé pour visualiser les données.</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">C</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En tant que personnel de l&#8217;IUT, je veux pouvoir intégrer des nouveaux capteurs (température, présence) facilement au projet.</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">C</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En tant que personnel de l&#8217;IUT, je veux pouvoir choisir l&#8217;encadrement par date pour visualiser les données de consommation électrique.</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">W</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En tant que personnel de l&#8217;IUT, je veux pouvoir accéder aux données de la consommation électrique de toutes les salles de l&#8217;enceinte de l&#8217;IUT.</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">W</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En tant que personnel de l&#8217;IUT, je veux pouvoir être averti avec une notification automatique (bot telegram) lors d&#8217;une consommation inhabituelle.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_besoins_non_fonctionnels">2.2. Besoins non-fonctionnels</h3>
+<div class="paragraph">
+<p>Le projet étant une preuve de concept, une vidéo de présentation du projet fini est nécessaire pour pouvoir financer plus facilement un projet plus ambitieux. La vidéo doit montrer toutes les fonctionnalités du site et comment elles ont été réalisées et ce de manière vulgarisée. De plus, nous devons convaincre sur le potentiel de ce projet en montrant des évolutions possibles et intéressantes. Enfin pour permettre une reprise du projet captElec dans le but d&#8217;ajouter de nouvelles fonctionnalités, nous devons rendre une documentation développeur complète et facile à comprendre. Le tableau de bord s&#8217;accompagne également d&#8217;une documentation utilisateur.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Description des documentations dans <a href="#_documentation">Documentation</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_structure_du_projet">3. Structure du projet</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_description">3.1. Description</h3>
+<div class="paragraph">
+<p>Afin de correctement décrire ce projet, nous pouvons le découper en trois grandes parties. On retrouve ces trois parties dans le schéma des technologies ci-dessous (trois lignes). Nous regrouperons donc les technologies et les tâches à réaliser dans ces trois catégories.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Acquisition</strong> : Capteur, LoRaWan, ChirpStack</p>
+</li>
+<li>
+<p><strong>Stockage</strong> : Node-Red, InfluxDB</p>
+</li>
+<li>
+<p><strong>Affichage / Interprétation</strong> : PHP, Apache, Grafana</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ici on constate que le MQTT n&#8217;est pas vraiment classable entre Acquisition et Stockage puisque par sa nature de protocole de communication, c&#8217;est une technologie de "transition".</p>
+</div>
+<div class="paragraph">
+<p>On peut apporter un peu plus de détails quant aux rôles de ces différentes parties.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Acquisition</strong> : Récupérer les données (consommation électrique) "sur le terrain" pour les rendre disponibles sur le réseau de l&#8217;IUT.</p>
+</li>
+<li>
+<p><strong>Stockage</strong> : Lire les données envoyées sur le réseau et les insérer dans une base de données.</p>
+</li>
+<li>
+<p><strong>Affichage / Interprétation</strong> : Collecter les données dans la base pour les présenter sous différentes formes et les présenter à l&#8217;utilisateur.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+"Interprétation" fait référence à des traitements faits sur les données et qui déclencheraient des actions en fonction.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="src/schemaTechno.png" alt="schemaTechno">
+</div>
+<div class="title">Figure 1. Schéma d&#8217;interactions des technologies dans le projet</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_glossaire">3.2. Glossaire</h3>
+<div class="sect3">
+<h4 id="_capteur_electrique_nke_triphaso_60a">3.2.1. Capteur Electrique (NKE TRIPHAS&#8217;O 60A)</h4>
+<div class="paragraph">
+<p>Le capteur Triphas’O permet la télé relève à distance via le réseau LoRaWAN®, des consommations d’énergies électriques d’une installation. Il est spécialement conçu pour répondre aux besoins de gestion d’énergie des bâtiments industriels, tertiaires, fonctionnant avec des équipements de moyenne et forte puissance et de forte consommation d’énergie.
+C&#8217;est pour ces raisons que ce capteur convient tout à fait à l&#8217;utilisation contrôle à distance d&#8217;une salle informatique.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_lorawan">3.2.2. LoRaWAN</h4>
+<div class="paragraph">
+<p>La spécification LoRaWAN est un protocole de télécommunication LPWA (Low Power, Wide Area) conçu pour connecter sans fil des "objets" fonctionnant sur batterie et permettant de se connecter et de se connecter à Internet via des passerelles, participant ainsi à l&#8217;internet des objets.</p>
+</div>
+<div class="paragraph">
+<p>Ce protocole se veut simple, peu coûteux à implémenter et économe en énergie. Le protocole LoRaWAN a pour but les communications longues portées à bas coût et basse consommation plutôt que les communications à débit élevé consommatrices en ressource CPU et en énergie. En effet, les défis concernant l&#8217;interconnexion des objets résident dans leur coût, leur autonomie ainsi que leur nombre d&#8217;un point de vue réseau.</p>
+</div>
+<div class="paragraph">
+<p>En terme d&#8217;architecture, le réseau LoRaWAN est constitué de plusieurs passerelles permettant la communication avec les différents serveurs (par exemple ChirpStack) .</p>
+</div>
+<div class="paragraph">
+<p>En ce qui concerne la portée, une seule passerelle LoRa peut recevoir et transmettre des signaux sur une distance de plus de 15 kilomètres dans les zones rurales. Même dans les environnements urbains denses, les messages peuvent parcourir jusqu&#8217;à cinq kilomètres.</p>
+</div>
+<div class="paragraph">
+<p>En terme de capacité, un réseau LoRaWAN peut prendre en charge des millions de messages. Toutefois, le nombre de messages pris en charge dans un déploiement donné dépend du nombre de passerelles installées.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_chirpstack">3.2.3. ChirpStack</h4>
+<div class="paragraph">
+<p>Le serveur de réseau ChirpStack est un serveur de réseau LoRaWAN, responsable de la gestion de l&#8217;état du réseau. Il a connaissance des activations de dispositifs sur le réseau et est capable de traiter les demandes d&#8217;adhésion lorsque des dispositifs veulent rejoindre le réseau.</p>
+</div>
+<div class="paragraph">
+<p>Lorsque des données sont reçues par plusieurs passerelles, le serveur LoRa recevra la même trame une ou plusieurs fois, d&#8217;une ou plusieurs passerelles.
+Lorsque le serveur LoRa reçoit la première trame, il attend, par exemple pendant 200 ms (configurable), que d&#8217;autres passerelles reçoivent les mêmes données et les transmettent au serveur. Ainsi, le serveur est alors capable de dédupliquer les données afin de ne pas transmettre le même message plusieurs fois.
+Lorsqu&#8217;un serveur d&#8217;application doit renvoyer des données à un appareil, le serveur de réseau ChirpStack garde ces éléments en file d&#8217;attente jusqu&#8217;à ce qu&#8217;il puisse les envoyer à l&#8217;une des passerelles.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Serveur de réseau :
+Il implémente le protocole LoRaWan afin de gérer la couche réseau. Il valide l&#8217;authenticité et l&#8217;intégrité des appareils communiquant avec le serveur.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Serveur d&#8217;application :
+Le serveur d&#8217;application est responsable de l&#8217;envoi des données récupérées par le serveur de réseau. Dans notre cas, il communique avec MQTT.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mqtt">3.2.4. MQTT</h4>
+<div class="paragraph">
+<p>MQTT est un système de messagerie pour objets connectés, leur permettant d&#8217;envoyer des informations sur un sujet donné à un serveur qui fonctionne comme un broker de messages. Le broker publie ces informations sur des "topics" que les utilisateurs peuvent suivre en s&#8217;y abonnant. Ainsi, les utilisateurs abonnés à ces topics recevront les informations qu&#8217;il publie en temps réel.</p>
+</div>
+<div class="literalblock">
+<div class="title">Exemple de trame récupéré sur le bus MQTT de l&#8217;IUT</div>
+<div class="content">
+<pre>application/11/device/8553042fc3905153/rx {
+    "applicationID": "11",
+    "applicationName": "Chaput-Test",
+    "deviceName": "ttgo-1",
+    "devEUI": "8553042fc3905153",
+    "rxInfo": [
+        {
+            "gatewayID": "77aaaa5500000001",
+            "uplinkID": "ed98d035-c452-41ab-a494-6f73fe757767",
+            "name": "",
+            "rssi": -120,
+            "loRaSNR": -4,
+            "location": null
+        }
+    ],
+    "txInfo": {
+        "frequency": 868300000,
+        "dr": 0
+    },
+    "adr": true,
+    "fCnt": 6450,
+    "fPort": 1,
+    "data": "RW5yZWdpc3RyZW1lbnQgZGUgbGEgZMOpbW9uc3RyYXRpb24="
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Les trames qui circulent sur le bus MQTT prennent la forme de chaînes JSON comme l&#8217;exemple ci-dessus. Dans cette trame, la partie utile du dictionnaire JSON est indexée par la clé <em>"data"</em> et la valeur est codée en base 64. Ici, la valeur codée est : "RW5yZWdpc3RyZW1lbnQgZGUgbGEgZMOpbW9uc3RyYXRpb24=" et veut dire "Enregistrement de la démonstration". On peut également remarquer que la trame contient de nombreuses métadonnées comme la gatewayID : id de la "gateway" qui a réceptionnée le message ou le "deviceName" : nom de l&#8217;émetteur du message.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_node_red">3.2.5. Node-RED</h4>
+<div class="paragraph">
+<p>NodeRED est un environnement de programmation low-code pour les applications événementielles. Il utilise une méthode de programmation graphique basée sur les flux. Ainsi, il est possible via des blocs de code prédéfinis appelés "node" de constituer son programme en reliant les différents nodes . Node-RED a été développé en Javascript et est basé sur NodeJS</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_influxdb">3.2.6. Influxdb</h4>
+<div class="paragraph">
+<p>InfluxDB est une time series database (TSDB). Elle est taillée pour stocker un large volume times series venant de différentes sources. Cette base de données vise à collecter le volume croissant de données issues de l&#8217;internet des objets et permet de gérer en temps réel les événements de tous ces systèmes.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_grafana">3.2.7. Grafana</h4>
+<div class="paragraph">
+<p>Grafana est un logiciel libre qui permet de générer des graphiques et des tableaux de bord à partir de bases de données de séries temporelles (time series database) tel que Influxdb.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_php">3.2.8. PHP</h4>
+<div class="paragraph">
+<p>PHP (Hypertext Preprocessor) est un langage de programmation libre, principalement utilisé pour produire des pages Web dynamiques via un serveur HTTP tel que Apache. Ce langage est principalement conçu pour servir de langage de script côté serveur, il est donc capable de faire tout ce que n&#8217;importe quel script CGI peut faire, comme collecter des données de formulaire, générer du contenu dynamique ou gérer des cookies et des sessions.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_apache">3.2.9. Apache</h4>
+<div class="paragraph">
+<p>Le serveur HTTP Apache est un logiciel libre et gratuit qui permet aux utilisateurs de déployer leurs sites web sur Internet. Pour atteindre cet objectif, il agit comme un intermédiaire entre le serveur et les machines clientes. Il extrait le contenu du serveur à chaque demande de l&#8217;utilisateur et le diffuse sur le Web.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_contraintes">4. Contraintes</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_matériel">4.1. Matériel</h3>
+<div class="paragraph">
+<p>Le capteur de consommation électrique constitue le point zéro de la chaîne d&#8217;information de ce projet, il est chargé de recueillir les données qui seront présentées par notre tableau de bord.
+Un lot de capteur a déjà été commandé par l&#8217;IUT en août 2021, mais en raison de la conjoncture sanitaire la date de livraison reste incertaine. Toutefois, nous serons en mesure de palier ce problème en simulant le capteur. De cette manière, même dans l&#8217;hypothèse où l&#8217;on ne recevrait jamais les capteurs, le reste du projet se déroulerait normalement.</p>
+</div>
+<div class="paragraph">
+<p>En plus du capteur, nous avons aussi des contraintes sur les technologies à utiliser. Ces technologies sont déjà déployées sur le réseau de l&#8217;IUT. Nous devons donc les étudier afin de les utiliser correctement. Ces technologies sont :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>LoRaWAN</p>
+</li>
+<li>
+<p>ChirpStack</p>
+</li>
+<li>
+<p>MQTT</p>
+</li>
+<li>
+<p>Node-Red</p>
+</li>
+<li>
+<p>Influxdb</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Pour plus de détail sur le capteur et les différentes technologies, vous pouvez vous référer au <em><a href="#_glossaire">Glossaire</a></em>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_délais">4.2. Délais</h3>
+<div class="paragraph">
+<p>Puisque ce projet s&#8217;inscrit dans le cadre d&#8217;un projet tutoré de l&#8217;IUT de Blagnac, il comprend plusieurs échéances intermédiaires.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Échéances intermédiaires</caption>
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Date</p></th>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Étape</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">06/10/2021</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CDC - Cahier Des Charges</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">10/11/2021</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Premier Prototype</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">09/12/2021</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deuxième Prototype</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">21/01/2022</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Livraison et Recette client</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_déroulement_du_projet">5. Déroulement du projet</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_planification">5.1. Planification</h3>
+<div class="paragraph">
+<p>Dans les contraintes de délais, nous avons défini plusieurs échéances intermédiaires. Il faut maintenant déterminer ce que contiendront les dépôts de ces étapes.</p>
+</div>
+<div class="sect3">
+<h4 id="_premier_prototype">5.1.1. Premier Prototype</h4>
+<div class="paragraph">
+<p>Pour cette version très simpliste du projet, nous nous concentrerons sur les deux premières parties : Collecte et Stockage des données. Ici, il y a de nombreuses technologies qui interviennent et qui doivent être paramétrées/programmées correctement.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Les parties sont décrites dans <a href="#_description">Description</a>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 3. Contenu de la livraison du premier prototype</caption>
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">Nom</th>
+<th class="tableblock halign-center valign-top">Objet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Capteur simulé</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">À cause de la date de livraison incertaine du capteur, il est primordial pour la suite du projet de pouvoir le remplacer. Il faudra donc trouver un moyen de simuler un ou plusieurs capteurs qui émettraient des données.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Documentation paramétrage (partie de doc technique)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Une documentation qui retrace toutes les manipulations de paramétrage et de programmation des différentes technologies des parties Collecte et Stockage.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Fichiers paramétrages</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L’ensemble des fichiers qui ont un lien avec les manipulations de paramétrage et de programmation des différentes technologies des parties Collecte et Stockage.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Début de documentation utilisateur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Une documentation destinée à l&#8217;utilisateur, détaillant les quelques fonctionnalités de cette version.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Ébauche de tableau de bord (sources et site opérationnel)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Une version <strong>minimale</strong> du site avec quelques pages grafana et un menu, sans porter attention au style.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Conception tableau de bord pour second prototype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Les documents de conception du tableau de bord de la prochaine version (SNI, maquette).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_second_prototype">5.1.2. Second Prototype</h4>
+<div class="paragraph">
+<p>Pour cette seconde version, nous nous concentrerons sur le développement du tableau de bord, il s&#8217;agit ici de le rendre plus complet en terme de fonctionnalités. Nous travaillerons également la présentation graphique et l&#8217;ergonomie.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 4. Contenu de la livraison du second prototype</caption>
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">Nom</th>
+<th class="tableblock halign-center valign-top">Objet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Tableau de bord final</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Un tableau de bord complet présentant à l’utilisateur toutes les données que l’utilisateur peut souhaiter sous différentes formes de graphiques, ainsi que des menus ergonomiques pour faciliter la navigation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Documentation technique</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Une documentation permettant d&#8217;améliorer le tableau de bord.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Documentation utilisateur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Une documentation complète de la navigation dans le tableau de bord ainsi que des possibilités qu’il offre.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Cahier de recettes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Écriture d’un cahier de recette contenant les généralités, les détails des tests et le plan de test. Il sera ensuite complété ave les résultats des tests effectués avec le client.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_livraison_et_recette_client">5.1.3. Livraison et Recette client</h4>
+<div class="paragraph">
+<p>Pour cette étape finale, l&#8217;objectif et de rendre tout ce que nous avons livré précédemment mis au propre et corrigé selon les remarques du client.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 5. Contenu de la livraison finale</caption>
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Vidéo de démonstration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Une vidéo qui présente le dispositif, du capteur au tableau de bord.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Sources</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L&#8217;ensemble des fichiers sources qui constituent le projet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Documentations</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Toutes les documentations écrites jusque-là.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Cahier de recette rempli</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Résultat complet des tests effectués avec le client.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_documentation">5.2. Documentation</h3>
+<div class="paragraph">
+<p>La documentation livrée sera composée de 2 documents : la documentation technique et la documentation utilisateur. Toutes les documentations seront écrites en Asciidoc et donc seront livrées en PDF et en HTML.<br>
+La documentation technique est importante pour que le projet soit maintenable et améliorable facilement par n&#8217;importe quel développeur. Elle comportera pour le coté web l&#8217;arborescence du site web, et le fonctionnement des request/reponse HTTP. Du coté back-end la documentation doit décrire les protocoles utilisés et les différentes étapes pour qu&#8217;une trame de données parte du capteur et rentre dans la base de données du projet. Pour finir, pour que le code source soit lisible, il sera évidemment commenté.<br>
+Quant à elle la documentation utilisateur, elle doit décrire toutes les fonctionnalités implémentées au site et comment l&#8217;utilisateur peut interagir avec ce dernier.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_responsabilités">6. Responsabilités</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_maîtrise_douvrage">6.1. Maîtrise d&#8217;ouvrage</h3>
+<div class="paragraph">
+<p>Ce projet est réalisé pour le secteur recherche de l&#8217;IUT de Blagnac, plus exactement le laboratoire IRIT. Notre cliente, Patricia Stolf est donc la maître d&#8217;ouvrage et travaille quant à elle au sein de l&#8217;équipe SEPIA, qui mène des recherches dans les systèmes sécurisés et l’économie d’énergie. C&#8217;est elle qui nous donne ses attentes concernant ce projet ainsi que ses délais. Nous avons déjà eu une réunion dans laquelle elle nous expliquait en détail les besoins du projet et ses attentes.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_maîtrise_dœuvre">6.2. Maîtrise d&#8217;œuvre</h3>
+<div class="paragraph">
+<p>Le maître d&#8217;œuvre de Capt ELEC est Rémi BOULLE, enseignant en informatique à l&#8217;IUT de Blagnac. Il est ici pour aider notre cliente à la bonne réalisation du projet de notre équipe. Notre réunion avec monsieur BOULLE se résume aux explications des détails non compris lors de notre première réunion avec le maître d&#8217;ouvrage : il met tout en œuvre pour que les travaux se déroulent conformément aux attentes du maître d’ouvrage.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_annexe">7. Annexe</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_documentation_du_nke_triphaso_60a">7.1. Documentation du NKE TRIPHAS’O 60A</h3>
+<div class="paragraph">
+<p>Ci-dessous des liens vers les deux supports de documentation du capteur disponible sur Internet.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.nke-watteco.fr/download/fiche-technique-triphaso/?wpdmdl=3334&amp;refresh=61586a9445b6f1633184404">Fiche Technique</a></p>
+</li>
+<li>
+<p><a href="https://www.nke-watteco.fr/download/notice-dinstallation-capteur-triphaso/?wpdmdl=8368&amp;refresh=61586a9446c861633184404">Notice d&#8217;installation</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_maquette">7.2. Maquette</h3>
+<div class="paragraph">
+<p>Afin de matérialiser ce que nous imaginons pour ce projet, nous avons réalisé deux maquettes.</p>
+</div>
+<div class="sect3">
+<h4 id="_carte_topologique">7.2.1. Carte topologique</h4>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+Il est important de noter pour les parties qui suivent qu&#8217;il ne s&#8217;agit que de maquettes réalisées à la main dans un souci de structure et de visualisation du projet. Aucune attention particulière n&#8217;a été portée au côté esthétique, cela ne sera évidemment pas le cas lors de la réalisation finale du projet.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_description_2">Description</h5>
+<div class="imageblock">
+<div class="content">
+<img src="src/maquette_carte.png" alt="maquette carte">
+</div>
+<div class="title">Figure 2. Carte topologique des consommations d&#8217;un étage</div>
+</div>
+<div class="paragraph">
+<p>Sur l&#8217;image ci-dessus on peut voir à quoi ressemblerait un écran qui donnerait les valeurs de consommation des salles d&#8217;un étage. Ici, on reconnaît la forme du bâtiment B de l&#8217;IUT de Blagnac. Les différentes salles sont remplies avec les couleurs représentant leur consommation respective.</p>
+</div>
+<div class="paragraph">
+<p>On peut voir que la salle <em>B_1yy</em> a été sélectionnée, un onglé est donc apparu pour fournir plus d&#8217;informations sur cette salle.</p>
+</div>
+<div class="paragraph">
+<p>L&#8217;objectif de ce genre d&#8217;écran est de prendre rapidement des informations sur : l&#8217;ensemble de l&#8217;IUT, un bâtiment ou un étage à l&#8217;instant T.</p>
+</div>
+<div class="paragraph">
+<p>En bas on peut voir le chemin qui mène à cet écran; en cliquant sur <em>Batiment B</em> ou <em>IUT</em> on revient aux écrans précédents. Cela permet donc de naviguer entre les différents écrans de visualisation.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_évolutions_et_interrogations">Évolutions et interrogations</h5>
+<div class="paragraph">
+<p>Ce genre d&#8217;écran est intéressant pour voir les données "temps réel", il permet une meilleure représentation qu&#8217;un simple tableau. Toutefois, il reste encore quelques questions en suspens.</p>
+</div>
+<div class="paragraph">
+<p>Sur quel maximum devons-nous générer <em>l&#8217;Echelle des puissances</em> ? Les options envisageables seraient :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>La consommation totale de l&#8217;IUT</p>
+</li>
+<li>
+<p>La moyenne généralement observé plus une constante</p>
+</li>
+<li>
+<p>Le maximum de l&#8217;écran</p>
+</li>
+<li>
+<p>Laisser le choix entre les trois propositions précédentes</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Quelles informations sont pertinentes à faire apparaître dans l&#8217;onglet de sélection d&#8217;une salle ? Ici, nous avons mis :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>La consommation actuelle (en gros de la couleur de la salle)</p>
+</li>
+<li>
+<p>Des moyennes</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Journalière serait la moyenne de la journée en cours</p>
+</li>
+<li>
+<p>Absolue serait la moyenne de l&#8217;ensemble des relevés faits sur la salle.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>On pourrait ajouter d&#8217;autres agrégations mathématiques, un lien flop vers l&#8217;emploi du temps de la salle, ou plus tard les informations d&#8217;autres types de capteurs (présence, température, CO2, &#8230;&#8203;).</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_visualisation_des_données">7.2.2. Visualisation des données</h4>
+<div class="sect4">
+<h5 id="_description_3">Description</h5>
+<div class="imageblock">
+<div class="content">
+<img src="src/maquette_graph.png" alt="maquette graph">
+</div>
+<div class="title">Figure 3. Graph de visualisation de la consommation d&#8217;une salle</div>
+</div>
+<div class="paragraph">
+<p>Comme on peut le voir, la maquette ci-dessus comprend peu d&#8217;éléments, cela est dû à notre connaissance encore faible de l&#8217;outil <a href="#_grafana">Grafana</a> nous ne connaissons pas encore tous les types de présentation de données disponibles.</p>
+</div>
+<div class="paragraph">
+<p>L&#8217;écran se compose en trois parties :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>La zone centrale : contient le graphe ainsi que son titre, mais également des boutons permettant de changer de mode de visualisation ou de télécharger les données par exemple.</p>
+</li>
+<li>
+<p>Le menu latéral : permet de naviguer entre les éléments du niveau actuel. Il évite d&#8217;avoir à repasser par la carte vue précédemment.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Si on visualise une salle du premier étage du bâtiment B on pourra naviguer entre toutes les salles de cet étage.</p>
+</li>
+<li>
+<p>Si on visualise l&#8217;ensemble du premier étage du bâtiment B on pourra naviguer entre les étages de ce bâtiment.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Le menu supérieur : permet de revenir aux cartes, de changer de niveau (IUT, Bâtiment, Étage) ou encore d&#8217;accéder aux paramètres du tableau de bord.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_évolutions_et_interrogations_2">Évolutions et interrogations</h5>
+<div class="paragraph">
+<p>Nous ne savons pas encore s&#8217;il sera possible d&#8217;intégrer des menus tels que ceux décrits plus haut avec l&#8217;outil Grafana; et dans l&#8217;hypothèse où ce serait possible la forme de ces menus pourrait être amené à changer.</p>
+</div>
+<div class="paragraph">
+<p>Les écrans de ce type ont pour objectif de mettre en évidence des modèles ou des comportements dans les données collectées par les capteurs. Il est donc primordial de pouvoir simplement ajouter de nouvelles visualisations et de pouvoir naviguer entre elles. L&#8217;évolution de tels écrans fait donc partie intégrante de leur utilisation, les manipulations devront donc être simples et accessibles à l&#8217;utilisateur.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_schema_use_cases">7.3. Schema use cases</h3>
+<div class="imageblock">
+<div class="content">
+<img src="src/usercase.png" alt="usercase">
+</div>
+<div class="title">Figure 4. Schema des use cases du projet</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2021-11-10 22:04:33 +0100
+</div>
+</div>
+</body>
+</html>
