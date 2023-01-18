@@ -42,9 +42,9 @@ def onMessage(client, userdata, msg):
             value = str(json_data["object"][key])
             value = value
             temps = time.time()
-            print(salle[Nom], source, value, temps)
+            print( source, salle[Nom], value, temps)
 
-            val = (salle[Nom], source, value, temps)
+            val = ( source, salle[Nom], value, temps)
             mycursor.execute(sql, val)
         mydb.commit()
         print(json_data['deviceName'])
