@@ -6,10 +6,10 @@
 - Marco Valle Wellmer
 
 ## Lien vers le backlog produit
-Cliquez ici --> [BackLogs produits](https://github.com/users/SkyFriz/projects/2/views/).
+Cliquez ici --> [BackLogs produits](https://github.com/users/SkyFriz/projects/2).
 
 ## Lien vers les backlogs sprints
-Cliquez ici --> [BackLogs Sprints](https://github.com/users/SkyFriz/projects/2/views/).
+Cliquez ici --> [BackLogs Sprints](https://github.com/users/SkyFriz/projects/2).
 
 ## Lien vers les test
 ----
