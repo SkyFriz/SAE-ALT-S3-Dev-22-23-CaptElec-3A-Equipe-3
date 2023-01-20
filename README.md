@@ -37,11 +37,8 @@ Durant cette semaine, nous avons travaillé sur du Python, PHP, JavaScript, Grap
 - Plusieures requêtes liées aux graphiques graphana
 Les défis rencontrés au cours de ce sprint ont été l'intégration des différents outils: Python, Grafana, PHP. L'équipe a dû travailler pour s'assurer que toutes les parties de l'application fonctionnent ensemble de manière transparente.
 
-Au cours de la prochaine itération, l'équipe prévoit de :
+Au prochain Sprint, l'équipe prévoit de :
 
-Travailler sur les fonctionnalités de sécurité pour protéger les données collectées.
-Ajouter des fonctionnalités pour exporter les données collectées dans différents formats pour une utilisation ultérieure.
-Continuer à améliorer l'expérience utilisateur de l'interface PHP en rajoutant des fonctionnalités et en corrigeant les bugs.
-Dans l'ensemble, l'équipe a fait un excellent travail en utilisant les compétences Python, Grafana et PHP pour créer une application fonctionnelle qui permet aux utilisateurs de visualiser les données de différentes sources. Les prochaines étapes devraient aider à améliorer encore plus l'application.
+Implémenter les tableaux de bord graphana sur le site web dynamiquement. On prévoit de crée des menus déroulant ou l'utilisateur pourra choisir la source (température, co2, humidité, etc...) et la plage de temps, par exmemple les dernieres 24 heures, les 2 derniers jours, etc ... Ensuite, on prévoit de réaliser la tâche principal ou la couleur des salles sur le svg change de couleur en fonction de la donnée choisi et de sa valeur. On prévoit donc la finalisation du projet.
 
 ## Sprint Review semaine 4
