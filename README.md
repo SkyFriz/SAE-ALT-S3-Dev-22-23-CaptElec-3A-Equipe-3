@@ -32,7 +32,9 @@ Durant cette semaine, nous avons travaillé sur du Python, PHP, JavaScript, Grap
 - Développer un script python qui récupère les données des salles via le flux mqtt et les stocker dans une base de données.
 - Utiliser Grafana pour créer des tableaux de bord pour visualiser les données collectées, en utilisant des variables pour permettre aux utilisateurs de sélectionner les données qu'ils souhaitent voir.
 - Reprendre le site de base et le modifier pour pouvoir séléctionner les données que l'utilisateur souhaite voir par rapport aux salles de l'IUT.
-- 
+- Créer un serveur websocket qui permet d'avoir les données les plus récentes de la base de données MySQL qu'on à config
+- Setup de graphana pour l'affichage de certains graphiques
+- Plusieures requêtes liées aux graphiques graphana
 Les défis rencontrés au cours de ce sprint ont été l'intégration des différents outils: Python, Grafana, PHP. L'équipe a dû travailler pour s'assurer que toutes les parties de l'application fonctionnent ensemble de manière transparente.
 
 Au cours de la prochaine itération, l'équipe prévoit de :
