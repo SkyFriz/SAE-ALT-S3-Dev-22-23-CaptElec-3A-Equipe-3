@@ -50,11 +50,12 @@ Durant cette semaine, nous avons travaillé sur du Python, PHP, JavaScript, Grap
 Les défis rencontrés au cours de ce sprint ont été l'intégration des différents outils: Python, Grafana, PHP. L'équipe a dû travailler pour s'assurer que toutes les parties de l'application fonctionnent ensemble de manière transparente.
 
 Au niveau organisationel : 
-Egxon c'est occupé a gérer github (scrum master) et a réaliser le script python qui récupère les données pour ensuite les envoyées dans la base de donnée mysql, et a crée des graphiques avec graphana 
 
-Marco a crée la base de donnée, crée des script ....
+- Egxon c'est occupé a gérer github (scrum master) et a réaliser le script python qui récupère les données pour ensuite les envoyées dans la base de donnée mysql, et a crée des graphiques avec graphana 
 
-Thomas a réalisé le début du site .....
+- Marco a crée la base de donnée, crée des script ....
+
+- Thomas a réalisé le début du site .....
 
 Au prochain Sprint, l'équipe prévoit de :
 
