@@ -1,5 +1,4 @@
 = Documentation Technique Script Python
-
 :icons: font
 :models: models
 :experimental:
