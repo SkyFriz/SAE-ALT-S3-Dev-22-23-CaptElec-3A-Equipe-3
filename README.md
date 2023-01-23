@@ -47,7 +47,9 @@ Documentations :  attention, un script python n'est pas une doc ! il faut une do
 
 Tests :  je n'ai pas de cahier de test (cf. SAE S2)
 
-Backlog produit :  revoir la vidéo je n'ai que l'intitulé de la US, il me manque les critères d'acceptabilité, les tâches liées, la priorité, le label US
+Backlog produit :  revoir la vidéo je n'ai que l'intitulé de la US, il me manque les critères d'acceptabilité, les tâches liées, la priorité, le label US.
+
+
 Backlog sprint :  il reste encore de nombreuses issues dans "à faire" alors que le sprint est terminé ... 
 
 Je n'ai pas de release de sprint
