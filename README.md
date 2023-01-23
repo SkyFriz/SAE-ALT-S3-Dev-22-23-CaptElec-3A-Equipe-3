@@ -1,9 +1,9 @@
 # SAE-ALT-S3-Dev-22-23-CaptElec-3A-Equipe-3
 
  Equipe :
-- Egxon Zejnullahi 
-- Thomas Testa
-- Marco Valle Wellmer
+- Egxon Zejnullahi (Scrum master + dev backend)
+- Thomas Testa (Dev front-end et back-end)
+- Marco Valle Wellmer ( dev front-end et bakc-end
 
 ## Lien vers le backlog produit
 Cliquez ici --> [BackLogs produits](https://github.com/users/SkyFriz/projects/2).
