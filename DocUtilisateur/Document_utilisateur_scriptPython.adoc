@@ -1,1 +1,36 @@
-tmp
+= Document utilisateur script python mqtt
+:icons: font
+:models: models
+:experimental:
+:incremental:
+:numbered:
+:toc: macro
+:window: _blank
+:correction!:
+
+toc::[]
+
+== Prérequis
+- Python 3 installé sur votre ordinateur
+- Un compte et une connexion à un serveur MQTT
+- Une installation de MySQL
+- Les modules Python paho-mqtt et mysql-connector-python installés
+
+== Installation
+- Téléchargez ou clonez le script Python à partir de son référentiel GitHub.
+- Installez les modules nécessaires en utilisant la commande pip install -r requirements.txt.
+- Créez une base de données MySQL vide pour stocker les données récupérées à partir du flux MQTT.
+- Modifiez les paramètres de connexion à la base de données dans le script (nom d'utilisateur, mot de passe, etc.).
+- Modifiez les paramètres de connexion au serveur MQTT dans le script (URL du serveur, nom d'utilisateur, mot de passe, etc.).
+
+== Utilisation
+éxécutez le script en utilisant la commande python nom_du_script.py. Le script se connectera au serveur MQTT, récupérera les données et les enverra à la base de données MySQL. Vous pouvez également utiliser un planificateur de tâches pour exécuter le script automatiquement à des intervalles de temps réguliers.
+
+== Notes
+- Assurez-vous que la base de données MySQL et le serveur MQTT sont en cours d'exécution avant de lancer le script.
+- Assurez-vous que les paramètres de connexion sont corrects avant de lancer le script.
+- Les données récupérées seront stockées dans une table appelée "mqtt_data" dans la base de données MySQL.
+- Si vous rencontrez des erreurs, vérifiez les journaux d'erreur pour plus d'informations.
+
+== Conclusion
+Ce script Python vous permet de récupérer des données à partir d'un flux MQTT et de les stocker dans une base de données MySQL. Il peut être utilisé pour enregistrer des données en temps réel à partir d'un réseau IoT ou pour stocker des données pour une analyse ultérieure ou pour un site internet .
