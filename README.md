@@ -49,6 +49,11 @@ Durant cette semaine, nous avons travaillé sur du Python, PHP, JavaScript, Grap
 - Plusieures requêtes liées aux graphiques graphana
 Les défis rencontrés au cours de ce sprint ont été l'intégration des différents outils: Python, Grafana, PHP. L'équipe a dû travailler pour s'assurer que toutes les parties de l'application fonctionnent ensemble de manière transparente.
 
+Au niveau organisationel : 
+Egxon c'est occupé a gérer github (scrum master) et a réaliser le script python qui récupère les données pour ensuite les envoyées dans la base de donnée mysql, et a crée des graphiques avec graphana 
+Marco a crée la base de donnée, crée des script ....
+Thomas a réalisé le début du site .....
+
 Au prochain Sprint, l'équipe prévoit de :
 
 Implémenter les tableaux de bord graphana sur le site web dynamiquement. On prévoit de crée des menus déroulant ou l'utilisateur pourra choisir la source (température, co2, humidité, etc...) et la plage de temps, par exmemple les dernieres 24 heures, les 2 derniers jours, etc ... Ensuite, on prévoit de réaliser la tâche principal ou la couleur des salles sur le svg change de couleur en fonction de la donnée choisi et de sa valeur. On prévoit donc la finalisation du projet.
