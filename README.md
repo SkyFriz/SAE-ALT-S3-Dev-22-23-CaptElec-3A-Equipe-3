@@ -51,7 +51,9 @@ Les défis rencontrés au cours de ce sprint ont été l'intégration des diffé
 
 Au niveau organisationel : 
 Egxon c'est occupé a gérer github (scrum master) et a réaliser le script python qui récupère les données pour ensuite les envoyées dans la base de donnée mysql, et a crée des graphiques avec graphana 
+
 Marco a crée la base de donnée, crée des script ....
+
 Thomas a réalisé le début du site .....
 
 Au prochain Sprint, l'équipe prévoit de :
