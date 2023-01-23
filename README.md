@@ -1,6 +1,6 @@
 # SAE-ALT-S3-Dev-22-23-CaptElec-3A-Equipe-3
 
- Equipe :
+## Equipe :
 - Egxon Zejnullahi (Scrum master + dev backend)
 - Thomas Testa (Dev front-end et back-end)
 - Marco Valle Wellmer ( dev front-end et bakc-end
@@ -17,10 +17,11 @@ Cliquez ici --> [BackLogs Sprints](https://github.com/users/SkyFriz/projects/2).
 ## Documentation
 | Nom           | Lien        |
 |---------------|-------------|
+| Installer ptyhon sur windows ou ubuntu| https://github.com/SkyFriz/SAE-ALT-S3-Dev-22-23-CaptElec-3A-Equipe-3/blob/main/DocTechnique/InstallerPython.adoc |
 |  Script python pour flux mqtt + BD      | https://github.com/SkyFriz/SAE-ALT-S3-Dev-22-23-CaptElec-3A-Equipe-3/blob/main/mqtt.py        |
-| | |
-| | |
-| | |
+|  Doc utilisateur pour le script mqtt|https://github.com/SkyFriz/SAE-ALT-S3-Dev-22-23-CaptElec-3A-Equipe-3/blob/main/DocUtilisateur/Document_utilisateur_scriptPython.adoc  |
+|  Doc technique pour le script mqtt| https://github.com/SkyFriz/SAE-ALT-S3-Dev-22-23-CaptElec-3A-Equipe-3/blob/main/DocTechnique/Documment_technique_scriptPy.adoc|
+|  Test du script mqtt| |
 | | |
 
 
