@@ -1,0 +1,29 @@
+= Documentation Technique Script Python
+
+:icons: font
+:models: models
+:experimental:
+:incremental:
+:numbered:
+:toc: macro
+:window: _blank
+:correction!:
+
+toc::[]
+
+## Contexte
+
+Nous devons récolter des données via un flux mqtt pour ensuite les importer dans une base de donnée afin de pouvoir crée un site web avec des graphiques et des représentation
+des plans en 2d de l'iut de blagnac avec une couleur qui correspond à la valeur de la donnée. Par exemple plus il fait chaud dans une salle, plus la couleur de la salle
+sera rouge, à l'inverse, plus il fait froid, plus la couleur sera bleu.
+
+== Prérecquis
+- Avoir python
+
+== Fonctionnement du code
+ 
+Le fonctionnement du script est assez simple. Dans un 1er temps on se connecte a la base de donnée et on s'abonne aux flux mqtt chirpstack de l'iut afin de pouvoir 
+recevoir les donneés et de les importer dans la base. Nous avons un fonctionne qui se nomme "OnMessage", cette fonction s'active quand de nouvelle donnnées arrive depuis le flux 
+mqtt. On transforme ces données sous format json pour pouvoir parcourir plus facilement et les traitées pour pouvoir ensuite les importer avec une requêtes préparées dans
+notre base de donnée
+ 
