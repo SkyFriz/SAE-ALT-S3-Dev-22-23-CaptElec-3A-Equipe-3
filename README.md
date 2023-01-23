@@ -42,3 +42,17 @@ Au prochain Sprint, l'équipe prévoit de :
 Implémenter les tableaux de bord graphana sur le site web dynamiquement. On prévoit de crée des menus déroulant ou l'utilisateur pourra choisir la source (température, co2, humidité, etc...) et la plage de temps, par exmemple les dernieres 24 heures, les 2 derniers jours, etc ... Ensuite, on prévoit de réaliser la tâche principal ou la couleur des salles sur le svg change de couleur en fonction de la donnée choisi et de sa valeur. On prévoit donc la finalisation du projet.
 
 ## Sprint Review semaine 4
+
+Documentations :  attention, un script python n'est pas une doc ! il faut une doc technique et une doc utilisateur.
+
+Tests :  je n'ai pas de cahier de test (cf. SAE S2)
+
+Backlog produit :  revoir la vidéo je n'ai que l'intitulé de la US, il me manque les critères d'acceptabilité, les tâches liées, la priorité, le label US
+Backlog sprint :  il reste encore de nombreuses issues dans "à faire" alors que le sprint est terminé ... 
+
+Je n'ai pas de release de sprint
+
+CR :  j'ai un CR technique mais j'ai rien sur l'organisationnel ...
+
+Seulement 12 commits sous Github ??
+
