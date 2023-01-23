@@ -1,0 +1,33 @@
+= Documentation Installation Python
+:icons: font
+:models: models
+:experimental:
+:incremental:
+:numbered:
+:toc: macro
+:window: _blank
+:correction!:
+
+toc::[]
+
+== Installation
+
+===  Prérequis
+
+- Avoir accès à internet
+
+===  Installation
+
+Pour installer Python sur windows, vous pouvez aller sur le lien offciel et le télécharger : https://www.python.org/downloads/
+
+Sur une distribution linux, ici ubuntu, ouvrez votre terminal et tapez la commande : sudo apt-get install python3
+
+== Lancement
+
+Une fois installé, il faut déziper le projet pour pouvoir utiliser python sur windows. Une fois installé, on peut utiliser python avec un ide comme Visual Studio code ou bien 
+Pycharm.
+
+Voici les commandes a utiliser pour éxécuter votre script/application:
+Sur windows : `python chemin_vers_votre_app/app.py`
+
+Sur Linux : `python3 chemin_vers_votre_app/app.py`
