@@ -86,10 +86,7 @@ def onMessage(client, userdata, msg):
             val = ( source, salle[Nom], value, temps)
             mycursor.execute(sql, val)
         mydb.commit()
-        print(json_data['deviceName'])
-        print("test")
-        print(time.time())
-
+       
 
 client = paho.Client()
 client.on_message = onMessage
