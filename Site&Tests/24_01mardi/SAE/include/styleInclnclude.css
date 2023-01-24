@@ -6,7 +6,8 @@
 }
 
 body{
-    font-family: 'Poppins';
+    font-family: 'Impact';
+    background-color: #121213;
 }
 
 header{
@@ -25,12 +26,13 @@ header{
 }
 
 .navbar a{
-    color: white;
+    color: #111066;
 }
 
 .navbar .logo{
     font-size: 2em;
     font-weight: bold;
+    color: #383d09;
 }
 
 .navbar .nav-links ul{
@@ -42,8 +44,8 @@ header{
 }
 
 .navbar .nav-links ul li.active a{
-    color: red;
-    font-weight: 600;
+    color: rgb(38, 0, 255);
+    font-size: large;
 }
 
 .navbar .menu-hamburger{
