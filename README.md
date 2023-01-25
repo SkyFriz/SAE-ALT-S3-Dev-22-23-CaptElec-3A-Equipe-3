@@ -55,7 +55,7 @@ Au niveau organisationel :
 
 - Marco a crée la base de donnée, crée des script ....
 
-- Thomas a réalisé le début du site .....
+- Thomas a réalisé le début du site et son fonctionnement
 
 Au prochain Sprint, l'équipe prévoit de :
 

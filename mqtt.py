@@ -71,21 +71,35 @@ mycursor = mydb.cursor()
 
 
 def onMessage(client, userdata, msg):
-    json_data = json.loads(msg.payload)
-    sql = "INSERT INTO DATA (DATA_TYPE, SOURCE,VALUE,TIMESTAMP) VALUES (%s, %s, %s, %s)"
-    Nom = json_data['deviceName']
-    if (Nom in salle):
-        for key in json_data["object"]:
-            print(key + " " + str(json_data["object"][key]))
-            source = key
-            value = str(json_data["object"][key])
-            value = value
-            temps = time.time()
-            print( source, salle[Nom], value, temps)
+     json_data = json.loads(msg.payload)
 
-            val = ( source, salle[Nom], value, temps)
-            mycursor.execute(sql, val)
+
+    if ('batteryLevel') in json_data:
+
+        nom = (json_data['deviceName'])
+        batery = (json_data['batteryLevel'])
+        temps = (time.time())
+
+        sql = "INSERT INTO DEVICE_INFO (SOURCE , VALUE ,TIMESTAP) VALUES (%s, %s, %s)"
+        val = (nom, batery, temps)
+        mycursor.execute(sql, val)
         mydb.commit()
+
+    else:
+        sql = "INSERT INTO DATA (DATA_TYPE, SOURCE,VALUE,TIMESTAMP) VALUES (%s, %s, %s, %s)"
+        Nom = json_data['deviceName']
+        if (Nom in salle):
+            for key in json_data["object"]:
+                print(key + " " + str(json_data["object"][key]))
+                source = key
+                value = str(json_data["object"][key])
+                value = value
+                temps = time.time()
+                print(source, salle[Nom], value, temps)
+
+                val = (source, salle[Nom], value, temps)
+                mycursor.execute(sql, val)
+            mydb.commit()
        
 
 client = paho.Client()
@@ -95,6 +109,7 @@ if client.connect("chirpstack.iut-blagnac.fr", 1883, 60) != 0:
     print("Could not connect to MQtt Broker")
 
 client.subscribe("application/1/device/+/event/up")
+client.subscribe("application/1/device/+/event/status")
 
 try:
 
