@@ -10,6 +10,9 @@
 }
 
 .navbar{
+    top: 0;
+    left: 0;
+    
     font-family: 'Impact';
 
     position: absolute;
@@ -100,6 +103,10 @@
     .nav-links.mobile-menu{
         margin-left: -1%;
         margin-top: -1%;
+    }
+
+    .card.mobile-menu{
+        display: none;
     }
 
     .nav-links ul{

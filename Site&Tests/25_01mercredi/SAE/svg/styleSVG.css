@@ -1,6 +1,8 @@
 g {
-    fill:rgb(183, 232, 247);
+    text-decoration: none;
+    fill:rgb(184, 236, 252);
     stroke:rgb(0, 26, 255);
+    
     
     /* stroke:rgb(0, 0, 0);
     fill: rgb(248, 183, 43); */
@@ -13,15 +15,22 @@ g {
     
     transition: fill 1.2s, stroke 1s
 }
-g.changeColor:hover {
+g.changeColor a path:hover {
     stroke:rgb(56, 0, 102);
     fill: rgb(247, 156, 239);
+    
     
     /* stroke:rgb(255, 193, 183);
     fill: rgb(233, 8, 0); */
 }
 
+
 #box:checked + g {
     background: #fffc47;
     color: #666666;
   }
+
+g a path{
+    fill:rgb(183, 232, 247);
+    stroke:rgb(0, 26, 255);
+}

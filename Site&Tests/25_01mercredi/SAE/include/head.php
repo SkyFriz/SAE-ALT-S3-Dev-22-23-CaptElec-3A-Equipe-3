@@ -11,8 +11,8 @@
         <a href="#" class="logo">CaptElec</a>
         <div class="nav-links">
             <ul>
-                <li class="active"><a onclick="window.location.href='index.php'">Accueil</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a onclick="window.location.href='index.php'">Accueil</a></li>
+                <li><a onclick="window.location.href='Contact.php'">Contact</a></li>
                 <?php
                   if (!isset($_SESSION['identifie']) OR isset($_SESSION['identifie'])!='OK') {
                     echo("<li><a onclick=\"window.location.href='connexion.php'\">Connexion</a></li>");
