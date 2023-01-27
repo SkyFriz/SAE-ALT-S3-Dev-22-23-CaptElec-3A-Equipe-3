@@ -58,12 +58,6 @@ g.changeColor a:hover {
     color: #666666;
   }
 
-g a path{
-    fill:rgb(183, 232, 247);
-    stroke:rgb(0, 26, 255);
-
-    transition: fill 1.2s, stroke 1s
-}
 
 g.changeColor a path:hover {
     stroke:rgb(56, 0, 102);

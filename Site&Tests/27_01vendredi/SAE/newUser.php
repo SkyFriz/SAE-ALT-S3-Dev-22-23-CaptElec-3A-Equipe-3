@@ -5,7 +5,6 @@ $password = trim(fread($file, filesize('path/to/password_file.txt')));
 fclose($file);
 $host = "51.38.52.224";
 $username = "saeS3";
-$password = "$password";
 $database = "saeS3";
 
 $mysqli = new mysqli($host, $username, $password, $database);

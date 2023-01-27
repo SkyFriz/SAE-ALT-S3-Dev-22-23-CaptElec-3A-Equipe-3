@@ -44,6 +44,7 @@
                                         <?php
                                             if(!empty($_POST['Source'])){
                                                 echo 'Sélection : '.$_POST['Source'];
+                                                
                                             }
                                             else{
                                                 echo 'Sélection : temperature';
@@ -57,14 +58,10 @@
                 </div>
                 <?php
                     if(!empty($_GET['batiment'])){
-                        $svg_rdc_url= 'svg/'.$_GET['batiment'].'.svg';
-                        $svg_rdc_content= file_get_contents($svg_rdc_url);
-                        echo $svg_rdc_content;
+                        include 'svg/'.$_GET['batiment'].'.html';
                     }
                     else{
-                        $svg_rdc_url= 'svg/batimentIUT.svg';
-                        $svg_rdc_content= file_get_contents($svg_rdc_url);
-                        echo $svg_rdc_content;
+                        include 'batimentIUT.html';
                     }
                 ?> 
                 <hr>
@@ -79,9 +76,7 @@
             </div>
         </div>
     </body>
-    <foot>
-        <a href="svg/batimentIUT.html">TEST</a>
-    </foot>
+    <script type= module src="./svg/test.js"></script>
     <script>
         const menuHamburger = document.querySelector(".menu-hamburger")
         const navLinks = document.querySelector(".nav-links")

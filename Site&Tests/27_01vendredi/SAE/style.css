@@ -110,8 +110,7 @@ form{
 .graphique{
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
     align-items: center;
+    align-content: space-between;
     justify-content: space-around;
-    margin-top: 10px;
 }
