@@ -17,8 +17,20 @@
 ## Lien vers le backlog produit
 Cliquez ici --> [BackLogs produits](https://github.com/users/SkyFriz/projects/2).
 
+Quand vous cliquez sur les Backlogs produits, pour voir les prioritées, critères d'acception et tâche reliées cliqué sur le user story
+
+![test](US.png)
+
+Ensuite vous aurez toutes les informations 
+
+
+![test](US2.png)
+
+
 ## Lien vers les backlogs sprints
 Cliquez ici --> [BackLogs Sprints](https://github.com/users/SkyFriz/projects/2).
+
+
 
 ## Documentation
 | Nom           | Lien        |
