@@ -6,8 +6,9 @@ body {
   align-items: center;
   font-family: "Righteous", cursive;
   min-height: 100vh;
-  background-color: #07252d;
-  background-image: #07252d;
+}
+a{
+  color: white;
 }
   .container {
     max-width: 100vw;
@@ -23,7 +24,6 @@ body {
       width: 300px;
       height: 400px;
       margin: 0;
-      background: #000;
       border-radius: 15px;
       box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
     }
@@ -55,22 +55,19 @@ body {
             padding: 0;
           }
 
-          .java {
-            background-color: #00fffc;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+          .Egxon {
+            color: #00fffc;
+            background-color: #07252d;
           }
 
-          .python {
-            background-color: #00fffc;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+          .Marco {
+            color: #00fffc;
+            background-color: #07252d;
           }
 
-          .cSharp {
-            background-color: #00fffc;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+          .Thomas {
+            color: #00fffc;
+            background-color: #07252d;
           }
         
 
@@ -96,6 +93,7 @@ body {
       h2 {
         background-color: #054453;
         font-size: 2em;
+        text-align: center;
       }
     
 

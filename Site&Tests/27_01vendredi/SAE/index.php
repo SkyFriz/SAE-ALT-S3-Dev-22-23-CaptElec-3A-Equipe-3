@@ -1,14 +1,14 @@
 <?php
     session_start();
-    $cookie_name="type";    
+    $cookie_type="type";
     if(!empty($_POST['Source'])){
-        $cookie_value=$_POST['Source'];
+        $cookie_valueType=$_POST['Source'];
     }
+    
     else{
-        $cookie_value="temperature";
+        $cookie_valueType="temperature";
     }
-    setcookie($cookie_name,$cookie_value,time()-3600);
-
+    setcookie($cookie_type,$cookie_valueType);
 ?>
 
 <!DOCTYPE html>
@@ -31,48 +31,7 @@
                         <?php
                             if(!empty($_GET['batiment'])){
                                 if($_GET['batiment'] == 'batimentB/rdc' || $_GET['batiment'] == 'batimentB/1etage' || $_GET['batiment'] == 'batimentB/2etage'){
-                                    ?>  <div class="formSelect">
-                                            <form action="" method="POST">
-                                                <label>Source :</label>
-                                                <select name="Source">
-                                                    <option value="temperature">Température</option>
-                                                    <option value="co2">CO2</option>
-                                                </select><br>
-                                                <label>Durée :</label>
-                                                <select name="temps">
-                                                    <option value="1">1h</option>
-                                                    <option value="3">3h</option>
-                                                    <option value="6">6h</option>
-                                                    <option value="12">12h</option>
-                                                    <option value="24">1j</option>
-                                                    <option value="48">2j</option>
-                                                    <option value="168">7j</option>
-                                                </select><br>
-                                                <input type="submit" name="Valider" value="Valider">
-                                            </form>
-                                        </div>
-                                        <div class="typeSelect">
-                                            <?php
-                                                if(!empty($_POST['Source'])){
-                                                    echo 'Sélection : '.$_POST['Source'];
-
-                                                }
-                                                else{
-                                                    echo 'Sélection : temperature';
-                                                }
-                                            ?>
-                                        </div>
-                                        <?php
-                                            if(!empty($_POST['Source'])){
-                                                if($_POST['Source']=='temperature'){
-                                                    echo "<img src='svg/image/temperature.png' alt='Temperature' style='width:200px;height:200px;'>";
-                                                }
-                                            }
-                                            else{
-                                                echo "<img src='svg/image/temperature.png' alt='Temperature' style='width:200px;height:200px;'>";
-                                            }
-                                        ?>
-                                    <?php
+                                    echo "<img src='svg/image/temperature.png' alt='Temperature' style='width:200px;height:200px; position:absolute; left:45%;''>";
                                 }
                             }
                         ?>
@@ -80,12 +39,24 @@
                 </div>
                 <?php
                     if(!empty($_GET['batiment'])){
-                        include 'svg/'.$_GET['batiment'].'.html';
-                    }
-                    else{
-                        include 'svg/batimentIUT.html';
+                        if($_GET['batiment']=="batimentB/rdc" || $_GET['batiment']=="batimentB/1etage" ||$_GET['batiment']=="batimentB/2etage"){
+                            echo "<div class='batiment'>";
+                        }
+                        else{
+                            echo "<div>";
+                        }
                     }
                 ?>
+                    <?php
+                        if(!empty($_GET['batiment'])){
+                            include 'svg/'.$_GET['batiment'].'.html';
+                        }
+                        else{
+                            include 'svg/batimentIUT.html';
+                        }
+                    ?>
+                </div>
+                <?php?>
                 <hr>
                 <form action="" method="GET">
                     <input type="submit" name="batiment" value="batimentIUT">
