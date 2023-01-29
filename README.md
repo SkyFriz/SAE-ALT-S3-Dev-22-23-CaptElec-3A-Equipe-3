@@ -120,7 +120,7 @@ Au niveau organisationel :
 
 
 ## Livrable : 
-Notre site final : http://51.38.52.224/connexionTest.php
+Notre site final : http://51.38.52.224
 
 ## Retour d'expérience :
 
