@@ -1,4 +1,4 @@
-const cars = ["p", "B101", "B102","B103","B105","B106","B108","B109","B110","B111","B112","B113","B201","B202","B203","B001","B002","B003","B212","B233","B219","B234"];
+const cars = ["B101", "B102","B103","B105","B106","B108","B109","B110","B111","B112","B113","B201","B202","B203","B001","B002","B003","B212","B233","B219","B234"];
 let fLen = cars.length;
 
 
@@ -53,12 +53,19 @@ socket.onmessage = function(event) {
     console.log(data[1][1]);
     console.log(data[1][2]);
 
-    /*
-    for (let i = 0; i < 200; i++) {
+    
+    for (let i = 0; i < data.length; i++) {
       if(cars.includes(data[i][1])){
+        console.log('Nom de la salle')
         console.log(console.log(data[i][1]));
+
+        console.log("Source ")
+        console.log(console.log(data[i][6][]));
+
+        console.log("Valeur")
+        console.log(console.log(data[i][6]));
       }
-    }*/
+    }
   
     if (cars.includes(data[1][1])){
 
