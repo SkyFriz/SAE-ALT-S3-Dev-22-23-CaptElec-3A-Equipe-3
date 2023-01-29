@@ -114,3 +114,8 @@ form{
     align-content: space-between;
     justify-content: space-around;
 }
+
+.legende{
+    display: flex;
+    flex-wrap: wrap;
+}

@@ -26,35 +26,47 @@
                 ?>
             </div>
             <div class="item2">
-                <div class="select1">
-                    <?php
-                        if(!empty($_GET['batiment'])){
-                            if($_GET['batiment'] == 'batimentB/rdc' || $_GET['batiment'] == 'batimentB/1etage' || $_GET['batiment'] == 'batimentB/2etage'){
-                                ?>  <div class="formSelect">
-                                        <form action="" method="POST">
-                                            <label>Source :</label>
-                                            <select name="Source">
-                                                <option value="temperature">Température</option>
-                                                <option value="co2">CO2</option>
-                                            </select><br>
-                                            <input type="submit" name="Valider" value="Valider">
-                                        </form>
-                                    </div>
-                                    <div class="typeSelect">
+                <div class="legende">
+                    <div class="select1">
+                        <?php
+                            if(!empty($_GET['batiment'])){
+                                if($_GET['batiment'] == 'batimentB/rdc' || $_GET['batiment'] == 'batimentB/1etage' || $_GET['batiment'] == 'batimentB/2etage'){
+                                    ?>  <div class="formSelect">
+                                            <form action="" method="POST">
+                                                <label>Source :</label>
+                                                <select name="Source">
+                                                    <option value="temperature">Température</option>
+                                                    <option value="co2">CO2</option>
+                                                </select><br>
+                                                <input type="submit" name="Valider" value="Valider">
+                                            </form>
+                                        </div>
+                                        <div class="typeSelect">
+                                            <?php
+                                                if(!empty($_POST['Source'])){
+                                                    echo 'Sélection : '.$_POST['Source'];
+
+                                                }
+                                                else{
+                                                    echo 'Sélection : temperature';
+                                                }
+                                            ?>
+                                        </div>
                                         <?php
                                             if(!empty($_POST['Source'])){
-                                                echo 'Sélection : '.$_POST['Source'];
-                                                
+                                                if($_POST['Source']=='temperature'){
+                                                    echo "<img src='svg/image/temperature.png' alt='Temperature' style='width:200px;height:200px;'>";
+                                                }
                                             }
                                             else{
-                                                echo 'Sélection : temperature';
+                                                echo "<img src='svg/image/temperature.png' alt='Temperature' style='width:200px;height:200px;'>";
                                             }
                                         ?>
-                                    </div>
-                                <?php
+                                    <?php
+                                }
                             }
-                        }
-                    ?>
+                        ?>
+                    </div>
                 </div>
                 <?php
                     if(!empty($_GET['batiment'])){
@@ -63,7 +75,7 @@
                     else{
                         include 'svg/batimentIUT.html';
                     }
-                ?> 
+                ?>
                 <hr>
                 <form action="" method="GET">
                     <input type="submit" name="batiment" value="batimentIUT">
