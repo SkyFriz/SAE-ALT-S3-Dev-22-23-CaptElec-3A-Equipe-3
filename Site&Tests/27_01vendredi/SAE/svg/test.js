@@ -32,7 +32,7 @@ for (let i = 0; i < paths.length; i++) {
 
 */
 
-const socket = new WebSocket('ws://51.38.52.224:8090');
+const socket = new WebSocket('ws://51.38.52.224/api/');
 
 socket.onopen = function() {
     console.log("WebSocket connection established");
