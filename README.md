@@ -48,7 +48,7 @@ Cliquez ici --> [BackLogs Sprints](https://github.com/users/SkyFriz/projects/2).
 | Nom           | Lien        |
 |---------------|-------------|
 |Lien du site| Le site n'était pas hébérgé durant le 1er sprint|
-|Lien local |https://github.com/SkyFriz/SAE-ALT-S3-Dev-22-23-CaptElec-3A-Equipe-3/tree/main/SiteWeb/captelec-master |
+|Lien local |https://github.com/SkyFriz/SAE-ALT-S3-Dev-22-23-CaptElec-3A-Equipe-3/tree/main/Site%26Tests/18_01mercredi/SAE |
 
 ## Release Sprint 2
 | Nom           | Lien        |
