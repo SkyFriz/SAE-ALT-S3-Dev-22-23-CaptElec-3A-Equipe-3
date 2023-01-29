@@ -113,7 +113,7 @@ Au niveau organisationel :
 
 - Egxon s'est occupé a remplir le github, a modifié le script javascript (client websocket crée par marco) pour pouvoir actualiser les couleurs des salles en temps réel avec l'aide de thomas, a réglé les problèmes des graphiques sur graphana en créant de nouvelles requêtes SQL, a crée les liens pour avoir les bons graphiques réliée aux bonnes salles.
 
-- Thomas s'est occupé
+- Thomas s'est occupé du design du site, de la création des pages "Graphique", "Contact" et "Connexion". Documentation Utilisateur et Technique. 
 
 - Marco s'est occupé
 
