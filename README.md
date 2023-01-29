@@ -122,6 +122,10 @@ Au niveau organisationel :
 ## Livrable : 
 Notre site final : http://51.38.52.224/connexionTest.php
 
+## Retour d'expérience :
+
+Malgré notre petite équipe, nous nous complétons et nous avons pu grâce aux connaissances de chacun avancer et terminer le projet à temps.
+Durant les 2 semaines nous avons rencontré des difficultés techniques mais aussi humaine un membre est tombé malade, mais nous avons pu rattraper notre retard à l'aide d'une bonne communication. En effet nous avons travaillé en équipe et tous les jours nous nous envoyions des messages pour tenir au courant de l'avancé ou des problèmes que nous rencontrions. Lorsque que nous rencontrons un problème nous nous appelions pour débattre sur les solutions possibles qu'il existe.
 
 ------------------
 ## Commentaires 
