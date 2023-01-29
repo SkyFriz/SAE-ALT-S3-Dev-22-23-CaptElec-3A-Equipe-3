@@ -17,7 +17,9 @@ session_start();
     <div class="content">
       <span class="stars"></span>
       <h2 class="java">Egxon Zejnullahi</h2>
-      <p class="java">c'est occupé a gérer github (scrum master) et a réaliser le script python qui récupère les données pour ensuite les envoyées dans la base de donnée mysql, et a crée des graphiques avec graphana.</p>
+      <p class="java">c'est occupé a gérer github (scrum master) et a réaliser le script python qui récupère les données pour ensuite les envoyées dans la base de donnée mysql, et a crée des graphiques avec graphana.
+        <a href = "mailto: abc@example.com" class=""> Cliquez ici pour envoyer un mail</a>
+      </p>
     </div>
   </div>
   <div class="face face2">
@@ -43,7 +45,7 @@ session_start();
     <div class="content">
       <span class="stars"></span>
       <h2 class="cSharp">Thomas Testa</h2>
-      <p class="cSharp">a réalisé le début du site et son fonctionnement.</p>
+      <p class="cSharp">a réalisé le site, son design et son fonctionnement.</p>
     </div>
   </div>
   <div class="face face2">

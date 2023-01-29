@@ -113,6 +113,7 @@ form{
     align-items: center;
     align-content: space-between;
     justify-content: space-around;
+    padding: 5px;
 }
 
 .legende{

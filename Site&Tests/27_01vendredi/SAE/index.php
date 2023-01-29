@@ -1,13 +1,14 @@
 <?php
     session_start();
-    $cookie_name="type";    
+    $cookie_type="type";
     if(!empty($_POST['Source'])){
-        $cookie_value=$_POST['Source'];
+        $cookie_valueType=$_POST['Source'];
     }
+    
     else{
-        $cookie_value="temperature";
+        $cookie_valueType="temperature";
     }
-    setcookie($cookie_name,$cookie_value,time()-3600);
+    setcookie($cookie_type,$cookie_valueType);
 
 ?>
 
@@ -38,27 +39,16 @@
                                                     <option value="temperature">Température</option>
                                                     <option value="co2">CO2</option>
                                                 </select><br>
-                                                <label>Durée :</label>
-                                                <select name="temps">
-                                                    <option value="1">1h</option>
-                                                    <option value="3">3h</option>
-                                                    <option value="6">6h</option>
-                                                    <option value="12">12h</option>
-                                                    <option value="24">1j</option>
-                                                    <option value="48">2j</option>
-                                                    <option value="168">7j</option>
-                                                </select><br>
                                                 <input type="submit" name="Valider" value="Valider">
                                             </form>
                                         </div>
                                         <div class="typeSelect">
                                             <?php
                                                 if(!empty($_POST['Source'])){
-                                                    echo 'Sélection : '.$_POST['Source'];
-
+                                                    echo 'Sélection : '.$_POST['Source'].'<br>';
                                                 }
                                                 else{
-                                                    echo 'Sélection : temperature';
+                                                    echo 'Sélection : temperature<br>';
                                                 }
                                             ?>
                                         </div>
