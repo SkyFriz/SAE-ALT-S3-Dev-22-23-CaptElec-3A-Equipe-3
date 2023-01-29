@@ -48,8 +48,17 @@ socket.onmessage = function(event) {
     // Handle the received message
     const data = JSON.parse(event.data);
     console.log("Message");
+    console.log(data);
+    console.log(data[0][0]);
     console.log(data[1][1]);
     console.log(data[1][2]);
+
+    /*
+    for (let i = 0; i < 200; i++) {
+      if(cars.includes(data[i][1])){
+        console.log(console.log(data[i][1]));
+      }
+    }*/
   
     if (cars.includes(data[1][1])){
 

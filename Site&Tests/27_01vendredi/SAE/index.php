@@ -61,7 +61,7 @@
                         include 'svg/'.$_GET['batiment'].'.html';
                     }
                     else{
-                        include 'batimentIUT.html';
+                        include 'svg/batimentIUT.html';
                     }
                 ?> 
                 <hr>
