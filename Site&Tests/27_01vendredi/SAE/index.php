@@ -31,7 +31,7 @@
                         <?php
                             if(!empty($_GET['batiment'])){
                                 if($_GET['batiment'] == 'batimentB/rdc' || $_GET['batiment'] == 'batimentB/1etage' || $_GET['batiment'] == 'batimentB/2etage'){
-                                    echo "<img src='svg/image/temperature.png' alt='Temperature' style='width:200px;height:200px; padding-left: 100%'>";
+                                    echo "<img src='svg/image/temperature.png' alt='Temperature' style='width:200px;height:200px; position:absolute; left:45%;''>";
                                 }
                             }
                         ?>
@@ -39,12 +39,24 @@
                 </div>
                 <?php
                     if(!empty($_GET['batiment'])){
-                        include 'svg/'.$_GET['batiment'].'.html';
-                    }
-                    else{
-                        include 'svg/batimentIUT.html';
+                        if($_GET['batiment']=="batimentB/rdc" || $_GET['batiment']=="batimentB/1etage" ||$_GET['batiment']=="batimentB/2etage"){
+                            echo "<div class='batiment'>";
+                        }
+                        else{
+                            echo "<div>";
+                        }
                     }
                 ?>
+                    <?php
+                        if(!empty($_GET['batiment'])){
+                            include 'svg/'.$_GET['batiment'].'.html';
+                        }
+                        else{
+                            include 'svg/batimentIUT.html';
+                        }
+                    ?>
+                </div>
+                <?php?>
                 <hr>
                 <form action="" method="GET">
                     <input type="submit" name="batiment" value="batimentIUT">
