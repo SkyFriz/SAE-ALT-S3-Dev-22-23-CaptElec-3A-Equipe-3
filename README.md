@@ -79,7 +79,7 @@ Au niveau organisationel :
 
 - Egxon c'est occupé a gérer github (scrum master) et a réaliser le script python qui récupère les données pour ensuite les envoyées dans la base de donnée mysql, et a crée des graphiques avec graphana 
 
-- Marco a crée la base de donnée, crée des script ....
+- Marco a crée la base de donnée, crée un serveur websocket, setup nginx, installé php, config php, installé grafana et fait des requêtes pour grafana
 
 - Thomas a réalisé le début du site et son fonctionnement
 
@@ -115,7 +115,7 @@ Au niveau organisationel :
 
 - Thomas s'est occupé du design du site, de la création des pages "Graphique", "Contact" et "Connexion". Documentation Utilisateur et Technique. 
 
-- Marco s'est occupé
+- Marco s'est occupé d'améiliorer les fonctionnalitées qu'il à débuté la première semaine en plus de faire la création/connexion d'utilisateurs (côté serveur)
 
 
 
