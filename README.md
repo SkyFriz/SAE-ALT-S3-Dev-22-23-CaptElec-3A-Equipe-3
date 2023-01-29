@@ -54,7 +54,7 @@ Cliquez ici --> [BackLogs Sprints](https://github.com/users/SkyFriz/projects/2).
 | Nom           | Lien        |
 |---------------|-------------|
 |Lien du site| http://51.38.52.224/connexionTest.php |
-|Lien local |https://github.com/SkyFriz/SAE-ALT-S3-Dev-22-23-CaptElec-3A-Equipe-3/tree/main/SiteWeb/captelec-master |
+|Lien local |https://github.com/SkyFriz/SAE-ALT-S3-Dev-22-23-CaptElec-3A-Equipe-3/tree/main/Site%26Tests/27_01vendredi/SAE |
 
 
 ## Sprint review semaine 3
