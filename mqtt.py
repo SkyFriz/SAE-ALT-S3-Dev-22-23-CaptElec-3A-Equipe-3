@@ -71,11 +71,10 @@ mycursor = mydb.cursor()
 
 
 def onMessage(client, userdata, msg):
-     json_data = json.loads(msg.payload)
+    json_data = json.loads(msg.payload)
 
 
     if ('batteryLevel') in json_data:
-
         nom = (json_data['deviceName'])
         batery = (json_data['batteryLevel'])
         temps = (time.time())
@@ -89,12 +88,13 @@ def onMessage(client, userdata, msg):
         sql = "INSERT INTO DATA (DATA_TYPE, SOURCE,VALUE,TIMESTAMP) VALUES (%s, %s, %s, %s)"
         Nom = json_data['deviceName']
         if (Nom in salle):
+            temps = time.time()
             for key in json_data["object"]:
                 print(key + " " + str(json_data["object"][key]))
                 source = key
                 value = str(json_data["object"][key])
                 value = value
-                temps = time.time()
+                
                 print(source, salle[Nom], value, temps)
 
                 val = (source, salle[Nom], value, temps)
