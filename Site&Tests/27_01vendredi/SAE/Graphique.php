@@ -24,14 +24,25 @@ else{
     <body>
         <div class="TG">
             <?php
-                echo $_COOKIE["type"];
-                echo " de la salle ";
+                echo "Salle ";
                 echo $_GET['Salle'];
             ?>
         </div>
         <div class="select1">
             <div class="formSelect">
-                <form action="" method="post">
+                <form action="" method="POST">
+                    <label>Source :</label>
+                    <select name="Source">
+                        <option value="temperature">Température</option>
+                        <option value="co2">CO2</option>
+                        <option value="tvoc">Qualité de l'air</option>
+                        <option value="activity">Activité</option>
+                        <option value="humidity">Humidité</option>
+                        <option value="infrared">Infrarouge</option>
+                        <option value="pressure">Pression</option>
+                        <option value="illumination">Luminosité</option>
+                        <option value="infrared_and_visible">Infrarouge et visibilité</option>
+                    </select><br>
                     <label>Durée :</label>
                     <select name="temps">
                         <option value="1">1h</option>
@@ -48,10 +59,12 @@ else{
             <div class="typeSelect">
                 <?php
                     if(!empty($_POST['temps'])){
-                        echo 'Sélection : '.$_POST['temps'].'h';
+                        echo 'Sélection : '.$_POST['Source'].'<br>';
+                        echo 'Durée : '.$_POST['temps'].'h';
                     }
                     else{
-                        echo 'Sélection :1h';
+                        echo 'Sélection : temperature<br>';
+                        echo 'Durée :1h';
                     }
                 ?>
             </div>

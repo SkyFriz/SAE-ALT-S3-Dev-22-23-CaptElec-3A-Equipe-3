@@ -31,44 +31,7 @@
                         <?php
                             if(!empty($_GET['batiment'])){
                                 if($_GET['batiment'] == 'batimentB/rdc' || $_GET['batiment'] == 'batimentB/1etage' || $_GET['batiment'] == 'batimentB/2etage'){
-                                    ?>  <div class="formSelect">
-                                            <form action="" method="POST">
-                                                <label>Source :</label>
-                                                <select name="Source">
-                                                    <option value="temperature">Température</option>
-                                                    <option value="co2">CO2</option>
-                                                    <option value="tvoc">Qualité de l'air</option>
-                                                    <option value="activity">Activité</option>
-                                                    <option value="humidity">Humidité</option>
-                                                    <option value="infrared">Infrarouge</option>
-                                                    <option value="pressure">Pression</option>
-                                                    <option value="illumination">Luminosité</option>
-                                                    <option value="infrared_and_visible">Infrarouge et visibilité</option>
-                                                </select><br>
-                                                <input type="submit" name="Valider" value="Valider">
-                                            </form>
-                                        </div>
-                                        <div class="typeSelect">
-                                            <?php
-                                                if(!empty($_POST['Source'])){
-                                                    echo 'Sélection : '.$_POST['Source'].'<br>';
-                                                }
-                                                else{
-                                                    echo 'Sélection : temperature<br>';
-                                                }
-                                            ?>
-                                        </div>
-                                        <?php
-                                            if(!empty($_POST['Source'])){
-                                                if($_POST['Source']=='temperature'){
-                                                    echo "<img src='svg/image/temperature.png' alt='Temperature' style='width:200px;height:200px;'>";
-                                                }
-                                            }
-                                            else{
-                                                echo "<img src='svg/image/temperature.png' alt='Temperature' style='width:200px;height:200px;'>";
-                                            }
-                                        ?>
-                                    <?php
+                                    echo "<img src='svg/image/temperature.png' alt='Temperature' style='width:200px;height:200px; padding-left: 100%'>";
                                 }
                             }
                         ?>
