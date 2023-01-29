@@ -7,7 +7,7 @@
     else{
         $cookie_value="temperature";
     }
-    setcookie($cookie_name,$cookie_value);
+    setcookie($cookie_name,$cookie_value,time()-3600);
 
 ?>
 
@@ -37,6 +37,16 @@
                                                 <select name="Source">
                                                     <option value="temperature">Température</option>
                                                     <option value="co2">CO2</option>
+                                                </select><br>
+                                                <label>Durée :</label>
+                                                <select name="temps">
+                                                    <option value="1">1h</option>
+                                                    <option value="3">3h</option>
+                                                    <option value="6">6h</option>
+                                                    <option value="12">12h</option>
+                                                    <option value="24">1j</option>
+                                                    <option value="48">2j</option>
+                                                    <option value="168">7j</option>
                                                 </select><br>
                                                 <input type="submit" name="Valider" value="Valider">
                                             </form>
