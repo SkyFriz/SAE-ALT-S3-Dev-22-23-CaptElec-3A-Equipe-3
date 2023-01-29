@@ -9,7 +9,6 @@
         $cookie_valueType="temperature";
     }
     setcookie($cookie_type,$cookie_valueType);
-
 ?>
 
 <!DOCTYPE html>
@@ -38,6 +37,13 @@
                                                 <select name="Source">
                                                     <option value="temperature">Température</option>
                                                     <option value="co2">CO2</option>
+                                                    <option value="tvoc">Qualité de l'air</option>
+                                                    <option value="activity">Activité</option>
+                                                    <option value="humidity">Humidité</option>
+                                                    <option value="infrared">Infrarouge</option>
+                                                    <option value="pressure">Pression</option>
+                                                    <option value="illumination">Luminosité</option>
+                                                    <option value="infrared_and_visible">Infrarouge et visibilité</option>
                                                 </select><br>
                                                 <input type="submit" name="Valider" value="Valider">
                                             </form>

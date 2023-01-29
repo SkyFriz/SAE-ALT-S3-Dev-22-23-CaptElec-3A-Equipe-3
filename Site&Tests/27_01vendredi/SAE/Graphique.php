@@ -19,6 +19,7 @@ else{
         <?php
             include 'include/head.php';
         ?>
+        <title>graphique</title>
     </head>
     <body>
         <div class="TG">

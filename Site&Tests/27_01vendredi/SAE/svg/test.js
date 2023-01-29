@@ -1,4 +1,5 @@
-const cars = ["B101", "B102","B103","B105","B106","B108","B109","B110","B111","B112","B113","B201","B202","B203","B001","B002","B003","B212","B233","B219","B234"];
+// B201, B202 , B203 , B212, B234
+const cars = ["B101", "B102","B103","B105","B106","B108","B109","B110","B111","B112","B113","B201","B202","B203","B001","B002","B003","B212","B217","B219","B234"];
 let fLen = cars.length;
 
 
@@ -14,6 +15,7 @@ const orangeClaire = [255,156,0];
 const orangeFonce = [255,88,0];
 const rougeClair = [255,0,0];
 const rougeFonce = [150,0,0];
+
 /*
 for (let j = 0; j < cars.length; j++) {
 const paths = document.getElementsByClassName(cars[j]);
@@ -47,70 +49,70 @@ socket.onopen = function() {
 socket.onmessage = function(event) {
     // Handle the received message
     const data = JSON.parse(event.data);
+    console.log((Math.floor(Date.now() / 1000)));
+
+    let unix = (Math.floor(Date.now() / 1000)) - 1000;
+
     console.log("Message");
     console.log(data);
-    console.log(data[0][0]);
-    console.log(data[1][1]);
-    console.log(data[1][2]);
+    
 
     
     for (let i = 0; i < data.length; i++) {
-      if(cars.includes(data[i][1])){
-        console.log('Nom de la salle')
-        console.log(console.log(data[i][1]));
-
-        console.log("Source ")
-        console.log(console.log(data[i][6][]));
-
-        console.log("Valeur")
-        console.log(console.log(data[i][6]));
-      }
-    }
-  
-    if (cars.includes(data[1][1])){
+      
+          if((data[i][0])=="temperature" && cars.includes(data[i][1]) && data[i][3]>unix ){
+           
+            console.log("Source " , data[i][0]);
+            console.log("Nom de la salle ",data[i][1]);
+            console.log("Valeur ",data[i][2]);
+            let temps = data[i][2];
+            const paths = document.getElementsByClassName(data[i][1]);
+            let couleur = null;
 
 
-   
+            switch (temps) {
+              case 17:
+                couleur = bleuFonce
+                break;
+              case 18:
+                couleur = bleuClaire
+                break;
+              case 19:
+                couleur = bleuTresClaire
+                break;
+              case 20:
+                couleur = orangeClaire
+                break;
+              case 21:
+                couleur = orangeFonce
+                break;
+              case 22:
+                couleur = rougeClair
+                break;
+              case 23:
+                couleur = rougeFonce
+                break;
+              default:
+                if (temps>23){
+                  couleur = rougeFonce
+                }
+                else if (temps<17){
+                  couleur = bleuFonce
+                }
+                console.log(`Sorry, we are out of ${temps}.`);
+            }
+            
+            for (let k = 0; k < paths.length; k++) {
+              paths[k].setAttribute("fill", `rgb(${couleur})`);
+            }
+          }
 
-    let temps = data[1][2];
-    const paths = document.getElementsByClassName(data[1][1]);
-    let couleur = null;
+          
+        
     
-
-    switch (temps) {
-      case temps<17:
-        couleur = bleuFonce
-        break;
-      case 18:
-        couleur = bleuClaire
-        break;
-
-      case 19:
-        couleur = bleuTresClaire
-        break;
-
-      case 20:
-        couleur = orangeClaire
-        break;
-      case 21:
-        couleur = orangeFonce
-        break;
-      case 22:
-        couleur = rougeClair
-        break;
-      case temps>22:
-        couleur = rougeFonce
-      default:
-        console.log(`Sorry, we are out of ${temps}.`);
-    }
-    
-    for (let i = 0; i < paths.length; i++) {
-      paths[i].setAttribute("fill", `rgb(${couleur})`);
-    }
-  }else{
-    console.log("pas dans la liste");
   }
-
+  
+    
 
     updateWebsite(data);
 };
