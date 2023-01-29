@@ -54,11 +54,17 @@ Cliquez ici --> [BackLogs Sprints](https://github.com/users/SkyFriz/projects/2).
 Durant cette semaine, nous avons travaillé sur du Python, PHP, JavaScript, Graphana , MySQL et Docker. Nous avons réussi à:
 
 - Développer un script python qui récupère les données des salles via le flux mqtt et les stocker dans une base de données.
+
 - Utiliser Grafana pour créer des tableaux de bord pour visualiser les données collectées, en utilisant des variables pour permettre aux utilisateurs de sélectionner les données qu'ils souhaitent voir.
+
 - Reprendre le site de base et le modifier pour pouvoir séléctionner les données que l'utilisateur souhaite voir par rapport aux salles de l'IUT.
-- Créer un serveur websocket qui permet d'avoir les données les plus récentes de la base de données MySQL qu'on à config
-- Setup de graphana pour l'affichage de certains graphiques
-- Plusieures requêtes liées aux graphiques graphana
+
+- Créer un serveur websocket qui permet d'avoir les données les plus récentes de la base de données MySQL qu'on à configuré.
+
+- Setup de graphana pour l'affichage de certains graphiques.
+
+- Plusieures requêtes liées aux graphiques graphana.
+
 Les défis rencontrés au cours de ce sprint ont été l'intégration des différents outils: Python, Grafana, PHP. L'équipe a dû travailler pour s'assurer que toutes les parties de l'application fonctionnent ensemble de manière transparente.
 
 Au niveau organisationel : 
@@ -75,7 +81,38 @@ Implémenter les tableaux de bord graphana sur le site web dynamiquement. On pr�
 
 ## Sprint Review semaine 4
 
+Durant ce dernier sprint, nous avons finalisé notre site en :
 
+- implémentent les couleurs des salles en fonctions de la témpérature.
+
+- Créant une table dans notre base de donnée pour les batteries AM-107.
+
+- En ajoutant les données des batteries AM-107 à notre table en modifant le script mqtt.py.
+
+- implémentent les graphiques (des salles et des valeurs, des pourcentages de bateries des appareils AM-107).
+
+- Améliorer le design du site.
+
+- Ajoutant une page de contact.
+
+- Créant un script JavaScript pour les couleurs des salles pour que ce dernier soit dynamique.
+
+- Créant la navaigation de bâtiment en bâtiment .
+
+- En donnant le choix a l'utilisateur pour les salles, données et plages de temps pour les graphiques.
+
+Au niveau organisationel : 
+
+- Egxon s'est occupé a remplir le github, a modifié le script javascript (client websocket crée par marco) pour pouvoir actualiser les couleurs des salles en temps réel avec l'aide de thomas, a réglé les problèmes des graphiques sur graphana en créant de nouvelles requêtes SQL, a crée les liens pour avoir les bons graphiques réliée aux bonnes salles.
+
+- Thomas s'est occupé
+
+- Marco s'est occupé
+
+
+
+## Livrable : 
+Notre site final : http://51.38.52.224/
 
 
 ------------------
