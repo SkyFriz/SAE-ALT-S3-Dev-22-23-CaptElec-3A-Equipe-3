@@ -3,7 +3,7 @@
 ## Equipe
 - Egxon Zejnullahi (Scrum master + dev backend)
 - Thomas Testa (Dev front-end et back-end)
-- Marco Valle Wellmer ( dev front-end et bakc-end
+- Marco Valle Wellmer ( dev front-end et back-end)
 
 ## Technologie utilisées:
 - Python
